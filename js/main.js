@@ -30,14 +30,12 @@ buttons.forEach(function(item){
     
     item.addEventListener('mouseover', function(e){
         let box = item.getBoundingClientRect();
-        //let top = e.clientY - box.top;
         let left = e.clientX - box.left;
         let decorElem = item.querySelector('.decor');
         
         item.classList.add("active");
         
         decorElem.style.left = '' + left + 'px';
-        //decorElem.style.top = '' + top + 'px';
     });
     
     item.addEventListener("mouseleave", function(){
@@ -81,9 +79,6 @@ function initialSliderInfinity() {
             setTimeout(function(){
                 itemShow.previousElementSibling.classList.add('show');
                 itemShow.classList.remove('show');
-                document.querySelectorAll('.js-arrows-infinity .current').forEach(function(item){
-                    setCurrentSlideIndex(item);
-                });
             },20)
         });
         

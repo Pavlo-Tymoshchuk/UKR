@@ -902,19 +902,106 @@ body {
   line-height: 20px;
 }
 /* Reviews */
+.reviews {
+  background-color: #F0F0FA;
+  padding: 75px 0px;
+}
+.reviews__wrapper {
+  position: relative;
+}
+.reviews__wrapper::before {
+  content: "";
+  position: absolute;
+  right: -170px;
+  top: -110px;
+  width: 385px;
+  height: 340px;
+  background: url(../img/pattern-2.png) repeat center;
+}
 .reviews__list {
   display: flex;
   justify-content: space-between;
+  margin-top: 40px;
+  height: 235px;
 }
 .reviews__item {
+  display: flex;
+  flex-direction: column;
   width: 540px;
   height: 235px;
   background-color: #fff;
   border-radius: 30px;
   padding: 30px 40px;
+  position: absolute;
+  transform: translateX(-570px);
+  opacity: 0;
+  transition: transform 0.6s, opacity 0.6s;
 }
 .reviews__item .content {
   max-height: 67px;
   overflow: hidden;
   position: relative;
+}
+.reviews__item.show {
+  transform: translateX(0px);
+  opacity: 1;
+}
+.reviews__item.show + .reviews__item {
+  transform: translateX(570px);
+  opacity: 1;
+}
+.reviews__item.show + .reviews__item + .reviews__item {
+  transform: translateX(1140px);
+  opacity: 0;
+}
+.reviews__img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  flex-shrink: 0;
+}
+.reviews__item-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-top: auto;
+  position: relative;
+}
+.more_info {
+  position: absolute;
+  left: 0px;
+  top: 5px;
+  color: #0009F7;
+  font-weight: 600;
+}
+.reviews__name {
+  font-size: 18px;
+  line-height: 25px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+.reviews__sub {
+  font-size: 12px;
+  line-height: 18px;
+}
+.buttons__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 32px;
+}
+.buttons__wrapper .slider-button {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: 1px solid #7C85F4;
+}
+.buttons__wrapper .slider-button.next {
+  order: 1;
+}
+.buttons__wrapper .main_button {
+  margin: 0px 32px;
 }
