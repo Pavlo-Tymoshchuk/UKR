@@ -37,4 +37,107 @@
             color: #0009F7;
         }
     }
+    
+     /* /Filter */
+     
+     /* Noty */
+     .notyfication__item {
+         &:hover {
+             background-color: #F0F0FA;
+         }
+     }
+     
+     .notyfication-subscription__item {
+         &:hover {
+             color: #0009F7;
+             
+             .custome-check {
+                 border-color: #5C5DF7;
+             }
+             
+             input {
+                &:checked {
+                    + .custome-check {
+                        border-color: #0009F7;
+                        background-color: #0009F7;
+                    }
+                    
+                    ~ .text {
+                        color: #0009F7 !important;
+                    }
+                }
+            }
+         }
+     }
+     /* /Noty */
+     
+     /* Bottons */
+     
+     .buttons__wrapper {
+         .slider-button {
+             transition: border-color .4s;
+             
+             span {
+                 &::before {
+                     transition: color .4s;
+                 }
+             }
+             
+             &:hover {
+                 border-color: #0009F7;
+                 
+                 span {
+                     &:before {
+                         color: #0009F7;
+                     }
+                 }
+             }
+         }
+     }
+     
+     /* Footer */
+     
+     .footer-contact__item {
+         a {
+             transition: color .4s;
+             
+             &:hover {
+                 color: #0009F7;
+             }
+         }
+     }
+     
+     .footer-social__item {
+         a {
+             transition: background-color .4s;
+             
+             span {
+                 &::before {
+                     transition: color .4s;
+                 }
+             }
+             
+             &:hover {
+                 background-color: #5C5DF7;
+                 
+                 span {
+                     &::before {
+                         color: #fff;
+                     }
+                 }
+             }
+         }
+     }
+     
+     .footer-copyright__wrapper {
+         a {
+             transition: color .4s;
+             
+             &:hover {
+                 color: #0009F7;
+             }
+         }
+     }
+     
+     /* /Footer */
 }

@@ -1,0 +1,76 @@
+@media (max-width: 1160px) {
+    .header__list {
+        position: absolute;
+        right: 0px;
+        margin: 0px;
+        
+        .header__link {
+            font-size: 0px;
+        }
+        
+        .header__item {
+            margin: 0px;
+        }
+        
+        &.callback {
+            position: relative;
+            
+            .header__item {
+                margin-right: 40px;
+                
+                &:last-child {
+                    margin-right: 0px;
+                }
+            }
+        }
+    }
+    
+    .drop-item {
+        margin: 0px;
+        padding: 0px;
+        
+        span {
+            font-size: 0px;
+        }
+        
+        .icon-arrow-header {
+            font-size: 0px;
+        }
+    }
+    
+    .header-burger {
+        display: block;
+        order: 2;
+    }
+    
+    .burger-menu__wrapper {
+        left: auto;
+        right: 0px;
+        &.active {
+            animation: burger-media 0.8s;
+        }
+    }
+    
+    @keyframes burger-media {
+        0% {
+            right: -500px;
+            opacity: 0;
+        }
+        
+        60% {
+            right: 30px;
+            opacity: .7;
+        }
+        
+        
+        80% {
+            right: -30px;
+            opacity: .9;
+        }
+        
+        100% {
+            right: 0px;
+            opacity: 1;
+        }
+    }
+}

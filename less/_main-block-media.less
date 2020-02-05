@@ -1,0 +1,178 @@
+@media (max-width: 1160px) {
+    /* Main Section */
+    
+    .main-section__wrapper {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 50px;
+        height: auto;
+        margin-bottom: 70px;
+    }
+    
+    .main-section__decor {
+        width: 465px;
+        height: 445px;
+        position: relative;
+        right: 0px;
+        top: 0px;
+        flex-shrink: 0;
+        
+        .pattern {
+            display: none;
+        }
+    }
+    
+    .main-section__info {
+        margin-top: 55px;
+        padding-top: 0px;
+        width: 100%;
+        order: 2;
+        text-align: center;
+        
+        p {
+            margin: 23px 0px 32px;
+        }
+        
+        .main_button-color {
+            margin: 0px auto;
+        }
+    }
+    /* /Main Section */
+    
+    /* Main info */
+    
+    .main-info__list {
+        flex-wrap: wrap;
+        margin-bottom: 35px;
+    }
+    
+    .main-info__item {
+        width: calc(50% - 15px);
+        margin-bottom: 55px;
+        
+        h4 {
+            font-size: 20px;
+            line-height: 26px;
+        }
+    }
+    
+    /* /Main info */
+    
+    /* Annoncements */
+    
+    .announcements {
+        padding: 32px 0px;
+    }
+    
+    .announcements__wrapper {
+        &::before {
+            width: 190px;
+            height: 1400px;
+            left: -75px;
+        }
+    }
+    
+    .filter__list {
+        flex-wrap: wrap;
+        padding-left: 0px;
+        margin-right: -25px;
+    }
+    
+    .filter__item {
+        background-color: #E7E7FF;
+        margin-bottom: 24px;
+        color: #7884AC;
+        margin-right: 25px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    
+    .workshops__list {
+        justify-content: space-between;
+        margin-right: 0px;
+    }
+    .workshops__item {
+        width: calc(50% - 15px);
+        margin-right: 0px;
+    }
+    
+    /* /Annoncements */
+    
+    
+    /* Corporate Training */
+    
+    .corporate-training__wrapper {
+        flex-direction: column;
+        margin-bottom: 22px;
+    }
+    
+    .corporate-training__decor {
+        margin-bottom: 32px;
+        
+        .pattern {
+            display: none;
+        }
+        
+        .decor {
+            width: 100%;
+            height: 352px;
+            margin-left: 0px;
+        }
+    }
+    
+    /* /Corporate Training */
+    
+    /* Corporate calc */
+    
+    .corporate-calc__wrapper {
+        &::before {
+            display: none;
+        }
+        
+        > .wrapper {
+            padding: 24px 32px 75px;
+        }
+    }
+    
+    .corporate-calc__body {
+        flex-direction: column;
+        margin-top: 16px;
+        margin-bottom: 50px;
+    }
+    
+    .corporate-calc__input {
+        width: 100%;
+        margin-bottom: 32px;
+    }
+    
+    .corporate-calc__list{
+        width: 100%;
+    }
+    
+    .corporate-calc__footer {
+        .info {
+            width: calc(50% - 15px);
+        }
+        
+        .wrapper {
+            width: calc(50% - 15px);
+        }
+        
+        .about-price {
+            font-size: 14px;
+            line-height: 21px;
+        }
+    }
+    
+    .corporate-calc__final-price {
+        flex-direction: column;
+        align-items: flex-start;
+        
+        .main_button-color {
+            max-width: 100%;
+            margin-top: 16px;
+        }
+    }
+}
