@@ -35,6 +35,18 @@
         &:hover {
             background-color: #DDDDFE;
             color: #0009F7;
+            
+            .filter-icon {
+                &::before {
+                    color: #0009F7;
+                }
+            }
+        }
+        
+        .filter-icon {
+            &::before {
+                transition: color .4s;
+            }
         }
     }
     
@@ -92,6 +104,18 @@
                      }
                  }
              }
+         }
+     }
+     
+     /* /Bottons */
+     
+     /* Breadcrumbs */
+     
+     .breadcrumbs__item {
+         transition: color .4s;
+         
+         &:hover {
+             color: #0009F7;
          }
      }
      

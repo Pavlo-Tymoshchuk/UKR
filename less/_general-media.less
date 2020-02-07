@@ -1,4 +1,8 @@
 @media (max-width: 1160px) {
+    html.overflow {
+        margin-right: 0px;
+    }
+    
     .container {
         max-width: 768px;
         padding: 0px 27px;
@@ -17,5 +21,185 @@
     .main-caption-s {
         font-size: 24px;
         line-height: 29px;
+    }
+    
+    /* Seo block */
+    
+    .seo-block__wrapper {
+        p {
+            margin-bottom: 24px;
+        }
+    }
+    
+    .seo-caption-m {
+        font-size: 24px;
+        line-height: 130%;
+        margin-bottom: 8px;
+    }
+    
+    .seo-caption-s {
+        font-size: 20px;
+        line-height: 130%;
+    }
+    
+    /* /Seo block */
+    
+    /* Filter */
+    
+    .filter__list {
+        flex-wrap: wrap;
+        padding: 0px;
+        margin-right: -6px;
+        margin-top: 16px;
+        
+    }
+    
+    .filter__item {
+        background-color: #F0F0FA;
+        margin-bottom: 8px;
+        color: #7884AC;
+        margin-right: 6px;
+        padding: 13px 19px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    
+    .announcements__wrapper {
+        .filter__item {
+            background-color: #E7E7FF;
+            
+            &.active {
+                background-color: #DDDDFE;
+            }
+        }
+    }
+    
+    /* /Filter */
+}
+
+
+@media (max-width: 768px) {
+     .container {
+        max-width: 380px;
+        padding: 0px 20px;
+    }
+    
+    .main-caption-l {
+        font-size: 24px;
+        line-height: 32px;
+    }
+    
+    .main_button-color {
+        max-width: 100%;
+    }
+    
+    .main_button {
+        max-width: 100%;
+    }
+    
+    .main-caption-s {
+        text-align: center;
+    }
+    
+    /* Filter */
+    
+    .filter__wrapper {
+        position: relative;
+        z-index: 1;
+        margin-top: 24px;
+        
+        &.active {
+            z-index: 2;
+            
+            .filter__list {
+                opacity: 1;
+                z-index: 1;
+                transition: opacity 0.4s;
+            }
+            
+            .filter-mobile {
+                .icon-drop-icon {
+                    transform: rotate(180deg);
+                }
+            }
+            
+        }
+        
+        .filter-mobile {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0px 20px;
+            height: 47px;
+            background-color: #fff;
+            border-radius: 30px;
+            color: #7884AC;
+            font-weight: 700;
+            box-shadow: 0px 4px 15px rgba(200, 204, 218, 0.2);
+            
+            p {
+                display: flex;
+                align-items: center;
+            }
+            
+            .icon-drop-icon {
+                font-size: 9px;
+                transition: transform .4s;
+            }
+            
+            .filter-icon {
+                font-size: 14px;
+                padding-right: 8px;
+            }
+            
+            .icon-save-work {
+                font-size: 12px;
+            }
+            
+            .icon-all {
+                font-size: 5px;
+            }
+        }
+        
+        .filter__list {
+            position: absolute;
+            left: 0px;
+            margin: 0px;
+            top: calc(100% + 5px);
+            width: 100%;
+            opacity: 0;
+            background: #FFFFFF;
+            border-radius: 30px;
+            z-index: -1;
+            overflow: auto;
+            box-shadow: 0px 4px 15px rgba(200, 204, 218, 0.2);
+        }
+        
+        .filter__item {
+            width: 100%;
+            background-color: #fff;
+            padding: 16px 16px 12px 20px;
+            margin: 0px;
+            border-radius: 0px;
+            
+            &.active {
+                background-color: #DDDDFE;
+            }
+            
+            .filter-icon {
+                display: inline-block;
+                width: 27px;
+            }
+        }
+    }
+    
+    /* /Filter */
+    
+    /* Seo block */
+    
+    .seo-block {
+        margin-bottom: 56px;
     }
 }

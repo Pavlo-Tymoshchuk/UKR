@@ -144,14 +144,24 @@ document.addEventListener("DOMContentLoaded", function(event) {
          // //Button effect
     }
     
+     if ('NodeList' in window && !NodeList.prototype.forEach) {
+        NodeList.prototype.forEach = function (callback, thisArg) {
+        thisArg = thisArg || window;
+        for (var i = 0; i < this.length; i++) {
+            callback.call(thisArg, this[i], i, this);
+        }
+        };
+    }
+    
     // Header
     
     let burger = document.querySelector('.header-burger');
     let burgerList = document.querySelector(".burger-menu__wrapper");
+    let burgerClose = document.querySelector('.close-burger');
 
     burger.addEventListener('click', function(){
-        this.classList.toggle('active');
-        burgerList.classList.toggle("active");
+        burgerList.classList.add("active");
+        document.querySelector('html').classList.add('overflow');
     });
 
     document.addEventListener('click', function(e){
@@ -159,8 +169,13 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
         if(!elem.closest(".header-burger") && !elem.closest(".burger-menu__wrapper")) {
             burgerList.classList.remove('active');
-            burger.classList.remove('active');
+            document.querySelector('html').classList.remove('overflow');
         }
+    });
+    
+    burgerClose.addEventListener('click', function(){
+        burgerList.classList.remove('active');
+        document.querySelector('html').classList.remove('overflow');
     });
 
     // /Header
@@ -247,6 +262,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
     showMoreInfo();
     
+    window.addEventListener('resize', function(){
+        showMoreInfo();
+    });
+    
     // /More info
     
     // Check input
@@ -328,4 +347,241 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     
     // /Popup
+    
+    // Drop list
+    
+    var dropList = document.querySelectorAll('.filter__wrapper');
+
+    document.addEventListener('click', function(e){
+        let element = e.target;
+        
+        if(element.closest('.filter-mobile')){
+            let isActive = element.closest('.filter__wrapper').classList.contains('active')? true: false;
+            
+            dropList.forEach(item => {item.classList.remove('active')});
+            
+            if(isActive)
+                element.closest('.filter__wrapper').classList.remove('active');
+            else
+                element.closest('.filter__wrapper').classList.add('active');
+        }
+        
+        if(element.closest('.filter__item')){
+            let value = element.closest('.filter__item').innerHTML;
+            let droplist = element.closest('.filter__wrapper');
+            let dropItems = droplist.querySelectorAll('.filter__item');
+            
+            dropItems.forEach(item => {item.classList.remove('active')});
+            element.closest('.filter__item').classList.add('active');
+            
+            // past value
+            droplist.querySelector('.filter-mobile p').innerHTML = value;
+            
+            // close dropdown
+            droplist.classList.remove('active');
+        }
+    });
+    
+    document.querySelector('body').addEventListener('click', function(event){
+        if(!event.target.closest('.filter__wrapper')) {
+            document.querySelectorAll('.filter__wrapper').forEach(function(item){
+                item.classList.remove('active');
+            }); 
+        }
+    });
+    
+    // Drop list
+    
+    // Map block 
+    
+    let svgPath = document.querySelectorAll('.svg-content path');
+    let hoverDiv = document.querySelector('.hover-map');
+    let mapitem = document.querySelectorAll('.region__item');
+    
+    document.addEventListener('mouseover', function(e){
+        let item = e.target;
+        
+        if(item.closest('.svg-content path')) {
+            let box = item.getBoundingClientRect();
+            let targetId = item.getAttribute('data-target');
+            let stepLeft = 0;
+            let stepTop = 0;
+            
+            if(targetId == "odessa") {
+                stepLeft = 25;
+                positionPercent(box, stepLeft, stepTop);
+            }
+            
+            if(targetId == "kiev") {
+                stepLeft = -10;
+                stepTop = 10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "sum") {
+                stepTop = 20;
+                stepLeft = -10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "kherson") {
+                stepLeft = 10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+                
+            if(targetId == "kirovo") {
+                stepLeft = 10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "cherkass") {
+                stepLeft = 15;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "roven") {
+                stepLeft = 10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "chernovitska") {
+                stepLeft = -10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            if(targetId == "khmelnitsk") {
+                stepLeft = -5;
+                stepTop = 10;
+                positionPercent(box, stepLeft, stepTop)
+            }
+            
+            
+            positionPercent(box,stepLeft,stepTop);
+            
+            for(var i = 0; svgPath.length > i; i++) {
+                svgPath[i].classList.remove("active");
+            }
+            
+            for(var i = 0; mapitem.length > i; i++) {
+                mapitem[i].classList.remove("active");
+            }
+            
+            document.querySelector('.region__item[data-target='+ targetId +']').classList.add('active');
+            
+            item.classList.add('active');
+        }
+        
+        if(item.closest('.region__item')) {
+            let targetId = item.closest('.region__item').getAttribute('data-target');
+            let svgItem = document.querySelector('.svg-content path[data-target='+ targetId +']');
+            let stepLeft = 0;
+            let stepTop = 0;
+            
+            if(svgItem !== null) {
+                let box = svgItem.getBoundingClientRect();
+                
+                if(targetId == "odessa") {
+                    stepLeft = 25;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "kiev") {
+                    stepLeft = -10;
+                    stepTop = 10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "sum") {
+                    stepTop = 20;
+                    stepLeft = -10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "kherson") {
+                    stepLeft = 10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "kirovo") {
+                    stepLeft = 10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "cherkass") {
+                    stepLeft = 15;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "roven") {
+                    stepLeft = 10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "chernovitska") {
+                    stepLeft = -10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+                if(targetId == "khmelnitsk") {
+                    stepLeft = -5;
+                    stepTop = 10;
+                    positionPercent(box, stepLeft, stepTop)
+                }
+                
+            
+                positionPercent(box,stepLeft,stepTop);
+                
+                for(var i = 0; svgPath.length > i; i++) {
+                    svgPath[i].classList.remove("active");
+                }
+                
+                svgItem.classList.add('active');
+            }
+            
+        }
+    });
+    
+    mapitem.forEach((item) => {
+        item.addEventListener('mouseout', function(e){
+            hideBlock();
+        });
+    });
+    
+    svgPath.forEach((item) => {
+        item.addEventListener('mouseout', function(e){
+            if(!e.relatedTarget.closest('.hover-map')) {
+                hideBlock();
+            }
+        });
+    });
+
+    
+    function hideBlock() {
+        svgPath.forEach(function(item){
+            item.classList.remove("active");
+        });
+        
+        mapitem.forEach(function(item){
+            item.classList.remove("active");
+        });
+        
+        hoverDiv.style.left = "-1000px";
+        
+        document.querySelector('html').classList.remove('overflow');
+    }
+    
+    function positionPercent(box,stepLeft,stepTop){
+        let wrapper = document.querySelector('.svg-map').getBoundingClientRect();
+        let wrapperLeft = wrapper.left;
+        let wrapperTop = wrapper.top;
+        let widthBox = box.width;
+        let heightBox = box.height;
+        let leftPosition = (box.left - wrapperLeft)   + (widthBox / 3) + stepLeft;
+        let topPosition =  (box.top - wrapperTop) + (heightBox / 3) + stepTop;
+        
+        hoverDiv.style.left = '' + leftPosition + 'px';
+        hoverDiv.style.top = '' + topPosition + 'px';
+    }
+    
+    // /Map block 
 });

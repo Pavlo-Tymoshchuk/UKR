@@ -50,7 +50,7 @@ html.overflow {
   height: auto;
   position: relative;
   overflow: hidden !important;
-  margin-right: 18px;
+  margin-right: 17px;
 }
 
 body {
@@ -197,7 +197,7 @@ body {
     height: 47px;
     box-shadow: 0px 4px 15px rgba(200, 204, 218, 0.2);
     border-radius: 30px;
-    background: #fff;
+    background: transparent;
     padding-left: 25px;
     outline: none;
     border: 1px solid #7884AC;
@@ -230,26 +230,54 @@ body {
 }
 /* Filter */
 
+.filter__wrapper {
+    .filter-mobile {
+        display: none;
+    }
+}
+
 .filter__list {
     display: flex;
-    margin-right: -15px;
     margin-top: 30px;
-    padding-left: 110px;
+    padding: 0px 80px;
     position: relative;
+    margin-right: -8px;
 }
 
 .filter__item {
+    display: flex;
+    align-items: center;
     border-radius: 30px;
-    padding: 14px 25px;
-    margin-right: 15px;
+    padding: 13px 20px;
+    margin-right: 8px;
     font-weight: 700;
     font-size: 14px;
     cursor: pointer;
     transition: background-color .4s, color .4s;
     
+    
     &.active {
         background-color: #DDDDFE;
         color: #0009F7;
+        
+        .filter-icon {
+            &::before {
+                color: #0009F7;
+            }
+        }
+    }
+    
+    .filter-icon {
+        font-size: 14px;
+        padding-right: 8px;
+    }
+    
+    .icon-save-work {
+        font-size: 12px;
+    }
+    
+    .icon-all {
+        font-size: 5px;
     }
 }
 
@@ -283,4 +311,46 @@ body {
     font-size: 24px;
     line-height: 31px;
     margin-bottom: 16px;
+}
+
+/* /Seo block */
+
+
+/* Breadcrumbs */
+
+.breadcrumbs {
+    margin: 40px 0px 24px;
+}
+
+.breadcrumbs__list {
+    display: flex;
+}
+
+.breadcrumbs__item {
+    margin-right: 11px;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        right: -6px;
+        bottom: 6px;
+        height: 14px;
+        width: 1px;
+        background-color: #3C4153;
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    &.active {
+        pointer-events: none;
+        color: #636C8A;
+        margin-right: 0px;
+        
+        &::before {
+            display: none;
+        }
+    }
 }

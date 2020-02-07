@@ -43,16 +43,13 @@
     
     .main-info__list {
         flex-wrap: wrap;
-        margin-bottom: 35px;
+        margin-bottom: 80px;
     }
     
     .main-info__item {
-        width: calc(50% - 15px);
-        margin-bottom: 55px;
-        
         h4 {
-            font-size: 20px;
-            line-height: 26px;
+            font-size: 18px;
+            line-height: 23px;
         }
     }
     
@@ -61,31 +58,14 @@
     /* Annoncements */
     
     .announcements {
-        padding: 32px 0px;
+        padding: 27px 0px 32px;
     }
     
     .announcements__wrapper {
         &::before {
             width: 190px;
-            height: 1400px;
+            height: 1100px;
             left: -75px;
-        }
-    }
-    
-    .filter__list {
-        flex-wrap: wrap;
-        padding-left: 0px;
-        margin-right: -25px;
-    }
-    
-    .filter__item {
-        background-color: #E7E7FF;
-        margin-bottom: 24px;
-        color: #7884AC;
-        margin-right: 25px;
-        
-        &:last-child {
-            margin-bottom: 0px;
         }
     }
     
@@ -103,9 +83,10 @@
     
     /* Corporate Training */
     
+    
     .corporate-training__wrapper {
         flex-direction: column;
-        margin-bottom: 22px;
+        margin-bottom: 40px;
     }
     
     .corporate-training__decor {
@@ -127,6 +108,8 @@
     /* Corporate calc */
     
     .corporate-calc__wrapper {
+        margin-bottom: 55px;
+        
         &::before {
             display: none;
         }
@@ -134,6 +117,11 @@
         > .wrapper {
             padding: 24px 32px 75px;
         }
+    }
+    
+    .corporate-topics__sub {
+        margin-top: 16px;
+        font-size: 14px;
     }
     
     .corporate-calc__body {
@@ -174,5 +162,588 @@
             max-width: 100%;
             margin-top: 16px;
         }
+    }
+    
+    /* /Corporate calc */
+    
+    /* Corporate topics */
+    
+    .corporate-topics__list {
+        margin: 16px 0px 32px;
+    }
+
+    .corporate-topics__wrapper {
+        margin-bottom: 80px;
+        
+        &::before {
+            height: 975px;
+            top: 280px;
+            left: -70px;
+            width: 180px;
+        }
+    }
+    
+    .topic__main-info {
+        font-size: 20px;
+        line-height: 26px;
+    }
+    
+    .corporate-topic__item {
+        height: 182px;
+        margin-bottom: 27px;
+        
+        a {
+            padding: 24px 32px 40px;
+        }
+        
+        .info {
+            font-size: 16px;
+        }
+        
+        .topic-footer {
+            right: 30px;
+            bottom: 24px;
+        }
+    }
+    
+    .corporate-training__item {
+        margin-bottom: 16px;
+        
+        h4 {
+            font-size: 20px;
+            line-height: 150%;
+         }
+    }
+    
+    /* /Corporate topics */
+    
+    /* Trust us */
+    
+    .trust-us__wrapper {
+        margin-bottom: 80px;
+    }
+    
+    .trust-us__sub-info {
+        padding: 0px 70px;
+    }
+    
+    .trust-us__company__list {
+        margin-top: 50px;
+    }
+    
+    .trust-us__company__item {
+        height: 55px;
+        
+        .img {
+            padding: 0px 11px;
+        }
+    }
+    
+    .trust-us__list {
+        margin-top: 70px;
+    }
+    
+    .trust-us__item {
+        .number {
+            font-size: 48px;
+            line-height: 48px;
+        }
+    }
+    
+    /* /Trust us */
+    
+    /* Reviews */
+    
+    .reviews {
+        padding: 32px 0px;
+    }
+    
+    .reviews__list {
+        height: 224px;
+    }
+    
+    .reviews__wrapper {
+        &::before {
+            width: 193px;
+            height: 304px;
+            right: 0px;
+            top: -40px;
+        }
+    }
+    
+    .reviews__item {
+        width: calc(100% - 54px);
+        height: 224px;
+        transform: translateX(-850px);
+        
+        &.show {
+            + .reviews__item {
+                transform: translateX(850px);
+                opacity: 0;
+            }
+        }
+        
+        .content {
+            max-height: 48px;
+        }
+    }
+    
+    .more_info {
+        top: -5px;
+    }
+    
+    /* /Reviews */
+    
+    /* Notyfication block */
+    
+    .notyfication__wrapper {
+        margin-bottom: 80px;
+        
+        &::before {
+            display: none;
+        }
+        
+        &::after {
+            display: none;
+        }
+    }
+    
+    .notyfication-sub {
+        margin-top: 24px;
+    }
+    
+    .notyfication-subscription {
+        padding: 30px 31px;
+    }
+    
+    /* /Notyfication block */
+    
+    /* Important-to-us*/
+    
+     .important-to-us__wrapper {
+        margin-bottom: 100px;
+    }
+    
+    .important-to-us__list {
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-top: 32px;
+    }
+   
+    .important-to-us__item {
+        width: calc(50% - 15px);
+        margin-bottom: 54px;
+        padding: 30px 24px 50px;
+        
+        &:first-child {
+            margin-right: 30px;
+        }
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    
+    /* /Important-to-us*/
+    
+    /* Helpfulp */ 
+    
+    .helpful-info {
+        margin-bottom: 50px;
+    }
+    
+    .helpful-info__item {
+        width: calc(33.33% - 30px);
+        margin-bottom: 80px;
+    }
+    
+    .helpful-info__link {
+        width: 214px;
+        height: 118px;
+        padding: 20px 30px 50px;
+    }
+    
+    /* /Helpful */
+}
+
+
+@media (max-width: 768px) {
+    /* Main Section */
+    
+    .main-section__wrapper {
+        margin-bottom: 56px;
+    }
+    
+    .main-section__decor {
+        width: 100%;
+        height: 270px;
+    }
+    
+    .main-section__info {
+        p {
+            margin: 16px 0px;
+        }
+    }
+    
+    /* /Main Section */
+    
+    /* Main info */
+    
+    .main-info__list {
+        margin-bottom: 15px;
+    }
+    
+    .main-info__item {
+        width: 100%;
+        margin-bottom: 40px;
+    }
+    
+    /* /Main info */
+    
+    /* Annoncements */
+    
+    .announcements {
+        padding: 16px 0px 24px;
+    }
+    
+    .announcements__wrapper {
+        &::before {
+            display: none;
+        }
+    }
+    
+    .workshops__list {
+        margin-top: 16px;
+    }
+    
+    .workshops__item {
+        width: 100%;
+        min-height: 330px;
+        margin-bottom: 16px;
+        
+        > .wrapper {
+            padding: 20px 20px 10px;
+        }
+    }
+    
+    .workshops-content {
+        font-size: 20px;
+        line-height: 26px;
+        max-height: 78px;
+    }
+    
+    /* /Annoncements */
+    
+    /* Corporate Training */
+    
+    .corporate-training__decor {
+        height: 157px;
+        
+        .decor {
+            height: 157px;
+        }
+    }
+    
+    /* /Corporate Training */
+    
+    /* Corporate calc */
+    
+    .corporate-calc__wrapper {
+        .main-caption-s {
+            text-align: center;
+        }
+        
+        > .wrapper {
+            padding: 16px 20px 32px;
+        }
+    }
+    
+    .corporate-calc__list {
+        flex-direction: column;
+    }
+    
+    .corporate-calc__footer {
+        flex-direction: column;
+        
+        .info {
+            order: 2;
+            width: 100%;
+            margin-top: 32px;
+        }
+        
+        .wrapper {
+            width: 100%;
+        }
+    }
+    
+    /* Corporate calc */
+    
+    /* Corporate topics */
+    
+    
+    .corporate-topics__wrapper {
+        margin-bottom: 56px;
+        
+        &::before {
+            display: none;
+        }
+    }
+    
+    .corporate-topics__sub {
+        text-align: center;
+    }
+    
+    .corporate-topics__list {
+        position: relative;
+        z-index: 1;
+        margin: 16px 0px;
+    }
+    
+    .corporate-topic__item {
+        height: 292px;
+        position: relative;
+        margin-bottom: 16px;
+        
+        a {
+            padding: 20px;
+        }
+        
+        .info {
+            font-size: 14px;
+            line-height: 21px;
+        }
+        
+        .topic-time {
+            position: absolute;
+            bottom: 20px;
+            left: 20px;
+        }
+        
+         .topic-footer {
+            right: 20px;
+            bottom: 20px;
+        }
+    }
+    
+    
+    .topic__main-info {
+        font-size: 20px;
+        line-height: 26px;
+        padding-right: 30px;
+    }
+    
+    
+    
+    /* /Corporate topics */
+    
+    /* Trust us */
+    
+    .trust-us__sub-info {
+        padding: 0px;
+        margin-top: 16px;
+    }
+    
+    .trust-us__company__list {
+        margin-top: 16px;
+        flex-wrap: wrap;
+    }
+    
+    .trust-us__company__item {
+        width: calc(50% - 10px);
+        height: 75px;
+        margin-bottom: 20px;
+    }
+    
+    .trust-us__list {
+        margin-top: 36px;
+        flex-direction: column;
+    }
+    
+    .trust-us__item {
+        width: 100%;
+        margin-bottom: 50px;
+        
+        &::before {
+            width: 100%;
+            height: 2px;
+            right: 0px;
+            bottom: -25px;
+        }
+        
+        &:last-child {
+            margin-bottom: 0px;
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
+    
+    .trust-us__wrapper {
+        margin-bottom: 56px;
+    }
+    
+    /* /Trust us */
+    
+    /* Reviews */
+    
+    .reviews__wrapper {
+        &::before {
+            display: none;
+        }
+    }
+    
+    .reviews__list {
+        margin-top: 12px;
+        height: 376px;
+    }
+    
+    .reviews__item {
+        padding: 20px;
+        width: calc(100% - 40px);
+        height: 376px;
+        transform: translateX(-600px);
+        
+        .content {
+            max-height: 168px;
+        }
+        
+        &.show + .reviews__item {
+            transform: translateX(600px);
+        }
+    }
+    
+    .reviews__item-wrapper {
+        height: 150px;
+        position: relative;
+    }
+    
+    .reviews__name {
+        margin-bottom: 55px;
+    }
+    
+    .more_info {
+        top: -10px;
+    }
+    
+    .reviews__img {
+        position: absolute;
+        right: 0px;
+        bottom: 40px;
+    }
+    
+    .buttons__wrapper {
+        position: relative;
+        height: 115px;
+        align-items: flex-start;
+        margin-top: 16px;
+        
+        .main_button {
+            position: absolute;
+            left: 0px;
+            bottom: 0px;
+            margin: 0px;
+        }
+        
+        .slider-button {
+            &:nth-child(1) {
+                margin-right: 20px;
+            }
+        }
+    }
+    
+    /* /Reviews */
+    
+    /* Notification */
+    
+    .notyfication {
+        padding-top: 56px;
+    }
+    
+    .notyfication-sub {
+        margin-top: 16px;
+    }
+    
+    .notyfication__wrapper {
+        margin-bottom: 56px;
+        
+        .wrapper {
+            margin-top: 24px;
+            flex-direction: column;
+        }
+    }
+    
+    .notyfication__list {
+        width: 100%;
+    }
+    
+    .notyfication-subscription {
+        width: 100%;
+    }
+    
+    .notyfication__item {
+        position: relative;
+        padding: 15px;
+        margin-top: 70px;
+        margin-bottom: 0px;
+        
+        .custome-radio {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            top: -32px;
+            margin: 0px auto;
+        }
+    }
+    
+    .notyfication-subscription {
+        margin-top: 32px;
+        padding: 15px;
+    }
+    
+    /* /Notification */
+    
+    /* Important-to-us*/
+    
+    .important-to-us__item {
+        padding: 16px 20px 30px;
+        width: 100%;
+        min-height: 206px;
+        margin-bottom: 60px;
+        
+        &:first-child {
+            margin-right: 0px;
+        }
+        
+        .main_button {
+            left: 0px;
+            bottom: -35px;
+        }
+    }
+    
+    /* /Important-to-us*/
+    
+    /* Helpfulp */
+    
+    .helpful-info {
+        margin-bottom: 20px;
+    }
+    
+    .helpful-info__item {
+        width: 100%;
+        
+        .img {
+            width: 68%;
+            height: 180px;
+        }
+        
+        .helpful-info__link {
+            width: 82%;
+        }
+    }
+    
+    .helpful-info__link {
+        height: 135px;
+        padding: 24px 22px 50px;
     }
 }

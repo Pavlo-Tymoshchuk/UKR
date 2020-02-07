@@ -53,15 +53,19 @@
 
 /* Main info */
 
+.main-info {
+    position: relative;
+    z-index: 2;
+}
 .main-info__list {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 60px;
+    margin-bottom: 115px;
 }
 
 .main-info__item {
     text-align: center;
-    width: calc(25% - 15px);
+    width: calc(33.33% - 15px);
     
     h4 {
         font-size: 16px;
@@ -69,7 +73,7 @@
     }
     
     .icon-img {
-        margin: 0px auto 8px;
+        margin: 0px auto 16px;
         width: 65px;
         height: 65px;
         background-repeat: no-repeat;
@@ -96,7 +100,7 @@
         content: "";
         position: absolute;
         left: -200px;
-        top: -90px;
+        top: 260px;
         position: absolute;
         width: 384px;
         height: 915px;
@@ -113,14 +117,17 @@
 
 .workshops__item {
     width: 350px;
-    min-height: 362px;
+    min-height: 373px;
     margin-right: 30px;
     border-radius: 30px;
-    padding: 40px 40px 15px;
     position: relative;
     margin-bottom: 32px;
     z-index: 1;
     transition: z-index 0s .2s;
+    
+    a {
+        text-decoration: none;
+    }
     
     > .wrapper {
         display: flex;
@@ -135,8 +142,6 @@
         transition: background-color .6s, color .6s;
         border-radius: 30px;
         z-index: 1;
-        text-decoration: none;
-        
     }
     
     &:hover {
@@ -206,6 +211,11 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    h3 {
+        font-size: 36px;
+        line-height: 53px;
+    }
     
     span {
         &::before {
@@ -436,6 +446,10 @@
     }
 }
 
+.corporate-topics__sub {
+    margin-top: 10px;
+}
+
 .corporate-topics__list {
     margin: 32px 0px;
 }
@@ -527,21 +541,22 @@
     margin-top: 55px;
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .trust-us__company__item {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0px 20px;
-    width: calc(16.66% - 15px);
+    width: calc(16.66% - 25px);
     height: 95px;
-    background-color: #fff;
     border-radius: 20px;
     
     .img {
         width: 100%;
         height: 100%;
+        padding: 0px 20px;
+        background-color: #fff;
         background-position: center;
         background-size: contain;
         background-repeat: no-repeat;
@@ -583,6 +598,8 @@
         line-height: 20px;
     }
 }
+
+/* /Trust us */
 
 /* Reviews */
 
@@ -670,7 +687,9 @@
     left: 0px;
     top: 5px;
     color: #0009F7;
-    font-weight: 600;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 12px;
     
     &.show {
         display: block;
@@ -718,9 +737,12 @@
 
 /* Notyfication block */
 
+.notyfication {
+    padding-top: 75px;
+}
+
 .notyfication__wrapper {
     margin-bottom: 150px;
-    padding-top: 70px;
     position: relative;
     z-index: 1;
     
@@ -851,7 +873,7 @@
 
 .notyfication-subscription {
     width: calc(50% - 15px);
-    padding: 55px 55px 70px;
+    padding: 55px 55px;
     background-color: #fff;
     border-radius: 30px;
     
@@ -991,20 +1013,22 @@
 /* Helpfulp */
 
 .helpful-info {
-    margin-bottom: 200px;
+    margin-bottom: 150px;
     position: relative;
     z-index: 1;
 }
 
 .helpful-info__list {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
     margin-top: 48px;
+    margin-right: -30px;
 }
 
 .helpful-info__item {
-    width: calc(25% - 20px);
+    width: calc(25% - 30px);
     position: relative;
+    margin-right: 30px;
     
     .img {
         width: 160px;
@@ -1012,7 +1036,7 @@
         border-radius: 20px;
         background-position: center;
         background-repeat: no-repeat;
-        background-position: center;
+        background-size: cover;
     }
 }
 
@@ -1055,4 +1079,262 @@
             transition: color .4s;
         }
     }
+}
+
+/* /Helpfulp */
+
+/* Our clients */
+
+.our-clients {
+    
+    .trust-us__company__list {
+        margin-top: 175px;
+        position: relative;
+        
+        &::before {
+            content: "";
+            width: 760px;
+            height: 465px;
+            background:url(../img/pattern.png) repeat center;
+            right: -160px;
+            top: -240px;
+            position: absolute;
+            z-index: -1;
+        }
+    }
+    
+    .trust-us__company__item {
+        flex-direction: column;
+        text-align: center;
+        margin-bottom: 33px;
+        height: auto;
+        
+        
+        .img {
+            flex-shrink: 0;
+            height: 93px;
+        }
+        
+        .name-company {
+            font-size: 14px;
+            line-height: 21px;
+            font-weight: 700;
+            margin-top: 16px;
+        }
+    }
+    
+    .trust-us__item {
+        &::before {
+            display: none;
+        }
+    }
+    
+    .trust-us__list {
+        margin-top: 100px;
+    }
+}
+
+/* Manufacturing */
+
+.manufacturing {
+    margin-bottom: 150px;
+}
+
+.manufacturing__wrapper {
+    position: relative;
+    min-height: 365px;
+}
+
+.canvas__wrapper {
+    width: 365px;
+    height: 365px;
+    margin: 0px auto;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left:0px;
+    right: 0px;
+    z-index: 1;
+}
+
+.manufacturing__list {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 580px;
+}
+
+.manufacturing-hover-elem {
+    position: absolute;
+    pointer-events: none;
+    color: #5C5DF7;
+    font-weight: 700;
+    opacity: 0;
+    
+    p {
+        &::after {
+            content: "%";
+            
+        }
+    }
+}
+
+.legent__item {
+    width: 50%;
+    margin-bottom: 16px;
+    padding-left: 24px;
+    position: relative;
+    cursor: pointer;
+    transition: color .4s, text-shadow .4s;
+    
+    &:nth-child(6n) {
+        margin-bottom: 56px;
+    }
+    
+    &::before {
+        content: "";
+        position: absolute;
+        left: 0px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #D9DBF5;
+        transition: background-color .4s;
+    }
+    
+    &:hover {
+        color: #5C5DF7;
+        text-shadow: 1px 0px 0px #5C5DF7;
+        
+        &::before {
+            background-color: #5C5DF7;
+        }
+    }
+}
+
+/* /Manufacturing */
+
+/* Map Ukraine */
+
+.map-ukraine__wrapper {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 150px;
+    
+    .svg-map {
+        height: 385px;
+        width: 540px;
+        position: relative;
+    }
+    
+    .svg-content {
+        path {
+            cursor: pointer;
+            transition: fill .4s;
+            
+            &.active {
+                fill: #7C85F4;
+            }
+        }
+    }
+}
+
+.hover-map {
+    position: absolute;
+    left: -1000px;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 1px 0px 0px #ccc;
+    cursor: pointer;
+}
+
+.region-caption {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+}
+
+.region__list {
+    -ms-columns: 2;
+    -webkit-columns: 2;
+    columns: 2;
+}
+
+.region__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 16px;
+    transition: color .2s, text-shadow .2s;
+    cursor: pointer;
+    
+    &:hover {
+        color: #5C5DF7;
+        text-shadow: 1px 0px 0px #5C5DF7;
+         
+        .icon-drop-icon {
+            opacity: 1;
+        }
+    }
+    
+    &.active {
+        color: #5C5DF7;
+        text-shadow: 1px 0px 0px #5C5DF7;
+         
+        .icon-drop-icon {
+            opacity: 1;
+        }
+    }
+    
+    .icon-drop-icon {
+        display: inline-block;
+        font-size: 7px;
+        transform: rotate(-90deg);
+        padding-top: 8px;
+        opacity: 0;
+        transition: opacity .2s;
+        text-shadow: none;
+        
+        &::before {
+            color: #5C5DF7;
+        }
+    }
+}
+
+/* /Map Ukraine */
+
+/* Clients Callback */
+
+.clients-callback {
+    margin-bottom: 80px;
+}
+
+.clients-callback__wrapper {
+    .wrapper {
+        max-width: 540px;
+        text-align: center;
+        margin: 0px auto;
+    }
+    
+    h4 {
+        font-size: 24px;
+        line-height: 130%;
+        margin-bottom: 16px;
+    }
+    
+    .clints-callback__form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .input_wrapper {
+        margin: 32px 0px;
+        text-align: left;
+        width: 368px;
+    }
+    
+    
 }

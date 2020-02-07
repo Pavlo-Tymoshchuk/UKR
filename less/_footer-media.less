@@ -1,0 +1,113 @@
+@media (max-width: 1160px) {
+    
+    /* Footer */
+    
+    .footer__wrapper {
+        padding-top: 33px;
+        padding-bottom: 17px;
+    }
+    
+    .footer-contact {
+        width: calc(65% - 15px);
+    }
+    
+    .footer-social {
+        flex-direction: column;
+        width: calc(35% - 15px);
+    }
+    
+    .footer-social__wrapper {
+        &:nth-child(1) {
+            margin-right: 0px;
+            margin-bottom: 24px;
+            
+            &::before {
+                display: none;
+            }
+        }
+    }
+    
+    .footer-social__item {
+        margin-right: 20px;
+    }
+    
+    .footer-contact__list {
+        margin-bottom: 44px;
+    }
+    
+    .footer-contact__item {
+        width: 50%;
+        
+        &:nth-child(2n) {
+            width: 50%;
+        }
+    }
+    
+    .footer-id-company {
+        width: 100%;
+    }
+    
+    .footer-copyright {
+        padding: 16px 0px;
+    }
+}
+
+
+@media (max-width: 768px) {
+    /* Footer */
+    
+    .footer__wrapper {
+        padding-top: 25px;
+        padding-bottom: 90px;
+        flex-direction: column;
+        position: relative;
+    }
+    
+    .footer-contact__list {
+        max-height: 100%;
+        margin: 16px 0px 24px;
+    }
+    
+    .footer-contact__item {
+        width: 100%;
+        
+        &:nth-child(2n) {
+            width: 100%;
+        }
+        
+        &:nth-child(2) {
+            margin-bottom: 24px;
+        }
+    }
+    
+    .footer-id-company {
+        width: calc(100% - 40px);
+        position: absolute;
+        left: 20px;
+        bottom: 24px;
+    }
+    
+    .footer-social {
+        width: 100%;
+    }
+    
+    .footer-copyright {
+        padding: 24px 0px;
+    }
+    
+    .footer-copyright__wrapper {
+        flex-direction: column;
+        
+        p {
+            &:nth-child(1) {
+                order: 3;
+            }
+        }
+        
+        a {
+            display: block;
+            margin: 16px 0px;
+            order: 2;
+        }
+    }
+}
