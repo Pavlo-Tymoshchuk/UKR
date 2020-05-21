@@ -180,7 +180,92 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
     // /Header
 
+    
+    // mainSLider
+    
+    let arrows = document.querySelectorAll(".js-arrows");
+    
+     function initialSlider() {
+        for(var i = 0;arrows.length > i; i++) {
+            let slider = arrows[i].closest(".slider");
+            let arrowNext = arrows[i].querySelector('.js-next');
+            let arrowPrev = arrows[i].querySelector('.js-prev');
+            let allItems = slider.querySelectorAll('.js-slider-item').length;
+            
+            if(allItems < 2) {
+                arrowNext.classList.add("disabled");
+            }
+            
+            arrowNext.addEventListener('click', function() {
+                let itemShow = slider.querySelector('.js-slider-item.show');
+                let itemElseShow = slider.querySelector('.js-slider-item-else.active');
+                
+                if(slider.querySelector('.js-slider-item.show').nextElementSibling == null) {
+                    return;
+                }
+                
+                
+                arrowPrev.classList.remove('disabled');
+                
+                if(itemElseShow) {
+                    itemElseShow.nextElementSibling.classList.add('active');
+                    itemElseShow.classList.remove('active');
+                }
+                
+                itemShow.nextElementSibling.classList.add('show');
+                itemShow.classList.remove('show');
+                
+                if(slider.querySelector('.js-slider-item.show').nextElementSibling == null) {
+                    arrowNext.classList.add('disabled');
+                }
+            });
+            
+            arrowPrev.addEventListener('click', function() {
+                let itemShow = slider.querySelector('.js-slider-item.show');
+                let itemElseShow = slider.querySelector('.js-slider-item-else.active');
+                
+                if(slider.querySelector('.js-slider-item.show').previousElementSibling == null) {
+                    return;
+                }
+                
+                arrowNext.classList.remove('disabled');
+                
+                if(itemElseShow) {
+                    itemElseShow.previousElementSibling.classList.add('active');
+                    itemElseShow.classList.remove('active');
+                }
+                
+                itemShow.previousElementSibling.classList.add('show');
+                itemShow.classList.remove('show');
+                
+                if(slider.querySelector('.js-slider-item.show').previousElementSibling == null) {
+                    arrowPrev.classList.add('disabled');
+                }
+            });
 
+            var startPointX;
+            var startPointY;
+            slider.addEventListener("touchstart", function(event) {
+                startPointX = event.changedTouches[0].screenX;
+                startPointY = event.changedTouches[0].screenY;
+            }, false);
+            slider.addEventListener("touchend", function(event){
+                var endPointX = event.changedTouches[0].screenX;
+                var endPointY = event.changedTouches[0].screenY;
+                
+                if(startPointX - endPointX > 40) {
+                    arrowNext.click();
+                } else if(endPointX - startPointX > 40) {
+                    arrowPrev.click();
+                }
+            }, false);
+        }
+    }
+    
+
+    initialSlider();
+    
+    // /Main SLider
 
     // Infinity slider 
 
@@ -268,25 +353,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     // /More info
     
-    // Check input
-    
-    document.addEventListener('click', function(e){
-        let elem = e.target;
-        
-        if(elem.closest('.notyfication__item')) {
-            let notyItem = document.querySelectorAll('.notyfication__item');
-            
-            for(var i = 0;notyItem.length > i; i++) {
-                notyItem[i].classList.remove('active');
-            }
-            
-            elem.closest('.notyfication__item').classList.add('active');
-        }
-    });
-    
-    // //Check input
-    
-     // Popup
+    // Popup
         
     let mainButton = document.querySelectorAll('.js-button');
     let overlay = document.querySelector('.overlay');
@@ -297,10 +364,15 @@ document.addEventListener("DOMContentLoaded", function(event) {
             
             mainButton[i].addEventListener('click', function(){
                 let getData = this.getAttribute('data-target');
+                let popupActive = document.querySelector('.popup.active');
                 let popup = document.querySelector('.popup[data-target = ' + getData + ']');
                 popup.classList.add('active');
                 overlay.classList.add('active');
-                htmlOverflow.classList.add('overflow')
+                htmlOverflow.classList.add('overflow');
+                
+                if(popupActive) {
+                    popupActive.classList.remove('active');
+                }
             });
         }
     }
@@ -316,6 +388,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 htmlOverflow.classList.remove('overflow');
             }
             
+            if(popupActive) {
+                popupActive.classList.remove('active');
+                htmlOverflow.classList.remove('overflow');
+            }
         }
     });
 
@@ -348,49 +424,68 @@ document.addEventListener("DOMContentLoaded", function(event) {
     
     // /Popup
     
-    // Drop list
+    // Drop
     
-    var dropList = document.querySelectorAll('.filter__wrapper');
+    var dropList = document.querySelectorAll('.js-drop-item');
+
 
     document.addEventListener('click', function(e){
         let element = e.target;
         
-        if(element.closest('.filter-mobile')){
-            let isActive = element.closest('.filter__wrapper').classList.contains('active')? true: false;
+        if(element.closest('.js-drop-button')){
+            let isActive = element.closest('.js-drop-item').classList.contains('active')? true: false;
             
             dropList.forEach(item => {item.classList.remove('active')});
             
             if(isActive)
-                element.closest('.filter__wrapper').classList.remove('active');
+                element.closest('.js-drop-item').classList.remove('active');
             else
-                element.closest('.filter__wrapper').classList.add('active');
+                element.closest('.js-drop-item').classList.add('active');
         }
         
-        if(element.closest('.filter__item')){
-            let value = element.closest('.filter__item').innerHTML;
-            let droplist = element.closest('.filter__wrapper');
-            let dropItems = droplist.querySelectorAll('.filter__item');
+        if(element.closest('.js-drop-contains')){
+            let dropList = element.closest('.js-drop-item');
+            let dropItems = dropList.querySelectorAll('.js-drop-contains');
             
             dropItems.forEach(item => {item.classList.remove('active')});
-            element.closest('.filter__item').classList.add('active');
+            element.closest('.js-drop-contains').classList.add('active');
+            let innerContent = element.closest('.js-drop-contains').querySelector('.text').innerHTML;
+            let dropInput = dropList.querySelector('.js-drop-input');
+            let dropInfo = dropList.querySelector('.js-drop-info');
             
-            // past value
-            droplist.querySelector('.filter-mobile p').innerHTML = value;
+            if(dropInfo) {
+                dropInfo.innerHTML = innerContent;
+            }
             
+            if(dropInput) {
+                dropInput.value = innerContent;
+            }
+
             // close dropdown
-            droplist.classList.remove('active');
+            dropList.classList.remove('active');
         }
     });
     
     document.querySelector('body').addEventListener('click', function(event){
-        if(!event.target.closest('.filter__wrapper')) {
-            document.querySelectorAll('.filter__wrapper').forEach(function(item){
+        
+        let dropItem = event.target.closest('.js-drop-item');
+        
+        if(!dropItem) {
+            document.querySelectorAll('.js-drop-item').forEach(function(item){
                 item.classList.remove('active');
             }); 
         }
+        if(dropItem) {
+            if(!dropItem.classList.contains("active")) {
+                document.querySelectorAll('.js-drop-item').forEach(function(item){
+                    item.classList.remove('active');
+                });
+            }
+        }
+        
     });
     
-    // Drop list
+    // //Drop
     
     // Map block 
     
@@ -583,5 +678,102 @@ document.addEventListener("DOMContentLoaded", function(event) {
         hoverDiv.style.top = '' + topPosition + 'px';
     }
     
-    // /Map block 
+    // /Map block
+    
+    // Add reviews photo
+
+    let fileInput = document.querySelector('.js-input-file');
+    let preview = document.querySelector('.add-reviews__photo');
+    let previewImg;
+    
+    if(preview) {
+        previewImg = preview.getAttribute('style');
+    }
+    
+    if(fileInput) {
+        fileInput.addEventListener("change",function(){
+            let file = fileInput.files[0];
+            let reader = new FileReader();
+            reader.onloadend = function () {
+                let src = reader.result;
+                preview.setAttribute("style",`background-image: url(${src})`);
+                
+                preview.classList.add('active');
+            }
+
+            if (file) {
+                reader.readAsDataURL(file);
+            } else {
+                preview.src = "";
+            }
+        });
+        
+        let clearInput = document.querySelector('.clear-file-input');
+
+        clearInput.addEventListener('click',function(){
+            preview.setAttribute("style",`${previewImg}`);
+            preview.classList.remove('active');
+            preview.querySelector('.js-input-file').value = null;
+        });
+    }
+    
+    // //Add rivews photo
+    
+    // Print 
+    
+    // Stars 
+    
+    let starsItem = document.querySelectorAll('.js-star-item');
+    let starInput = document.querySelector('.js-stars-input');
+    let starList = document.querySelector('.js-star-list');
+    starsItem.forEach((item) =>{
+        item.addEventListener('click',function(){
+            let starValuse = item.getAttribute('data-target');
+            starInput.setAttribute('value', starValuse);
+            starList.classList.add('checked');
+            
+            for(var i = 0; starsItem.length > i; i++) {
+                starsItem[i].classList.remove('active');
+            }
+            item.classList.add('active');
+        });
+    });
+});
+
+
+window.addEventListener("DOMContentLoaded", function() {
+    [].forEach.call( document.querySelectorAll('input[type="tel"]'), function(input) {
+    var keyCode;
+    function mask(event) {
+        event.keyCode && (keyCode = event.keyCode);
+        var pos = this.selectionStart;
+        if (pos < 3) event.preventDefault();
+        var matrix = "+38(___)-___-____",
+            i = 0,
+            def = matrix.replace(/\D/g, ""),
+            val = this.value.replace(/\D/g, ""),
+            new_value = matrix.replace(/[_\d]/g, function(a) {
+                return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+            });
+        i = new_value.indexOf("_");
+        if (i != -1) {
+            i < 5 && (i = 3);
+            new_value = new_value.slice(0, i)
+        }
+        var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+            function(a) {
+                return "\\d{1," + a.length + "}"
+            }).replace(/[+()]/g, "\\$&");
+        reg = new RegExp("^" + reg + "$");
+        if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+        if (event.type == "blur" && this.value.length < 5)  this.value = ""
+    }
+  
+    input.addEventListener("input", mask, false);
+    input.addEventListener("focus", mask, false);
+    input.addEventListener("blur", mask, false);
+    input.addEventListener("keydown", mask, false)
+  
+  });
+  
 });

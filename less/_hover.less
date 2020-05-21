@@ -1,4 +1,52 @@
 @media (min-width: 1160px) {
+    
+    /* General */
+    
+    .general-more,
+    .clear-file-input,
+    .more_info {
+        &:hover {
+            color: #0007cc;
+        }
+    }
+    
+    .policy-link {
+        &:hover {
+            color: #5C5DF7;
+        }
+    }
+    
+    .add-person {
+        &:hover {
+            color: #0007cc;
+            
+            .decor {
+                transform: rotate(90deg);
+            }
+        }
+    }
+    
+    .main_input {
+        &:hover {
+            border-color: #3C4153;
+        }
+    }
+    
+    .general-drop__item {
+        &:hover {
+            background-color: rgba(120, 132, 172, 0.15);
+        }
+    }
+    
+    .main-button-shadow {
+        &:hover {
+            color: #0007cc;
+            box-shadow: 0px 4px 8px rgba(60, 65, 83, 0.3);
+        }
+    }
+    
+    /* // General */
+    
     /* Header */
     
     .header__item {
@@ -55,35 +103,24 @@
      /* Noty */
      .notyfication__item {
          &:hover {
-             background-color: #F0F0FA;
+             .notyfication__info {
+                 color: #5C5DF7;
+             }
          }
      }
      
-     .notyfication-subscription__item {
+     .checkbox__wrapper {
          &:hover {
              color: #0009F7;
              
              .custome-check {
                  border-color: #5C5DF7;
              }
-             
-             input {
-                &:checked {
-                    + .custome-check {
-                        border-color: #0009F7;
-                        background-color: #0009F7;
-                    }
-                    
-                    ~ .text {
-                        color: #0009F7 !important;
-                    }
-                }
-            }
          }
      }
      /* /Noty */
      
-     /* Bottons */
+     /* Buttons */
      
      .buttons__wrapper {
          .slider-button {
@@ -107,7 +144,7 @@
          }
      }
      
-     /* /Bottons */
+     /* /Buttons */
      
      /* Breadcrumbs */
      
@@ -116,6 +153,17 @@
          
          &:hover {
              color: #0009F7;
+         }
+     }
+     
+     /* //Breadcrumbs */
+     
+     /* Calendar */
+     
+     .calendar__slider__button {
+         &:hover {
+            color: #0009F7;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.17);
          }
      }
      
@@ -164,4 +212,74 @@
      }
      
      /* /Footer */
+     
+     /* Popup */
+     
+     .close__popup {
+         &:hover {
+             color: #000000;
+             transform: rotate(90deg);
+         }
+     }
+     
+     .add-photo-input__decor {
+         &:hover {
+             color: #0009F7; 
+         }
+     }
+
+    
+    .stars__list {
+        &:hover {
+            .icon-star {
+                &::before {
+                    content: "\e913";
+                }
+            }
+        }
+    }
+    
+    .stars__item {
+        &:hover {
+            ~ .stars__item {
+                .icon-star {
+                    &::before {
+                        content: "\e914" !important;
+                    }
+                }
+            }
+        }
+    }
+    
+    .popup-teacher__course-item {
+        a {
+            &:hover {
+                color: #5C5DF7;
+            }
+        }
+    }
+    
+    .add-reviews-button {
+        &:hover {
+            color: #5C5DF7;
+        }
+    }
+    
+    .popup-teacher__reviews__item {
+        .more_info {
+            &:hover {
+                color: #0009F7;
+            }
+        }
+    }
+    
+    /* //Popup */
+    
+    /* Contact */
+    
+    a.contacts__item__descrip {
+        &:hover {
+            color: #0009F7;
+        }
+    }
 }

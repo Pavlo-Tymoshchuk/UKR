@@ -1,15 +1,33 @@
-@media (max-width: 1160px) {
+@media (max-width: 1280px) {
+    .header__list {
+        &.callback {
+            margin-left: 40px;
+        }
+    }
+    
+    .header__wrapper {
+        padding: 16px 25px;
+    }
+}
+
+@media (max-width: 1210px) {
+    .header__wrapper {
+        padding: 16px 20px;
+    }
+    
     .header__list {
         display: none;
         
         &.callback {
             display: flex;
+            margin-left: 0px;
         }
     }
     
     .header-burger {
         display: block;
         order: 2;
+        margin-right: 5px;
     }
     
     .burger-menu__wrapper {
@@ -107,7 +125,10 @@
     }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 576px) {
+    .header__wrapper {
+        padding: 8px 20px;
+    }
     
     .header__list {
         &.callback {

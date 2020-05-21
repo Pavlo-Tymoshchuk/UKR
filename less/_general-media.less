@@ -1,11 +1,11 @@
-@media (max-width: 1160px) {
+@media (max-width: 1210px) {
     html.overflow {
         margin-right: 0px;
     }
     
     .container {
         max-width: 768px;
-        padding: 0px 27px;
+        padding: 0px 20px;
     }
     
     .main-caption-l {
@@ -14,8 +14,8 @@
     }
     
     .main-caption-m {
-        font-size: 36px;
-        line-height: 47px;
+        font-size: 30px;
+        line-height: 100%;
     }
     
     .main-caption-s {
@@ -77,30 +77,25 @@
     }
     
     /* /Filter */
+    
+    /* Breadcrums */
+    
+    .breadcrumbs {
+        margin: 32px 0px 24px;
+    }
+    
+    /* //Breadcrums */
 }
 
 
-@media (max-width: 768px) {
+@media (max-width: 767px) {
      .container {
-        max-width: 380px;
-        padding: 0px 20px;
+        max-width: 576px;
     }
     
     .main-caption-l {
         font-size: 24px;
         line-height: 32px;
-    }
-    
-    .main_button-color {
-        max-width: 100%;
-    }
-    
-    .main_button {
-        max-width: 100%;
-    }
-    
-    .main-caption-s {
-        text-align: center;
     }
     
     /* Filter */
@@ -120,7 +115,7 @@
             }
             
             .filter-mobile {
-                .icon-drop-icon {
+                .icon-drop {
                     transform: rotate(180deg);
                 }
             }
@@ -144,8 +139,8 @@
                 align-items: center;
             }
             
-            .icon-drop-icon {
-                font-size: 9px;
+            .icon-drop {
+                font-size: 10px;
                 transition: transform .4s;
             }
             
@@ -202,4 +197,28 @@
     .seo-block {
         margin-bottom: 56px;
     }
+}
+
+@media screen and (max-width: 576px) {
+    .main-caption-m {
+        font-size: 30px;
+        line-height: 100%;
+    }
+    
+    .main_button-color {
+        max-width: 100%;
+    }
+    
+    .main_button,
+    .main-button-shadow {
+        max-width: 100%;
+    }
+    
+    /* Breadcrums */
+    
+    .breadcrumbs {
+        margin: 16px 0px;
+    }
+    
+    /* //Breadcrums */
 }
