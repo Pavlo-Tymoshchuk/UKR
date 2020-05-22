@@ -2045,7 +2045,9 @@ body {
 .calendar__table {
   border-collapse: collapse;
   width: 100%;
-  margin-left: -12px;
+}
+.calendar__table__header {
+  color: #636C8A;
 }
 .calendar__table__tr {
   height: 42px;
@@ -2067,7 +2069,7 @@ body {
   position: absolute;
   height: 52px;
   width: 42px;
-  left: -4px;
+  left: 0px;
   top: -7px;
   background-color: rgba(0, 9, 247, 0.15);
 }
@@ -2075,11 +2077,13 @@ body {
   opacity: 0;
 }
 .calendar__table__item-event-days.first-day .event_wrapper {
+  width: 46px;
+  left: -4px;
   border-top-left-radius: 30px;
   border-bottom-left-radius: 30px;
 }
 .calendar__table__item-event-days.last-day .event_wrapper {
-  width: 45px;
+  left: 0px;
   border-top-right-radius: 30px;
   border-bottom-right-radius: 30px;
 }
