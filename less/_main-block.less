@@ -1273,6 +1273,139 @@
     width: 100%;
 }
 
+.calendar__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.calendar__date {
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 150%;
+}
+
+.calendar__buttons {
+    display: flex;
+    align-items: center;
+}
+
+.calendar__button {
+    font-size: 16px;
+    color: #0009F7;
+    transition: color .4s;
+    
+    &:first-child {
+        margin-right: 30px;
+    }
+}
+
+.calendar__table {
+    border-collapse: collapse;
+    width: 100%;
+    margin-left: -12px;
+}
+
+.calendar__table__tr {
+    height: 42px;
+}
+
+.calendar__table__item {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+}
+
+.calendar__table__item-disabled {
+    color: #C1C7DD;
+    pointer-events: none;
+}
+
+.calendar__table__other-moth {
+    font-size: 0px;
+    pointer-events: none;
+}
+
+.calendar__table__item-event-days {
+    .event_wrapper {
+        position: absolute;
+        height: 52px;
+        width: 42px;
+        left: -4px;
+        top: -7px;
+        background-color: rgba(0, 9, 247, 0.15);
+    }
+    
+    .calendar__table__data {
+        &:not(.calendar__table__data-active) {
+            &::before {
+                opacity: 0;
+            }
+        }
+    }
+    
+    &.first-day {
+        .event_wrapper {
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+        }
+    }
+    
+    &.last-day {
+        .event_wrapper {
+            width: 45px;
+            border-top-right-radius: 30px;
+            border-bottom-right-radius: 30px;
+        }
+    }
+}
+
+.calendar__table__data {
+    display: block;
+    padding: 12px;
+    text-decoration: none;
+    font-weight: 700;
+    position: relative;
+    
+    &::before {
+        content: "";
+        position: absolute;
+        top: -2px;
+        left: 0px;
+        width: 42px;
+        height: 42px;
+        border-radius: 50%;
+        background: rgba(0, 9, 247, 0.15);
+        opacity: 0;
+        transition: opacity .4s;
+        z-index: -1;
+    }
+}
+
+.calendar__table__data-active {
+    color: #ffffff;
+    
+    &::before {
+        background-color: #0009F7;
+        opacity: 1;
+    }
+}
+
+.calendar__table__data-event-future {
+    &::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 4px;
+        width: 8px;
+        height: 8px;
+        border-radius: 50%;
+        background-color: #0009F7;
+    }
+}
+
 .calendar__info {
     width: 782px;
     padding: 30px;
