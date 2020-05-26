@@ -2,11 +2,24 @@
     
     /* General */
     
-    .general-more,
+    .main_button-color {
+        &.active {
+            .decor {
+            clip-path: circle(400px at center);
+            }
+        }
+    }
+    
     .clear-file-input,
     .more_info {
         &:hover {
             color: #0007cc;
+        }
+    }
+    
+    .general-more {
+        &:hover {
+            color: #373FFF;
         }
     }
     
@@ -38,10 +51,24 @@
         }
     }
     
-    .main-button-shadow {
+    .main-button-shadow,
+    .slider-button {
         &:hover {
-            color: #0007cc;
-            box-shadow: 0px 4px 8px rgba(60, 65, 83, 0.3);
+            color: #0009F7;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+        }
+    }
+    
+    .main_button {
+        &:hover {
+            background-color: #FAFAFF;
+            color: #0009F7;
+        }
+    }
+    
+    .filter-button {
+        &:hover {
+            color: #0009F7;
         }
     }
     
@@ -77,24 +104,81 @@
     
     /* /Header */
     
+    /* Workshops */
+    
+    .workshops__item {
+        &:hover {
+            z-index: 2;
+            transition: z-index 0s 0s;
+            
+            .workshops__item__wrapper {
+                box-shadow: 0px 0px 8px rgba(60, 65, 83, 0.25);
+            }
+        }
+    }
+    
+    .workshops-content {
+        &:hover {
+            max-height: 350px;
+            display: block;
+            transition: max-height 1.5s, display 0s 0s, color .4s;
+        }
+    }
+    
+    .info-button {
+        &:hover {
+            background-color: #5C5DF7;
+        }
+    }
+    
+    .workshops-content {
+        &:hover {
+            color: #5C5DF7;
+        }
+    }
+    
+    /* //Worksgops */
+    
+    /* Clients */
+    .legent__item {
+        &:hover {
+            color: #5C5DF7;
+            text-shadow: 0.1px 0px 0px #5C5DF7;
+            
+            &::before {
+                background-color: #5C5DF7;
+            }
+        }
+    }
+    
+    .region__item {
+        &:hover {
+            color: #5C5DF7;
+            text-shadow: 0.1px 0px 0px #5C5DF7;
+            
+            .icon-drop-icon {
+                opacity: 1;
+            }
+        }
+    }
+    
+    /* //Clients */
+    
+    /* Corporate topics */
+    
+    .corporate-topic__item {
+        &:hover {
+            color: #5C5DF7;
+        }
+    }
+    
+    /* //Corporate topics */
+    
     /* Filter */
     
     .filter__item {
         &:hover {
-            background-color: #DDDDFE;
             color: #0009F7;
-            
-            .filter-icon {
-                &::before {
-                    color: #0009F7;
-                }
-            }
-        }
-        
-        .filter-icon {
-            &::before {
-                transition: color .4s;
-            }
         }
     }
     
@@ -119,32 +203,7 @@
          }
      }
      /* /Noty */
-     
-     /* Buttons */
-     
-     .buttons__wrapper {
-         .slider-button {
-             transition: border-color .4s;
-             
-             span {
-                 &::before {
-                     transition: color .4s;
-                 }
-             }
-             
-             &:hover {
-                 border-color: #0009F7;
-                 
-                 span {
-                     &:before {
-                         color: #0009F7;
-                     }
-                 }
-             }
-         }
-     }
-     
-     /* /Buttons */
+    
      
      /* Breadcrumbs */
      
@@ -182,6 +241,14 @@
      }
      
      /* // Calendar */
+     
+     /* Faq */
+     
+     .faq__question__text {
+         &:hover {
+             color: #5C5DF7;
+         }
+     }
      
      /* Footer */
      

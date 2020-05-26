@@ -121,7 +121,7 @@
                         <a href="#">Главная</a>
                     </li>
                     <li class="breadcrumbs__item active">
-                        <a href="#">Вопрос и ответ</a>
+                        <a href="#">Частозадаваемые вопросы</a>
                     </li>
                 </ul>
             </div>
@@ -129,65 +129,85 @@
         <section class="faq">
             <div class="faq__wrapper container">
                 <h2 class="main-caption-m">Часто задаваемые вопросы</h2>
-                <ul class="faq__list">
-                    <li class="faq__item">
-                        <div class="faq__question">
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-1.png);"></div>
-                            <div class="faq__question__text">Как расcчитывается стоимость проведения корпоративного обучающего мероприятия на предприятии, увеличивается ли стоимость при увеличении количества слушателей?</div>
-                        </div>
-                        <div class="faq__answer">
-                            <div class="faq__answer__text">В зависимости от объема его тематики, количества часов обучения и необходимых комплектов раздаточных материалов. Количество слушателей во время обучения не ограничено. Это позволяет обучить персонал в более полном составе при минимальных затратах</div>
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-2.png);"></div>
-                        </div>
-                    </li>
-                    <li class="faq__item">
-                        <div class="faq__question">
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-1.png);"></div>
-                            <div class="faq__question__text">План мероприятий, размещенный на сайте, является окончательным?</div>
-                        </div>
-                        <div class="faq__answer">
-                            <div class="faq__answer__text">Планы проведения семинаров и тренингов могут редактироваться, дополняться мероприятиями по актуальной тематике</div>
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-2.png);"></div>
-                        </div>
-                    </li>
-                    <li class="faq__item">
-                        <div class="faq__question">
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-1.png);"></div>
-                            <div class="faq__question__text">Входит ли в указанную стоимость участия в мероприятии проживание участника и питание?</div>
-                        </div>
-                        <div class="faq__answer">
-                            <div class="faq__answer__text">Стоимость проживания оплачивает заказчик отдельно.  Мы предоставляет услуги бронирования номеров в отелях разного уровня комфортабельности для всех желающих. В цену обязательно входит стоимость обучения и раздаточных материалов, дополнительно может учитываться цена обедов и экскурсии для участников. Конкретная информация дается в каждом пригласительном билете</div>
-                            <div class="faq__img" style="background-image: url(./img/reviews-img-2.png);"></div>
-                        </div>
-                    </li>
-                </ul>     
-            </div>
-        </section>
-        <section class="ask-question">
-            <div class="ask-qustion__wrapper container">
-                <div class="ask-qustion__container">
-                    <h3 class="main-caption-s">Задайте свой вопрос</h3>
-                    <form action="#" class="ask-qustion__form">
-                        <label class="input_wrapper">
-                            <span class="input-caption">Ваше имя</span>
-                            <input type="text" class="main_input" placeholder="Имя">
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">E-mail*</span>
-                            <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Номер телефона</span>
-                            <input type="tel" class="main_input" placeholder="+380934882556">
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Ваш вопрос</span>
-                            <textarea class="main_input main_input-textarea" placeholder="Напишите вопрос..."></textarea>
-                        </label>
-                        <button class="main_button-color js-button-decor">
-                            <span class="text">ОТПРАВИТЬ</span>
-                        </button>
-                    </form>
+                <div class="faq__container">
+                    <ul class="faq__list">
+                        <li class="faq__item js-drop-item">
+                            <div class="faq__question">
+                                <button class="faq__question__text js-drop-button">
+                                    <span class="text">Как расcчитывается стоимость проведения корпоративного обучающего мероприятия на предприятии, увеличивается ли стоимость при увеличении количества слушателей?</span>
+                                    <span class="icon-drop"></span>
+                                </button>
+                            </div>
+                            <div class="faq__answer">
+                                <div class="faq__answer__text">
+                                    <p>В зависимости от объема его тематики, количества часов обучения и необходимых комплектов раздаточных материалов. Количество слушателей во время обучения не ограничено. Это позволяет обучить персонал в более полном составе при минимальных затратах</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item js-drop-item">
+                            <div class="faq__question">
+                                <button class="faq__question__text js-drop-button">
+                                    <span class="text">План мероприятий, размещенный на сайте, является окончательным?</span>
+                                    <span class="icon-drop"></span>
+                                </button>
+                            </div>
+                            <div class="faq__answer">
+                                <div class="faq__answer__text">
+                                    <p>Планы проведения семинаров и тренингов могут редактироваться, дополняться мероприятиями по актуальной тематике/p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item js-drop-item">
+                            <div class="faq__question">
+                                <button class="faq__question__text js-drop-button">
+                                    <span class="text">Входит ли в указанную стоимость участия в мероприятии проживание участника и питание?</span>
+                                    <span class="icon-drop"></span>
+                                </button>
+                            </div>
+                            <div class="faq__answer">
+                                <div class="faq__answer__text">
+                                    <p>В зависимости от объема его тематики, количества часов обучения и необходимых комплектов раздаточных материалов. Количество слушателей во время обучения не ограничено. Это позволяет обучить персонал в более полном составе при минимальных затратах</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="faq__item js-drop-item">
+                            <div class="faq__question">
+                                <button class="faq__question__text js-drop-button">
+                                    <span class="text">Входит ли в указанную стоимость участия в мероприятии проживание участника и питание?</span>
+                                    <span class="icon-drop"></span>
+                                </button>
+                            </div>
+                            <div class="faq__answer">
+                                <div class="faq__answer__text">
+                                    <p>В зависимости от объема его тематики, количества часов обучения и необходимых комплектов раздаточных материалов. Количество слушателей во время обучения не ограничено. Это позволяет обучить персонал в более полном составе при минимальных затратах</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="ask-qustion__container">
+                        <h3 class="main-caption-m">Задайте свой вопрос</h3>
+                        <form action="#" class="ask-qustion__form">
+                            <label class="input_wrapper">
+                                <span class="input-caption">Ваше имя</span>
+                                <input type="text" class="main_input" placeholder="Имя">
+                            </label>
+                            <label class="input_wrapper">
+                                <span class="input-caption">E-mail*</span>
+                                <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                            </label>
+                            <label class="input_wrapper">
+                                <span class="input-caption">Номер телефона</span>
+                                <input type="tel" class="main_input" placeholder="+380934882556">
+                            </label>
+                            <label class="input_wrapper">
+                                <span class="input-caption">Ваш вопрос</span>
+                                <textarea class="main_input main_input-textarea" placeholder="Напишите вопрос..."></textarea>
+                            </label>
+                            <button class="main_button-color js-button-decor">
+                                <span class="text">ОТПРАВИТЬ</span>
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

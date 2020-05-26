@@ -568,7 +568,10 @@ document.addEventListener("DOMContentLoaded", function(event) {
         
         if(item.closest('.region__item')) {
             let targetId = item.closest('.region__item').getAttribute('data-target');
+            let valueItem = item.closest('.region__item').getAttribute('data-value');
             let svgItem = document.querySelector('.svg-content path[data-target='+ targetId +']');
+            let hoverItem = document.querySelector('.hover-map');
+            hoverItem.innerHTML = valueItem;
             let stepLeft = 0;
             let stepTop = 0;
             

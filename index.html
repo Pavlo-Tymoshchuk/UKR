@@ -41,6 +41,9 @@
                             <li class="burger-menu__item">
                                 <a href="#">План мероприятий 2020</a>
                             </li>
+                            <li class="burger-menu__item">
+                                <a href="#">Частозадаваемые вопросы</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="header__item">
@@ -99,6 +102,9 @@
                             <li class="burger-menu__item">
                                 <a href="#">План мероприятий 2020</a>
                             </li>
+                            <li class="burger-menu__item">
+                                <a href="#">Частозадаваемые вопросы</a>
+                            </li>
                         </ul>
                         <ul class="burger-menu__list call-back">
                             <li class="burger-menu__item">
@@ -118,15 +124,12 @@
             <div class="main-section__wrapper container">
                 <div class="main-section__info">
                     <h1 class="main-caption-l">Консультационный центр «УкрКонсалтинг»</h1>
-                    <p>25 лет УкрКонсалтинг работает в сфере консалтинга и обучения персонала. Среди наших клиентов большинство крупнейших компаний Украины</p>
-                    <button class="main_button-color js-button-decor">
-                        <span class="text">ЗАПИСАТЬСЯ НА СЕМИНАР</span>
+                    <p class="main-section__text">25 лет УкрКонсалтинг работает в сфере консалтинга и обучения персонала. Среди наших клиентов большинство крупнейших компаний Украины</p>
+                    <button class="main_button-color js-button-decor js-button" data-target="popup-order">
+                        <span class="text">Записаться на семинар</span>
                     </button>
                 </div>
-                <div class="main-section__decor">
-                    <div class="decor-img"></div>
-                    <div class="pattern"></div>
-                </div>
+                <div class="main-section__decor" style="background-image:url(./img/main-img-1.png)"></div>
             </div>
         </section>
         <section class="main-info">
@@ -153,183 +156,157 @@
         <section class="announcements">
             <div class="announcements__wrapper container">
                 <h2 class="main-caption-m">Анонсы мероприятий</h2>
-                <div class="filter__wrapper js-drop-item">
-                    <div class="filter-mobile js-drop-button">
-                        <p class="js-drop-info">
-                            <span class="icon-all filter-icon"></span>
-                            <span>Все</span>
-                        </p>
-                        <span class="icon-drop"></span>
-                    </div>
-                    <ul class="filter__list">
-                        <li class="filter__item active js-drop-contains">
-                            <p class="text">
-                                <span class="icon-all filter-icon"></span>
-                                <span>Все</span>
-                            </p>
-                            
+                <ul class="announcements__list">
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-1.png)">
+                        <h3 class="announcements__theme">Охрана труда</h3>
+                    </li>
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-2.png)">
+                        <h3 class="announcements__theme">Охрана окружающей среды</h3>
+                    </li>
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-3.png)">
+                        <h3 class="announcements__theme">Экономика предприятия</h3>
+                    </li>
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-4.png)">
+                        <h3 class="announcements__theme">Управление персоналом</h3>
+                    </li>
+                </ul>
+                <div class="position-wrapper">
+                    <ul class="workshops__list">
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper js-drop-item">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Харьков</span>
+                                    <span class="icon"></span>
+                                </p>
+                                <a href="#" class="workshops-content">
+                                    Функциональный менеджмент на предприятии
+                                </a>
+                                <p class="workshops-name">Функциональный менеджмент на предприятии</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price_old">3 850 <span>грн</span></p>
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                    <button class="info-button js-drop-button" type="button"></button>
+                                    <div class="info-drop">
+                                        <p>Скидка действует при участии более двух человек с одного предприятия</p>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="filter__item js-drop-contains">
-                            <p class="text">
-                                <span class="icon-save-work filter-icon"></span>
-                                <span>Охрана труда</span>
-                            </p>
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper js-drop-item">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Одесса</span>
+                                    <span class="icon"></span>
+                                </p>
+                                <a href="#" class="workshops-content">
+                                    Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций
+                                </a>
+                                <p class="workshops-name">Управление персоналом</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price_old">3 850 <span>грн</span></p>
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                    <button class="info-button js-drop-button" type="button"></button>
+                                    <div class="info-drop">
+                                        <p>Скидка действует при участии более двух человек с одного предприятия</p>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="filter__item js-drop-contains">
-                            <p class="text">
-                                <span class="icon-save-world filter-icon"></span>
-                                <span>Охрана окружающей среды</span>
-                            </p>
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Харьков</span>
+                                    <span class="icon" style="background-image:url(./img/city-icon-1.svg)"></span>
+                                </p>
+                                <a href="#" class="workshops-content">
+                                    Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций
+                                </a>
+                                <p class="workshops-name">Охрана окружающей среды</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price_old">3 850 <span>грн</span></p>
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="filter__item js-drop-contains">
-                            <p class="text">
-                                <span class="icon-economy filter-icon"></span>
-                                <span>Экономика предприятия</span>
-                            </p>
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Харьков</span>
+                                    <span class="icon"></span>
+                                </p>
+                                <a href="#" class="workshops-content">
+                                    Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций
+                                </a>
+                                <p class="workshops-name">Функциональный менеджмент на предприятии</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
-                        <li class="filter__item js-drop-contains">
-                            <p class="text">
-                                <span class="icon-person filter-icon"></span>
-                                <span>Управление персоналом</span>
-                            </p>
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Харьков</span>
+                                    <span class="icon"></span>
+                                </p>
+                                <a href="#" class="workshops-content">
+                                    Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций
+                                </a>
+                                <p class="workshops-name">Управление персоналом</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="workshops__item">
+                            <div class="workshops__item__wrapper">
+                                <div class="workshops__date">
+                                    <h3>5.04 - 7.04</h3>
+                                </div>
+                                <p class="workshops-city">
+                                    <span>Харьков</span>
+                                    <span class="icon"></span>
+                                </p>
+                                <div class="workshops-content">
+                                    <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
+                                </div>
+                                <p class="workshops-name">Охрана окружающей среды</p>
+                                <div class="price__wrapper">
+                                    <div class="wrapper">
+                                        <p class="price_old">3 850 <span>грн</span></p>
+                                        <p class="price">3 250 <span>грн</span></p>
+                                    </div>
+                                </div>
+                            </div>
                         </li>
                     </ul>
                 </div>
-                <ul class="workshops__list">
-                    <li class="workshops__item benefit-check">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Харьков</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Функциональный менеджмент на предприятии</a>
-                            </div>
-                            <p class="workshops-name">Функциональный менеджмент на предприятии</p>
-                            <div class="price__wrapper">
-                                <div class="benefit">Выгода 600 <span>грн</span></div>
-                                <div class="wrapper">
-                                    <p class="price_old">3 850 <span>грн</span></p>
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="workshops__item">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Одесса</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
-                            </div>
-                            <p class="workshops-name">Управление персоналом</p>
-                            <div class="price__wrapper">
-                                <div class="wrapper">
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="workshops__item benefit-check">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Харьков</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
-                            </div>
-                            <p class="workshops-name">Охрана окружающей среды</p>
-                            <div class="price__wrapper">
-                                <div class="benefit">Выгода 600 <span>грн</span></div>
-                                <div class="wrapper">
-                                    <p class="price_old">3 850 <span>грн</span></p>
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="workshops__item">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Харьков</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
-                            </div>
-                            <p class="workshops-name">Функциональный менеджмент на предприятии</p>
-                            <div class="price__wrapper">
-                                <div class="wrapper">
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="workshops__item">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Харьков</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
-                            </div>
-                            <p class="workshops-name">Управление персоналом</p>
-                            <div class="price__wrapper">
-                                <div class="wrapper">
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="workshops__item benefit-check">
-                        <div class="wrapper">
-                            <div class="workshops__date">
-                                <h3>5.04 - 7.04</h3>
-                                <a href="#"><span class="icon-arrow-left"></span></a>
-                            </div>
-                            <p class="workshops-city">
-                                <span>Харьков</span>
-                                <span class="icon"></span>
-                            </p>
-                            <div class="workshops-content">
-                                <a href="#">Культура безопасности на производстве - фактор снижения рисков несчастных случаев и чрезвычайных ситуаций</a>
-                            </div>
-                            <p class="workshops-name">Охрана окружающей среды</p>
-                            <div class="price__wrapper">
-                                <div class="benefit">Выгода 600 <span>грн</span></div>
-                                <div class="wrapper">
-                                    <p class="price_old">3 850 <span>грн</span></p>
-                                    <p class="price">3 250 <span>грн</span></p>
-                                </div>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-                <button class="main_button js-button-decor">
+                <button class="main_button">
                     <span class="text">СМОТРЕТЬ ВСЕ СЕМИНАРЫ</span>
                 </button>
             </div>
@@ -337,67 +314,68 @@
         <section class="corporate-training">
             <h2 class="main-caption-m">Корпоративное обучение</h2>
             <div class="corporate-training__wrapper container">
-                <div class="corporate-training__decor">
-                    <div class="decor"></div>
-                    <div class="pattern"></div>
+                <div class="corporate-training__decor" style="background-image:url(./img/corporate-img-1.png)"></div>
+                <div class="corporate-training__info">
+                    <div class="corporate-training__text">
+                        <p>КЦ «УкрКонсалтинг» проводит корпоративные семинары, тренинги <strong>с выездом на предприятие</strong> по предложенной заказчиком тематике с постановкой целей и задач</p>
+                        <p><strong>Базовая стоимость</strong> не зависит от колличества слушателей </p>
+                    </div>
+                    <ul class="corporate-training__list">
+                        <li class="corporate-training__item">
+                            <h5 class="corporate-training__item__caption">Экономичность</h5>
+                            <p>Корпоративное обучение наиболее выгодный способ обучить многих специалистов с одного предприятия</p>
+                        </li>
+                        <li class="corporate-training__item">
+                            <h5 class="corporate-training__item__caption">Эффективность</h5>
+                            <p>Во многих случаях корпоративы являются также и наиболее эфективным способом обучения.</p>
+                        </li>
+                        <li class="corporate-training__item">
+                            <h5 class="corporate-training__item__caption">Сертификат</h5>
+                            <p>Все слушатели получат именной сертефикат об участии после окончания занятий</p>
+                        </li>
+                    </ul>
                 </div>
-                <ul class="corporate-training__list">
-                    <li class="corporate-training__item">
-                        <p>КЦ «УкрКонсалтинг» проводит корпоративные семинары, тренинги 
-                            <strong>с выездом на предприятие</strong> по предложенной заказчиком тематике с постановкой целей и задач</p>
-                    </li>
-                    <li class="corporate-training__item">
-                        <p><strong>Базовая стоимость</strong> не зависит от колличества слушателей</p>
-                    </li>
-                    <li class="corporate-training__item">
-                        <h4>Экономичность</h4>
-                        <p>Корпоративное обучение наиболее выгодный способ обучить многих специалистов с одного предприятия</p>
-                    </li>
-                    <li class="corporate-training__item">
-                        <h4>Эффективность</h4>
-                        <p>Во многих случаях корпоративы являются также и наиболее эфективным способом обучения.</p>
-                    </li>
-                    <li class="corporate-training__item">
-                        <h4>Сертификат</h4>
-                        <p>Все слушатели получат именной сертефикат об участии после окончания занятий</p>
-                    </li>
-                </ul>
             </div>
             <div class="corporate-calc__wrapper container">
-                <div class="wrapper">
+                <div class="corporate-calc__container">
                     <h2 class="main-caption-s">Расчитать стоимость корпоративного обучения</h2>
-                    <div class="corporate-calc__body">
-                        <div class="corporate-calc__input">
-                            <h5 class="name">Где находится предприятие?</h5>
-                            <label class="input_wrapper">
-                                <input type="text" class="main_input js-input" placeholder="Харьковская область">
-                            </label>
-                        </div>
-                        <ul class="corporate-calc__list">
-                            <li class="corporate-calc__item">
-                                <h5 class="name">Раздаточных материалов</h5>
-                                <div class="range"></div>
-                            </li>
-                            <li class="corporate-calc__item">
-                                <h5 class="name">Количество сертифика</h5>
-                                <div class="range"></div>
-                            </li>
-                            <li class="corporate-calc__item">
-                                <h5 class="name">Дней обучения</h5>
-                                <div class="range"></div>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="corporate-calc__footer">
-                        <p class="info">Расчитаная сумма является приблизительной. Конечная стоимость может отличаться от указанной как в большую так и в меньшую сторону</p>
-                        <div class="wrapper">
-                            <div class="corporate-calc__final-price">
-                                <p class="price">72 200 грн*</p>
-                                <button class="main_button-color js-button-decor">
-                                    <span class="text">ЗАКАЗАТЬ</span>
-                                </button>
+                    <div class="wrapper">
+                        <div class="corporate-calc__body">
+                            <div class="corporate-calc__input">
+                                <label class="input_wrapper">
+                                    <span class="input-caption">Где находится предприятие?</span>
+                                    <input type="text" class="main_input js-input" placeholder="Харьковская область">
+                                </label>
                             </div>
-                            <p class="about-price">*Стоимость указана без НДС. «КЦ УкрКонсалтинг» не является плательщиком НДС</p>
+                            <ul class="corporate-calc__list">
+                                <li class="corporate-calc__item">
+                                    <h5 class="name">Раздаточных материалов</h5>
+                                    <div class="range"></div>
+                                </li>
+                                <li class="corporate-calc__item">
+                                    <h5 class="name">Количество сертифика</h5>
+                                    <div class="range"></div>
+                                </li>
+                                <li class="corporate-calc__item">
+                                    <h5 class="name">Дней обучения</h5>
+                                    <div class="range"></div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="corporate-calc__footer">
+                            <p class="info">Расчитаная сумма является приблизительной. Конечная стоимость может отличаться от указанной как в большую так и в меньшую сторону</p>
+                            <div class="wrapper">
+                                <div class="corporate-calc__final-price js-drop-item">
+                                    <p class="price">72 200 грн</p>
+                                    <button class="info-button js-drop-button" type="button"></button>
+                                    <button class="main_button-color js-button-decor">
+                                        <span class="text">ЗАКАЗАТЬ</span>
+                                    </button>
+                                    <div class="info-drop">
+                                        <p>Скидка действует при участии более двух человек с одного предприятия</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -405,34 +383,32 @@
             <div class="corporate-topics__wrapper container">
                 <h2 class="main-caption-s">Темы корпоративного обучения</h2>
                 <p class="corporate-topics__sub">Темы могут быть <strong>скорректированы</strong> согласно Вашим требованиям</p>
-                <div class="filter__wrapper">
-                    <div class="filter-mobile">
-                        <p>
-                            <span class="icon-all filter-icon"></span>
-                            <span>Все</span>
-                        </p>
+                <div class="filter__wrapper js-drop-item">
+                    <button class="filter-mobile-button js-drop-button">
+                        <span class="icon-all filter-icon"></span>
+                        <span class="js-drop-info text">Все</span>
                         <span class="icon-drop"></span>
-                    </div>
+                    </button>
                     <ul class="filter__list">
-                        <li class="filter__item active">
+                        <li class="filter__item js-drop-contains active">
                             <span class="icon-all filter-icon"></span>
-                            <span>Все</span>
+                            <span class="text">Все</span>
                         </li>
-                        <li class="filter__item">
+                        <li class="filter__item js-drop-contains">
                             <span class="icon-save-work filter-icon"></span>
-                            <span>Охрана труда</span>
+                            <span class="text">Охрана труда</span>
                         </li>
-                        <li class="filter__item">
+                        <li class="filter__item js-drop-contains">
                             <span class="icon-save-world filter-icon"></span>
-                            <span>Охрана окружающей среды</span>
+                            <span class="text">Охрана окружающей среды</span>
                         </li>
-                        <li class="filter__item">
+                        <li class="filter__item js-drop-contains">
                             <span class="icon-economy filter-icon"></span>
-                            <span>Экономика предприятия</span>
+                            <span class="text">Экономика предприятия</span>
                         </li>
-                        <li class="filter__item">
+                        <li class="filter__item js-drop-contains">
                             <span class="icon-person filter-icon"></span>
-                            <span>Управление персоналом</span>
+                            <span class="text">Управление персоналом</span>
                         </li>
                     </ul>
                 </div>
@@ -446,7 +422,6 @@
                             <h3 class="topic__main-info">Имплементация законодательных актов Европейского Союза в сфере охраны окружающей среды в правовую систему Украины</h3>
                             <div class="topic-footer">
                                 <span class="topic-time">12 часов</span>
-                                <span class="icon-arrow-left topic_arrow"></span>
                             </div>
                         </a>
                     </li>
@@ -459,7 +434,6 @@
                             <h3 class="topic__main-info">Корпоративное мероприятие для экологов, актуальная информация 2020</h3>
                             <div class="topic-footer">
                                 <span class="topic-time">8 часов</span>
-                                <span class="icon-arrow-left topic_arrow"></span>
                             </div> 
                         </a>
                     </li>
@@ -472,7 +446,6 @@
                             <h3 class="topic__main-info">Личная эффективность управленческого персонала</h3>
                             <div class="topic-footer">
                                 <span class="topic-time">8 часов</span>
-                                <span class="icon-arrow-left topic_arrow"></span>
                             </div>
                         </a>
                     </li>
@@ -485,7 +458,6 @@
                             <h3 class="topic__main-info">Эффективная бизнесс-презентация</h3>
                             <div class="topic-footer">
                                 <span class="topic-time">8 часов</span>
-                                <span class="icon-arrow-left topic_arrow"></span>
                             </div>
                         </a>
                     </li>
@@ -498,14 +470,52 @@
                             <h3 class="topic__main-info">Практика организации нормирования труда на предприятии</h3>
                             <div class="topic-footer">
                                 <span class="topic-time">8 часов</span>
-                                <span class="icon-arrow-left topic_arrow"></span>
                             </div>
                         </a>
                     </li>
                 </ul>
-                <button class="main_button js-button-decor">
+                <button class="main_button">
                     <span class="text">СМОТРЕТЬ ВСЕ СЕМИНАРЫ</span>
                 </button>
+            </div>
+        </section>
+        <section class="about-company">
+            <div class="about-company__wrapper container">
+                <h2 class="main-caption-m">О компании</h2>
+                <div class="about-company__container">
+                    <div class="about-company__info">
+                        <div class="about-company__text">
+                            <p>Мы обучаем и консультируем сотрудников Украинских предприятий разного уровня, среднего и крупного бизнеса.</p>
+                            <p>Нашими основными направлениями работы были и остаются:</p>
+                            <ul>
+                                <li>проведение семинаров, тренингов и мастер классов</li>
+                                <li>организация обучающих корпоративных мероприятий консалтинговые услуги</li>
+                                <li>информационно-технические разработки.</li>
+                            </ul>
+                        </div>
+                        <ul class="about-company__list">
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-1.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>22 года УкрКонсалтинг работает в сфере консалтинга и обучения </p>
+                                </div>
+                            </li>
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-2.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>Мы провели около 1000 семинаров различной сложности</p>
+                                </div>
+                            </li>
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-3.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>Среди наших клиенты практически все крупнейшие компании Украины</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="about-company-img" style="background-image: url(./img/about-company-main-img.png);"></div>
+                </div>
             </div>
         </section>
         <section class="trust-us">
@@ -550,14 +560,19 @@
         </section>
         <section class="reviews">
             <div class="reviews__wrapper container slider-infinity">
-                <h2 class="main-caption-m">Отзывы слушателей</h2>
+                <div class="reviews__header">
+                    <h2 class="main-caption-m">Отзывы слушателей</h2>
+                    <a href="#" class="general-more">смотреть все отзывы</a>
+                </div>
                 <ul class="reviews__list js-slider-list">
                     <li class="reviews__item show js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Иван Кротов</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -566,11 +581,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris Сегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -579,11 +596,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -592,11 +611,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -607,17 +628,15 @@
                 </ul>
                 <div class="buttons__wrapper js-arrow-infinity js-item">
                     <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
+                    <button class="main-button-shadow js-button" data-target="add-reviews">
+                        <span class="text">оставить отзыв</span>
+                    </button>
                     <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
-                    <button class="main_button js-button-decor">
-                        <span class="text">СМОТРЕТЬ ВСЕ СЕМИНАРЫ</span>
-                    </button> 
                 </div>
             </div>
         </section>
         <section class="notyfication">
             <div class="notyfication__wrapper container">
-                <!-- <div class="pattern-left"></div>
-                <div class="pattern-right"></div> -->
                 <h2 class="main-caption-m">Уведомления</h2>
                 <p class="notyfication-sub">Как Вы хотели бы получать информацию о свежих мероприятиях?</p>
                 <form action="#" class="notyfication__form">
@@ -684,7 +703,7 @@
                         </div>
                         <div class="notyfication-subscription__footer">
                             <label class="input_wrapper error">
-                                <span class="input-caption">Введите ваш E-mail</p>
+                                <span class="input-caption">Введите ваш E-mail</span>
                                 <input type="email" class="main_input" placeholder="ivanov@gmail.com">
                                 <span class="input-text-error">Пожалуйста, введите ваш e-mail в формате: ivanov@gmail.com</span>
                             </label>
@@ -703,21 +722,21 @@
                     <li class="important-to-us__item">
                         <h4 class="type">Были на семинаре?</h4 >
                         <p class="content">Оцените организационную работу и работу преподавателей. Опишите что Вам понравилось и что необходимо улучшить</p>
-                        <button class="main_button js-button-decor">
+                        <button class="main-button-shadow js-button" data-target="add-reviews">
                             <span class="text">ОСТАВИТЬ ОТЗЫВ</span>
                         </button> 
                     </li>
                     <li class="important-to-us__item">
                         <h4 class="type">Хотите предложить тему?</h4>
                         <p class="content">Опишите темы или программы семинаров которые Вы хотели бы посетить.</p>
-                        <button class="main_button js-button-decor">
+                        <button class="main-button-shadow js-button" data-target="popup-theme">
                             <span class="text">ПРЕДЛОЖИТЬ ТЕМУ</span>
                         </button> 
                     </li>
                     <li class="important-to-us__item">
                         <h4 class="type">Ответьте на несколько вопросов</h4>
                         <p class="content">Ответьте на несколько вопросов в опроснике – это позволит нам повысить качество предоставляемых услуг.</p>
-                        <button class="main_button js-button-decor">
+                        <button class="main-button-shadow js-button" data-target="popup-questions">
                             <span class="text">ЗАПОЛНИТЬ АНКЕТУ</span>
                         </button> 
                     </li>
@@ -729,32 +748,32 @@
                 <h2 class="main-caption-m">Полезная информация</h2>
                 <ul class="helpful-info__list">
                     <li class="helpful-info__item">
-                        <div class="img" style="background-image: url(./img/helpful-img-1.png)"></div>
-                        <a href="#" class="helpful-info__link">
-                            <h5>Календарь мероприятий 2019</h5>
-                            <span class="icon-arrow-left topic_arrow"></span>
-                        </a>
+                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-1.png)"></div>
+                        <div class="helpful-info__content">
+                            <h5 class="helpful-info__caption">Календарь мероприятий 2019</h5>
+                            <a href="#" class="general-more">подробнее</a>
+                        </div>
                     </li>
                     <li class="helpful-info__item">
-                        <div class="img" style="background-image: url(./img/helpful-img-2.png)"></div>
-                        <a href="#" class="helpful-info__link">
-                            <h5>Хотите преподавать у нас?</h5>
-                            <span class="icon-arrow-left topic_arrow"></span>
-                        </a>
+                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-2.png)"></div>
+                        <div class="helpful-info__content">
+                            <h5 class="helpful-info__caption">Хотите преподавать у нас?</h5>
+                            <a href="#" class="general-more">подробнее</a>
+                        </div>
                     </li>
                     <li class="helpful-info__item">
-                        <div class="img" style="background-image: url(./img/helpful-img-3.png)"></div>
-                        <a href="#" class="helpful-info__link">
-                            <h5>Гостиницы Харькова</h5>
-                            <span class="icon-arrow-left topic_arrow"></span>
-                        </a>
+                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-3.png)"></div>
+                        <div class="helpful-info__content">
+                            <h5 class="helpful-info__caption">Гостиницы Харькова</h5>
+                            <a href="#" class="general-more">подробнее</a>
+                        </div>
                     </li>
                     <li class="helpful-info__item">
-                        <div class="img" style="background-image: url(./img/helpful-img-4.png)"></div>
-                        <a href="#" class="helpful-info__link">
-                            <h5>Новая услуга. Экологическая к...</h5>
-                            <span class="icon-arrow-left topic_arrow"></span>
-                        </a>
+                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-4.png)"></div>
+                        <div class="helpful-info__content">
+                            <h5 class="helpful-info__caption">Новая услуга. Экологическая к</h5>
+                            <a href="#" class="general-more">подробнее</a>
+                        </div>
                     </li>
                 </ul>
             </div>

@@ -16,7 +16,7 @@
                 <ul class="header__list">
                     <li class="header__item drop-item">
                         <div class="wrapper">
-                            <span>Меню</span>
+                            <span class="text">Меню</span>
                             <span class="icon-drop"></span>
                         </div>
                         <ul class="burger-menu__list">
@@ -40,6 +40,9 @@
                             </li>
                             <li class="burger-menu__item">
                                 <a href="#">План мероприятий 2020</a>
+                            </li>
+                            <li class="burger-menu__item">
+                                <a href="#">Частозадаваемые вопросы</a>
                             </li>
                         </ul>
                     </li>
@@ -99,6 +102,9 @@
                             <li class="burger-menu__item">
                                 <a href="#">План мероприятий 2020</a>
                             </li>
+                            <li class="burger-menu__item">
+                                <a href="#">Частозадаваемые вопросы</a>
+                            </li>
                         </ul>
                         <ul class="burger-menu__list call-back">
                             <li class="burger-menu__item">
@@ -144,7 +150,6 @@
                         <p class="type">Производственных отраслей</p>
                     </li>
                 </ul>
-                <p class="name-company"></p>
                 <ul class="trust-us__company__list">
                     <li class="trust-us__company__item">
                         <div class="img" style="background-image:url(./img/our-trust-img-1.png)"></div>
@@ -226,17 +231,62 @@
         </section>
         <section class="manufacturing">
             <div class="manufacturing__wrapper container">
+                <h2 class="main-caption-m">Отрасли производства</h2>
                 <div class="canvas__wrapper">
                     <canvas id="myChart" width="400" height="400"></canvas>
                     <div id="chartjs-tooltip" class="manufacturing-hover-elem">
                         <p></p>
                     </div>
                 </div>
-                <div id="myChartLegend" class="manufacturing__list"></div>
+                <div id="myChartLegend" class="manufacturing__chart-list"></div>
+                <div class="manufacturing__tablet">
+                    <ul class="manufacturing__list">
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Энергетические и сырьевые ресурсы</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Металлургия и металлообработка</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Машиностроение, оборудование </h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Электрооборудование и устройства</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="main_button">
+                        <span class="text">еще отрасли</span>
+                    </button>
+                </div>
             </div>
         </section>
         <section class="map-ukraine">
             <div class="map-ukraine__wrapper container">
+                <h2 class="main-caption-m">Наши клиенты со всей Украины</h2>
                 <div class="svg-map">
                     <svg class="svg-content" width="540" height="365" viewBox="0 0 540 365" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <mask id="mask0" mask-type="alpha" maskUnits="userSpaceOnUse" x="316" y="281" width="134" height="83">
@@ -275,109 +325,153 @@
                 <div class="region__wrapper">
                     <h5 class="region-caption">Области:</h5>
                     <ul class="region__list">
-                        <li class="region__item" data-target="vin">
+                        <li class="region__item" data-target="vin" data-value="10%">
                             <span>Винницкая</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="volun">
+                        <li class="region__item" data-target="volun" data-value="10%">
                             <span>Волынская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="dnepr">
+                        <li class="region__item" data-target="dnepr" data-value="10%">
                             <span>Днепропетровская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="don">
+                        <li class="region__item" data-target="don" data-value="10%">
                             <span>Донецкая</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="jutomer">
+                        <li class="region__item" data-target="jutomer" data-value="10%">
                             <span>Житомирская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="zakarpat">
+                        <li class="region__item" data-target="zakarpat" data-value="10%">
                             <span>Закарпатская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="zaporoj">
+                        <li class="region__item" data-target="zaporoj" data-value="10%">
                             <span>Запорожская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="ivano">
+                        <li class="region__item" data-target="ivano" data-value="10%">
                             <span>Ивано-Франковская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="kiev">
+                        <li class="region__item" data-target="kiev" data-value="10%">
                             <span>Киевская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="kirovo">
+                        <li class="region__item" data-target="kirovo" data-value="20%">
                             <span>Кировоградская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="lug">
+                        <li class="region__item" data-target="lug" data-value="10%">
                             <span>Луганская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="lviv">
+                        <li class="region__item" data-target="lviv" data-value="10%">
                             <span>Львовская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="nikol">
+                        <li class="region__item" data-target="nikol" data-value="10%">
                             <span>Николаевская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="odessa">
+                        <li class="region__item" data-target="odessa" data-value="10%">
                             <span>Одесская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="poltava">
+                        <li class="region__item" data-target="poltava" data-value="50%">
                             <span>Полтавская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="roven">
+                        <li class="region__item" data-target="roven" data-value="10%">
                             <span>Ровенская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="sum">
+                        <li class="region__item" data-target="sum" data-value="20%">
                             <span>Сумская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="ternopol">
+                        <li class="region__item" data-target="ternopol" data-value="10%">
                             <span>Тернопольская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="kharkiv">
+                        <li class="region__item" data-target="kharkiv" data-value="10%">
                             <span>Харьковская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="kherson">
+                        <li class="region__item" data-target="kherson" data-value="10%">
                             <span>Херсонская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="khmelnitsk">
+                        <li class="region__item" data-target="khmelnitsk" data-value="10%">
                             <span>Хмельницкая</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="cherkass">
+                        <li class="region__item" data-target="cherkass" data-value="10%">
                             <span>Черкасская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="chernigov">
+                        <li class="region__item" data-target="chernigov" data-value="10%">
                             <span>Черниговская</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="chernovitska">
+                        <li class="region__item" data-target="chernovitska" data-value="10%">
                             <span>Черновицкая</span>
                             <span class="icon-drop-icon"></span>
                         </li>
-                        <li class="region__item" data-target="krum">
+                        <li class="region__item" data-target="krum" data-value="10%">
                             <span>Автономная Республика Крым</span>
                             <span class="icon-drop-icon"></span>
                         </li>
                     </ul>
                 </div>
+                <div class="manufacturing__tablet">
+                    <ul class="manufacturing__list">
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Винницкая  область</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Харьковская  область</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Одесская область</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                        <li class="manufacturing__item">
+                            <div class="manufacturing__statistics">
+                                <p class="number">25%</p>
+                            </div>
+                            <div class="manufacturing__info">
+                                <h5 class="name">Киевская область</h5>
+                                <a href="#" class="general-more">Подробнее</a>
+                            </div>
+                        </li>
+                    </ul>
+                    <button class="main_button">
+                        <span class="text">еще области</span>
+                    </button>
+                </div>
             </div>
+            
         </section>
         <section class="clients-callback">
             <div class="clients-callback__wrapper container">

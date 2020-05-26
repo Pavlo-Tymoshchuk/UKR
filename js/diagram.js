@@ -55,19 +55,14 @@ var myChart = new Chart(ctx, {
         datasets: [{
             data: [10, 19, 3, 5, 2, 3, 1],
             backgroundColor: '#F0F0FA',
-            borderColor: "#ffffff",
+            borderColor: "#FAFAFF",
             borderWidth: 1,
-            hoverBackgroundColor: '#7C85F4',
+            hoverBackgroundColor: 'rgba(92, 93, 247, 0.5)',
         }]
     },
     options: {
         legend: {
             display: false,
-            labels: {
-                fontColor: '#3C4153',
-                fontFamily: "'Circe', 'sans-serif'",
-                fontSize: 16,
-            },
         },
         cutoutPercentage: 20,
         tooltips: {
@@ -110,7 +105,7 @@ function legendClickCallback(event) {
     // }
 }
 
-// function hoverLefend() {
-//           var idx = target.datasetIndex;
-//           console.log("legend " + idx);
-// }
+function hoverLefend() {
+        var idx = target.datasetIndex;
+        console.log("legend " + idx);
+}
