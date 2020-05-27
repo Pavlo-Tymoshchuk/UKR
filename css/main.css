@@ -1948,6 +1948,7 @@ body {
 .manufacturing__wrapper {
   position: relative;
   min-height: 365px;
+  margin-top: 30px;
 }
 .canvas__wrapper {
   width: 365px;
@@ -2009,6 +2010,7 @@ body {
   display: flex;
   justify-content: space-between;
   margin-bottom: 150px;
+  margin-top: 30px;
 }
 .map-ukraine__wrapper .svg-map {
   height: 385px;
@@ -4353,7 +4355,6 @@ body {
   }
   .manufacturing__tablet {
     display: block;
-    margin-top: 30px;
   }
   .manufacturing__list {
     display: flex;
@@ -4765,7 +4766,10 @@ body {
   .manufacturing {
     margin-bottom: 50px;
   }
-  .manufacturing__tablet {
+  .manufacturing__wrapper {
+    margin-top: 20px;
+  }
+  .map-ukraine__wrapper {
     margin-top: 20px;
   }
   .our-clients .trust-us__list {
