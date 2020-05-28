@@ -562,6 +562,9 @@ document.addEventListener("DOMContentLoaded", function(event) {
             }
             
             document.querySelector('.region__item[data-target='+ targetId +']').classList.add('active');
+            let value = document.querySelector('.region__item[data-target='+ targetId +']').getAttribute('data-value');
+            let hoverItem = document.querySelector('.hover-map');
+            hoverItem.innerHTML = value;
             
             item.classList.add('active');
         }
