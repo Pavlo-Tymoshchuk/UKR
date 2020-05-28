@@ -491,7 +491,7 @@
     height: 150px;
     background-color: #F0F0FA;
     border-radius: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     position: relative;
     overflow: hidden;
     background: #FFFFFF;
@@ -640,7 +640,7 @@
 .trust-us__company__list {
     margin-top: 50px;
     display: flex;
-    justify-content: space-between;
+    align-items: flex-start;
     flex-wrap: wrap;
     margin-right: -40px;
 }
@@ -1119,37 +1119,74 @@
     left:0px;
     right: 0px;
     z-index: 1;
+    cursor: pointer;
 }
 
 .manufacturing__chart-list {
     display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
+    justify-content: space-between;
     max-height: 580px;
 }
 
 .manufacturing-hover-elem {
     position: absolute;
     pointer-events: none;
-    color: #5C5DF7;
+    color: #3C4153;
     font-weight: 700;
     opacity: 0;
+}
+
+.manufacturing-hover-active {
+    &::after {
+        content: "%";
+    }
     
-    p {
-        &::after {
-            content: "%";
-            
-        }
+    &::before {
+        content: "";
+        position: absolute;
+        left: -12px;
+        bottom: 2px;
+        width: 45px;
+        height: 13px;
+        background: url(../img/diagram-decor.png) center / cover no-repeat;
     }
 }
 
+.legent__list {
+    max-width: 300px;
+    width: 100%;
+}
+
 .legent__item {
-    width: 50%;
+    display: flex;
     margin-bottom: 16px;
     padding-left: 24px;
     position: relative;
     cursor: pointer;
     transition: color .4s, text-shadow .4s;
+    
+    &.active {
+        color: #5C5DF7;
+        text-shadow: 0.1px 0px 0px #5C5DF7;
+        
+        .icon-drop {
+            opacity: 1;
+        }
+        
+        &::before {
+            background-color: #5C5DF7;
+        }
+    }
+    
+    .icon-drop {
+        order: 2;
+        font-size: 8px;
+        transform: rotate(-90deg);
+        margin-left: 10px;
+        opacity: 0;
+        transition: opacity .4s;
+    }
+    
     
     &:nth-child(6n) {
         margin-bottom: 56px;
@@ -2566,13 +2603,9 @@
 }
 
 .contacts__info {
-    width: calc(50% - 22px);
+    width: calc(50% - 150px);
     display: flex;
     justify-content: space-between;
-}
-
-.contacts__list {
-    max-width: 255px;
 }
 
 .contacts__item {
@@ -2601,6 +2634,10 @@
     &:last-child {
         margin-bottom: 0px;
     }
+}
+
+.contacts__item__descrip-mail {
+    text-decoration: underline;
 }
 
 .clients-callback__wrapper-contact {

@@ -287,7 +287,6 @@
     }
     
     .corporate-topic__item {
-        margin-bottom: 20px;
         height: 163px;
     }
     
@@ -356,6 +355,7 @@
         .img {
             padding: 0px 11px;
             height: 62px;
+            flex-shrink: 0;
         }
     }
     
@@ -522,6 +522,16 @@
     
     .calendar__slider__button {
         top: 20px;
+        width: 40px;
+        height: 40px;
+    }
+    
+    .calendar__slider__button-right {
+        right: -45px;
+    }
+    
+    .calendar__slider__button-left {
+        left: -45px;
     }
     
     
@@ -689,15 +699,7 @@
     }
     
     .contacts__info {
-        flex-direction: column;
-    }
-    
-    .contacts__list {
-        margin-bottom: 30px;
-        
-        &:last-child {
-            margin-bottom: 0px;
-        }
+        width: calc(50% - 22px);
     }
     
     /* Contacts */
@@ -1111,14 +1113,12 @@
     }
     
     .trust-us__company__list {
-        margin: 20px 0px -20px 0px;
+        margin: 20px -20px -20px 0px;
         flex-wrap: wrap;
     }
     
     .trust-us__company__item {
-        width: calc(50% - 10px);
-        height: 75px;
-        margin-right: 0px;
+        width: calc(25% - 20px);
         margin-bottom: 20px;
     }
     
@@ -1405,6 +1405,8 @@
     
     .calendar__slider__button {
         position: static;
+        width: 48px;
+        height: 48px;
         
         &:first-child {
             margin-right: 20px;
@@ -1884,4 +1886,11 @@
     }
     
     /* //About us */
+    
+    /* Trust us */
+    
+    
+    .trust-us__company__item {
+        width: calc(50% - 20px);
+    }
 }
