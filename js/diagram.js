@@ -149,3 +149,98 @@ legendItems.forEach(function(item,index){
         secondContainerItems.append(item);
     }
 });
+
+// Create tablet version 
+
+var data = [
+  {
+   "name": "Энергетические и сырьевые ресурсы", 
+   "color": "red", 
+    "value": 180
+  }, {
+   "name": "Металлургия и металлообработка", 
+   "color": "", 
+    "value": 100
+  }, {
+   "name": "Машиностроение, оборудование", 
+   "color": "green", 
+    "value": 135
+  }, {
+   "name": "Электрооборудование и устройства", 
+   "color": "pink", 
+    "value": 230
+  }, {
+   "name": "Пищевая промышленность", 
+   "color": "blue", 
+    "value": 90
+  }, {
+   "name": "Сельское хозяйство", 
+   "color": "red", 
+    "value": 180
+  }
+];
+
+
+// Setup global variables
+var svg = document.querySelectorAll('.pie-chart'),
+    list = document.getElementById('pie-values'),
+    totalValue = 0,
+    radius = 12,
+    circleLength = Math.PI * (radius * 2), // Circumference = PI * Diameter
+    spaceLeft = circleLength;
+
+// Get total value of all data.
+for (var i = 0; i < data.length; i++) {
+  totalValue += data[i].value;
+}
+
+let statisticsItem = document.querySelectorAll('.js-statistic');
+
+statisticsItem.forEach((item,index) => {
+    let persent = item.querySelector('.js-number');
+    let name = item.querySelector('.js-name');
+    
+    valuePct = parseFloat((data[index].value / totalValue) * 100).toFixed(1);
+    
+    name.innerHTML = data[index].name;
+    persent.innerHTML = valuePct + "%";
+    
+    
+});
+
+console.log(totalValue);
+
+// Loop trough data to create pie
+svg.forEach(function(item,index){
+    var spaceLeft = circleLength;
+    item.setAttribute("data-name", data[index].name);
+    for (var c = 0; c < data.length; c++) {
+    
+        // Create circle
+        var circle = document.createElementNS("http://www.w3.org/2000/svg", "circle");
+
+        // Set attributes (self explanatory)
+        circle.setAttribute("class", "pie-chart-value");
+        circle.setAttribute("cx", 20);
+        circle.setAttribute("cy", 20);
+        circle.setAttribute("r", radius);
+        circle.setAttribute("data-name", data[c].name);
+
+        // Set dash on circle
+        circle.style.strokeDasharray = (spaceLeft) + " " + circleLength;
+
+        // Set Stroke color
+        // circle.style.stroke = data[c].color;
+
+        // Append circle to svg.
+
+        item.appendChild(circle);
+
+        // Subtract current value from spaceLeft
+        spaceLeft -= (data[c].value / totalValue) * circleLength;
+    }
+    let getAttribute = item.getAttribute('data-name');
+    // let activeItem = document.querySelector(`pie-chart-value[data-name="${getAttribute}"]`);
+    document.querySelector(`.pie-chart[data-name="${getAttribute}"] .pie-chart-value[data-name="${getAttribute}"]`).classList.add('active');
+    // console.log(activeItem);
+});

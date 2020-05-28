@@ -778,7 +778,24 @@
         padding: 10px 20px;
     }
     
+    .pie-chart {
+        fill: none;
+        stroke-width:13;
+        stroke: #F0F0FA;
+    }
+    
+    .pie-chart-value {
+        overflow: hidden;
+        
+        &.active {
+            stroke: #5C5DF7;
+        }
+    }
+    
     .manufacturing__statistics {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
         margin-right: 15px;
         max-width: 45px;
         color: #5C5DF7;
@@ -788,15 +805,19 @@
     }
     
     .manufacturing__info {
+        display: flex;
+        flex-direction: column;
+        
         .name {
             font-size: 16px;
             line-height: 130%;
             font-weight: 400;
+            margin-bottom: auto;
         }
         
         .general-more {
             display: block;
-            margin-top: 25px;
+            margin-top: 8px;
             text-transform: initial;
             font-size: 14px;
             line-height: 130%;
