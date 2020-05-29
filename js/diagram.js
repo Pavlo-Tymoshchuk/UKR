@@ -205,10 +205,7 @@ statisticsItem.forEach((item,index) => {
     name.innerHTML = data[index].name;
     persent.innerHTML = valuePct + "%";
     
-    
 });
-
-console.log(totalValue);
 
 // Loop trough data to create pie
 svg.forEach(function(item,index){
@@ -229,9 +226,6 @@ svg.forEach(function(item,index){
         // Set dash on circle
         circle.style.strokeDasharray = (spaceLeft) + " " + circleLength;
 
-        // Set Stroke color
-        // circle.style.stroke = data[c].color;
-
         // Append circle to svg.
 
         item.appendChild(circle);
@@ -240,7 +234,5 @@ svg.forEach(function(item,index){
         spaceLeft -= (data[c].value / totalValue) * circleLength;
     }
     let getAttribute = item.getAttribute('data-name');
-    // let activeItem = document.querySelector(`pie-chart-value[data-name="${getAttribute}"]`);
     document.querySelector(`.pie-chart[data-name="${getAttribute}"] .pie-chart-value[data-name="${getAttribute}"]`).classList.add('active');
-    // console.log(activeItem);
 });

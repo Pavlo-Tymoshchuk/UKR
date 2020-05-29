@@ -14,5 +14,7 @@
     "gulp-autoprefixer": "^7.0.1",
     "gulp-less": "^4.0.1"
   },
-  "dependencies": {}
+  "dependencies": {
+    "vue-slider-component": "^3.1.4"
+  }
 }

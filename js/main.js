@@ -167,7 +167,7 @@ document.addEventListener("DOMContentLoaded", function(event) {
     document.addEventListener('click', function(e){
         let elem = e.target;
 
-        if(!elem.closest(".header-burger") && !elem.closest(".burger-menu__wrapper")) {
+        if(!elem.closest(".header-burger") && !elem.closest(".burger-menu__wrapper") && !elem.closest(".js-button")) {
             burgerList.classList.remove('active');
             document.querySelector('html').classList.remove('overflow');
         }

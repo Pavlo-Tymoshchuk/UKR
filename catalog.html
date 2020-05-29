@@ -133,62 +133,49 @@
             </div>
         </section>
         <section class="catalog">
+            <h2 class="main-caption-m container">Мероприятия</h2>
+            <div class="announcements-slider__wrapper js-catalog-wrapper">
+                <ul class="announcements__list announcements__list-slider js-catalog-list">
+                    <li class="announcements__item announcements__item-all js-catalog-item">
+                        <h3 class="announcements__theme">Все</h3>
+                    </li>
+                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-1.png)">
+                        <h3 class="announcements__theme">Охрана труда</h3>
+                    </li>
+                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-2.png)">
+                        <h3 class="announcements__theme">Охрана окружающей среды</h3>
+                    </li>
+                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-3.png)">
+                        <h3 class="announcements__theme">Экономика предприятия</h3>
+                    </li>
+                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-4.png)">
+                        <h3 class="announcements__theme">Управление персоналом</h3>
+                    </li>
+                </ul>
+            </div>
             <div class="catalog__wrapper container">
-                <h2 class="main-caption-s">Мероприятия</h2>
-                <div class="catalog__buttons">
+                <div class="catalog__buttons__container">
                     <div class="filter__wrapper js-drop-item">
-                        <button class="filter-mobile-button js-drop-button">
-                            <span class="icon-all filter-icon"></span>
-                            <span class="js-drop-info text">Все</span>
+                        <h5 class="filter__caption">Сортировать:</h5>
+                        <button class="filter-button js-drop-button">
+                            <span class="text js-drop-info">Дата по убыванию</span>
                             <span class="icon-drop"></span>
                         </button>
                         <ul class="filter__list">
                             <li class="filter__item js-drop-contains active">
-                                <span class="icon-all filter-icon"></span>
-                                <span class="text">Все</span>
+                                <span class="text">Дата по убыванию</span>
                             </li>
                             <li class="filter__item js-drop-contains">
-                                <span class="icon-save-work filter-icon"></span>
-                                <span class="text">Охрана труда</span>
+                                <span class="text">Дата по возрастанию</span>
                             </li>
                             <li class="filter__item js-drop-contains">
-                                <span class="icon-save-world filter-icon"></span>
-                                <span class="text">Охрана окружающей среды</span>
-                            </li>
-                            <li class="filter__item js-drop-contains">
-                                <span class="icon-economy filter-icon"></span>
-                                <span class="text">Экономика предприятия</span>
-                            </li>
-                            <li class="filter__item js-drop-contains">
-                                <span class="icon-person filter-icon"></span>
-                                <span class="text">Управление персоналом</span>
+                                <span class="text">По популярности</span>
                             </li>
                         </ul>
                     </div>
-                    <div class="catalog__buttons__container">
-                        <div class="filter__wrapper js-drop-item">
-                            <h5 class="filter__caption">Сортировать</h5>
-                            <button class="filter-button js-drop-button">
-                                <span class="js-drop-info">Дата по убыванию</span>
-                                <span class="icon-drop"></span>
-                                <span class="decor-elem"></span>
-                            </button>
-                            <ul class="filter__list">
-                                <li class="filter__item js-drop-contains active">
-                                    <span class="text">Дата по убыванию</span>
-                                </li>
-                                <li class="filter__item js-drop-contains">
-                                    <span class="text">Дата по возрастанию</span>
-                                </li>
-                                <li class="filter__item js-drop-contains">
-                                    <span class="text">По популярности</span>
-                                </li>
-                            </ul>
-                        </div>
-                        <a href="#" class="main-button-shadow">
-                            <span class="text">смотреть в календаре</span>
-                        </a>
-                    </div>
+                    <a href="#" class="main-button-shadow">
+                        <span class="text">смотреть в календаре</span>
+                    </a>
                 </div>
                 <div class="position-wrapper">
                     <ul class="workshops__list workshops__list-catalog">
@@ -449,5 +436,68 @@
     </footer>
     <div class="overlay"></div>
     <script src="./js/main.js"></script>
+    <script>
+        // Catalog-move
+    
+        let catalogWrapper = document.querySelector('.js-catalog-wrapper');
+        let catalogList = document.querySelector(".js-catalog-list");
+        let allItem = catalogList.querySelectorAll(".js-catalog-item");
+        let item = catalogList.querySelector(".js-catalog-item");
+        
+        let styleElem = window.getComputedStyle(item);
+        let catalogWrapperStyle = window.getComputedStyle(catalogWrapper);
+        let catalogWrapperStylePadding = parseFloat(catalogWrapperStyle.paddingLeft);
+        let margin = parseFloat(styleElem.marginRight);
+        
+        function moveList() {
+            let fullWidthItems = 0;
+            allItem.forEach(function(item){
+                fullWidthItems += item.offsetWidth;
+            });
+            
+            let widthList = fullWidthItems + (margin * allItem.length) + catalogWrapperStylePadding + 250;
+            
+            let step = (widthList - window.innerWidth) / window.innerWidth;
+            let flag;
+            let timerId;
+            let setTimMouseEnter;
+            
+            catalogWrapper.addEventListener('mouseenter', function(e){
+                setTimMouseEnter = setTimeout(function(){
+                    leftMouseMove = catalogWrapper.offsetLeft - e.clientX;
+                    catalogList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform .6s`);
+                }, 200);
+                
+            });
+            
+            catalogWrapper.addEventListener('mousemove', function(e){
+                timerId = setTimeout(function(){
+                    flag = true;
+                }, 500);
+
+                if(flag){
+                    clearTimeout(timerId);
+                    clearTimeout(setTimMouseEnter);
+                    leftMouseMove = this.offsetLeft - e.clientX;
+                    let transition = Math.abs(leftMouseMove) / 10000;
+                    catalogList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform ${transition}s`);
+                }
+            });
+            
+            catalogWrapper.addEventListener('mouseleave', function(e){
+                flag = false;
+                clearTimeout(setTimMouseEnter);
+                catalogList.setAttribute('style', `transform: translateX(-180px); transition: transform .6s`);
+            });
+        }
+        
+        moveList();
+        
+        window.addEventListener('resize', function() {
+            moveList();
+        });
+        
+        // Catalog-move
+    </script>
 </body>
 </html>
