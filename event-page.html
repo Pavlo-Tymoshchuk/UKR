@@ -171,6 +171,11 @@
                             </div>
                         </div>
                     </div>
+                    <button class="main_button-color js-button-decor js-button" data-target="popup-order">
+                        <span class="text">
+                            <span>записаться на семинар</span>
+                        </span>
+                    </button>
                 </div>
                 <div class="about-event">
                     <h3 class="main-caption-s">О мероприятии</h3>
@@ -184,15 +189,211 @@
                     <div class="teacher__photo" style="background-image: url(./img/reviews-img-2.png)"></div>
                     <div class="about-teacher__info">
                         <h5 class="about-teacher__name">Валерий Филатов</h5>
-                        <p class="about-teacher__sub">преподавтель,кто он главные достижения, преподавтель, кто он главные достижения</p>
-                        <button class="general-more js-button" data-target="popup-teacher">узнать больше о преподавателе</button>
+                        <p class="about-teacher__sub">преподавтель,<br>кто он главные достижения, преподавтель, кто он главные <br>достижения</p>
+                        <button class="general-more js-button" data-target="popup-teacher">подробнее</button>
                     </div>
                 </div>
                 <div class="program-event">
                     <h3 class="main-caption-s">Программа мероприятия</h3>
                     <div class="program-event__container">
-                        <div class="program-event__calendar-info">
+                        <div class="program-event__calendar">
                             <div class="calendar__container">
+                                <div class="calendar__body">
+                                    <table class="calendar__table">
+                                        <thead>
+                                            <tr class="calendar__table__header">
+                                                <th class="calendar__table__item"><span>Пн</span></th>
+                                                <th class="calendar__table__item"><span>Вт</span></th>
+                                                <th class="calendar__table__item"><span>Ср</span></th>
+                                                <th class="calendar__table__item active"><span>Чт</span></th>
+                                                <th class="calendar__table__item"><span>Пт</span></th>
+                                                <th class="calendar__table__item"><span>Сб</span></th>
+                                                <th class="calendar__table__item"><span>Вс</span></th>
+                                            </tr>
+                                        </thead> 
+                                        <tbody>
+                                            <tr class="calendar__table__tr" data="1">
+                                                <td class="calendar__table__item calendar__table__other-moth">
+                                                    <a href="#" class="calendar__table__data">27 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__other-moth">
+                                                    <a href="#" class="calendar__table__data">28 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__other-moth">
+                                                    <a href="#" class="calendar__table__data">29 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__other-moth">
+                                                    <a href="#" class="calendar__table__data">30 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-disabled"><a href="#" class="calendar__table__data">1 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-disabled"><a href="#" class="calendar__table__data">2 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-disabled"><a href="#" class="calendar__table__data">3 
+                                                    <div class="event_wrapper"></div>
+                                                </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="calendar__table__tr" data="2">
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">4 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">5 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">6 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-event-days first-day">
+                                                    <a href="#" class="calendar__table__data calendar__table__data-event-future calendar__table__data-active">7 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-event-days">
+                                                    <a href="#" class="calendar__table__data">8 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-event-days ">
+                                                    <a href="#" class="calendar__table__data calendar__table__data-event-future">9 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item calendar__table__item-event-days last-day">
+                                                    <a href="#" class="calendar__table__data">10 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="calendar__table__tr" data="3">
+                                                <td class="calendar__table__item">
+                                                    <a href="#" class="calendar__table__data">11 
+                                                    <div class="event_wrapper"></div></a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data calendar__table__data-event-future">12 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">13 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data ui-state-active">14 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data calendar__table__data-event-future">15 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">16 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">17 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="calendar__table__tr" data="4">
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">18 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">19 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item "><a href="#" class="calendar__table__data">20 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item "><a href="#" class="calendar__table__data">21 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ui-datepicker-today">
+                                                    <a href="#" class="calendar__table__data ui-state-active">22 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">23 
+                                                    <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">24 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                            <tr class="calendar__table__tr" data="5">
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">25 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">26 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">27 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">28 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">29 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">30 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                                <td class="calendar__table__item ">
+                                                    <a href="#" class="calendar__table__data">31 
+                                                        <div class="event_wrapper"></div>
+                                                    </a>
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
                             </div>
                             <div class="program-event__calendar-info">
                                 <h6 class="date">27 мая</h6>
@@ -241,19 +442,19 @@
                                 </li>
                             </ul>
                             <div class="program-event__buttons">
-                                <a href="#" download class="main_button-color js-button-decor">
+                                <a href="#" download class="main-button-shadow">
                                     <span class="text">
                                         <span class="icon-doc icon"></span>
                                         <span>Скачать doc</span>
                                     </span>
                                 </a>
-                                <a href="#" download class="main_button-color js-button-decor">
+                                <a href="#" download class="main-button-shadow">
                                     <span class="text">
                                         <span class="icon-pdf icon"></span>
                                         <span>Скачать pdf</span>
                                     </span>
                                 </a>
-                                <a href="#" class="main_button-color js-button-decor" onclick="window.print();">
+                                <a href="#" class="main-button-shadow" onclick="window.print();">
                                     <span class="text">
                                         <span class="icon-print icon"></span>
                                         <span>распечатать</span>
@@ -265,40 +466,45 @@
                 </div>
                 <div class="event-page__receive">
                     <h3 class="main-caption-s">В результате участники семинара-тренинга получат</h3>
-                    <ul class="event-page__receive__list">
-                        <li class="event-page__receive__item">
-                            <div class="receive__img" style="background-image:url(./img/receive-img-1.png)"></div>
-                            <div class="event-page__receive__info">
-                                <h5 class="type">Сертификат</h5>
-                                <p class="description">После окончания практикума слушатели получают сертификат об участии</p>
-                            </div>
-                        </li>
-                        <li class="event-page__receive__item">
-                            <div class="receive__img" style="background-image:url(./img/receive-img-2.png)"></div>
-                            <div class="event-page__receive__info">
-                                <h5 class="type">Материалы</h5>
-                                <p class="description">Все участники практикума будут обеспечены методическими материалами</p>
-                            </div>
-                        </li>
-                        <li class="event-page__receive__item">
-                            <div class="receive__img" style="background-image:url(./img/receive-img-3.png)"></div>
-                            <div class="event-page__receive__info">
-                                <h5 class="type">Обед</h5>
-                                <p class="description">В стоимость входит обед</p>
-                            </div>
-                        </li>
-                    </ul>
-                    <div class="event-page__receive__description">
-                        <ul class="receive__description__list">
-                            <li class="receive__description__item">Алгоритм построения культуры безопасного поведения на предприятии</li>
-                            <li class="receive__description__item">Новые инструменты мотивации персонала к безопасному поведению</li>
-                            <li class="receive__description__item">Мероприятие сопровождается иллюстративным мультимедийным материалом</li>
+                    <div class="event-page__receive__container">
+                        <ul class="event-page__receive__list">
+                            <li class="event-page__receive__item">
+                                <div class="receive__img" style="background-image:url(./img/receive-img-1.png)"></div>
+                                <div class="event-page__receive__info">
+                                    <h5 class="type">Сертификат</h5>
+                                    <p class="description">После окончания практикума слушатели получают сертификат об участии</p>
+                                </div>
+                            </li>
+                            <li class="event-page__receive__item">
+                                <div class="receive__img" style="background-image:url(./img/receive-img-2.png)"></div>
+                                <div class="event-page__receive__info">
+                                    <h5 class="type">Материалы</h5>
+                                    <p class="description">Все участники практикума будут обеспечены методическими материалами</p>
+                                </div>
+                            </li>
+                            <li class="event-page__receive__item">
+                                <div class="receive__img" style="background-image:url(./img/receive-img-3.png)"></div>
+                                <div class="event-page__receive__info">
+                                    <h5 class="type">Экскурсии</h5>
+                                    <p class="description">Иногда экскурсии иногда походы  в театр</p>
+                                </div>
+                            </li>
+                            <li class="event-page__receive__item">
+                                <div class="receive__img" style="background-image:url(./img/receive-img-4.png)"></div>
+                                <div class="event-page__receive__info">
+                                    <h5 class="type">Обед</h5>
+                                    <p class="description">В стоимость входит обед</p>
+                                </div>
+                            </li>
+                            <li class="event-page__receive__item">
+                                <div class="receive__img" style="background-image:url(./img/receive-img-5.png)"></div>
+                                <div class="event-page__receive__info">
+                                    <h5 class="type">Кофе-брейки</h5>
+                                    <p class="description">Перерывы на кофе в течении всего  мероприятия</p>
+                                </div>
+                            </li>
                         </ul>
-                        <div class="receive__description__info">
-                            <div class="receive__img" style="background-image:url(./img/receive-img-4.png)"></div>
-                            <p>Если у Вас накоплен опыт по данной тематике, которым вы можете поделиться на семинаре, мы с радостью предлагаем Вам подготовить выступление на основе реальных проектов  работы Вашего предприятия.</p>
-                            <p>Будем рады Вашему участию!</p>
-                        </div>
+                        <div class="event-page__receive__img" style="background-image:url(./img/receive-main-img.png)"></div>
                     </div>
                 </div>
                 <div class="event-page__timer">
@@ -324,20 +530,6 @@
                     <button class="main_button-color js-button-decor js-button" data-target="popup-order">
                         <span class="text">ЗАПИСАТЬСЯ НА СЕМИНАР</span>
                     </button>
-                </div>
-                <div class="event-more-offers">
-                    <div class="event-more-offers__description">
-                        <p class="text">Данная программа доступна также в формате <strong>корпоративного мероприятия</strong></p>
-                        <p class="sub-info"><strong>Базовая стоимость</strong> фиксированная и не зависит от колличества слушателей</p>
-                    </div>
-                    <div class="event-more-offers__buttons">
-                        <button class="main_button-color js-button-decor js-button" data-target="popup-order">
-                            <span class="text">СДЕЛАТЬ ЗАЯВКУ</span>
-                        </button>
-                        <button class="main_button js-button-decor js-button">
-                            <span class="text">РАСЧИТАТЬ СТОИМОСТЬ ОНЛАЙН</span>
-                        </button>
-                    </div>
                 </div>
             </div>
         </section>
@@ -366,65 +558,110 @@
                         <p class="reserve-place__text">две раздельные кровати,мансардный этаж</p>
                     </li>
                 </ul>
-                <div class="reserve-place__descrip">
-                    <div class="reserve-place__descrip__item">
-                        <div class="reserve-place__descrip__img" style="background-image:url(./img/reserve-place-img-1.png)"></div>
-                        <div class="reserve-place__descrip__text">
-                            <p>Уважаемые слушатели, в целях экономии селиться (если  один представитель  с предприятия) можно  совместно с нашими слушателями. </p>
-                            <p>Кто имеет с собой приказ на командировку освобождается от туристического сбора.</p>
-                            <p>Забронировать место в отеле «АРКАДИЯ»  желательно за 14 дней до начала мероприятия.</p>
-                            <p>Услуги «КЦ»УКРКОНСАЛТИНГА» также необходимо оплатить за 14 дней до начала мероприятия. Вы можете забронировать или поселиться в любом удобном для Вас отеле или квартире г.Одесса</p>
+                <div class="reserve-place__container">
+                    <div class="reserve-place__main-img" style="background-image: url(./img/reserve-main-img.png)"></div>
+                    <div class="reserve-place__descrip">
+                        <div class="reserve-place__descrip__item">
+                            <div class="reserve-place__descrip__img" style="background-image:url(./img/reserve-place-img-1.png)"></div>
+                            <div class="reserve-place__descrip__text">
+                                <h5>Как доехать в “Аркадию”?</h5>
+                                <p>трамвай №5, трамвай №5, 13, трамвай №115, 129, 168, 198</p>
+                            </div>
                         </div>
-                    </div>
-                    <div class="reserve-place__descrip__item">
-                        <div class="reserve-place__descrip__img" style="background-image:url(./img/reserve-place-img-2.png)"></div>
-                        <div class="reserve-place__descrip__text">
-                            <h5>Как доехать в “Аркадию”?</h5>
-                            <p>трамвай №5, трамвай №5, 13, трамвай №115, 129, 168, 198</p>
+                        <div class="reserve-place__descrip__item">
+                            <div class="reserve-place__descrip__img" style="background-image:url(./img/reserve-place-img-2.png)"></div>
+                            <div class="reserve-place__descrip__text">
+                                <p>Уважаемые слушатели, в целях экономии селиться (если  один представитель  с предприятия) можно  совместно с нашими слушателями. </p>
+                                <p>Кто имеет с собой приказ на командировку освобождается от туристического сбора.</p>
+                                <p>Забронировать место в отеле «АРКАДИЯ»  желательно за 14 дней до начала мероприятия.</p>
+                                <p>Услуги «КЦ»УКРКОНСАЛТИНГА» также необходимо оплатить за 14 дней до начала мероприятия. Вы можете забронировать или поселиться в любом удобном для Вас отеле или квартире г.Одесса</p>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="organizer">
-            <div class="organizer__wrapper container">
-                <h2 class="main-caption-s">Организатор</h2>
-                <div class="organizer__container">
-                    <div class="organizer__info">
-                        <h4 class="organizer__info__caption">Консультационный центр «УкрКонсалтинг»</h4>
-                        <p class="organizer__info__text">23 года УкрКонсалтинг работает в сфере консалтинга и обучения персонала. Среди наших клиентов практически все крупнейшие компании Украины. </p>
-                        <ul class="organizer__info__list">
-                            <li class="organizer__info__item">
-                                <h5 class="type">22</h5>
-                                <p class="description">Региона Украины</p>
+        <section class="about-company">
+            <div class="about-company__wrapper container">
+                <h2 class="main-caption-m">Организатор</h2>
+                <div class="about-company__container">
+                    <div class="about-company__info">
+                        <div class="about-company__text">
+                            <p>Мы обучаем и консультируем сотрудников Украинских предприятий разного уровня, среднего и крупного бизнеса.</p>
+                            <p>Нашими основными направлениями работы были и остаются:</p>
+                            <ul>
+                                <li>проведение семинаров, тренингов и мастер классов</li>
+                                <li>организация обучающих корпоративных мероприятий консалтинговые услуги</li>
+                                <li>информационно-технические разработки.</li>
+                            </ul>
+                        </div>
+                        <ul class="about-company__list">
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-1.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>22 года УкрКонсалтинг работает в сфере консалтинга и обучения </p>
+                                </div>
                             </li>
-                            <li class="organizer__info__item">
-                                <h5 class="type">300+</h5>
-                                <p class="description">Крупнейших компаний</p>
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-2.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>Мы провели около 1000 семинаров различной сложности</p>
+                                </div>
                             </li>
-                            <li class="organizer__info__item">
-                                <h5 class="type">22+</h5>
-                                <p class="description">Производственных отраслей</p>
+                            <li class="about-company__item">
+                                <div class="about-company__item__img" style="background-image:url(./img/about-company-img-3.png)"></div>
+                                <div class="about-company__item__text">
+                                    <p>Среди наших клиенты практически все крупнейшие компании Украины</p>
+                                </div>
                             </li>
                         </ul>
                     </div>
-                    <div class="organizer__photos">
-                        <img src="./img/organizer-photo-1.png" alt="Фото" class="organizer__photo">
-                        <img src="./img/organizer-photo-2.png" alt="Фото" class="organizer__photo">
-                    </div>
+                    <div class="about-company-img" style="background-image: url(./img/about-company-main-img.png);"></div>
                 </div>
             </div>
         </section>
+        <section class="photo-gallery">
+            <div class="photo-gallery__wrapper container slider-infinity">
+                <h3 class="main-caption-s">Как проходят наши мероприятия</h3>
+                <p class="photo-gallery__sub-info">Фотогалерея</p>
+                <ul class="photo-gallery__list js-slider-list">
+                    <li class="photo-gallery__item js-slider-item-infinity show">
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                    </li>
+                     <li class="photo-gallery__item js-slider-item-infinity">
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        <div class="photo-gallery__item__img" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                    </li>
+                </ul>
+                <div class="buttons__wrapper js-arrow-infinity">
+                    <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
+                    <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
+                </div>
+        </section>
         <section class="reviews">
             <div class="reviews__wrapper container slider-infinity">
-                <h2 class="main-caption-s">Отзывы слушателей</h2>
+                <div class="reviews__header">
+                    <h2 class="main-caption-m">Отзывы слушателей</h2>
+                    <a href="#" class="general-more">смотреть все отзывы</a>
+                </div>
                 <ul class="reviews__list js-slider-list">
                     <li class="reviews__item show js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button show" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Иван Кротов</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -433,11 +670,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris Сегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip MorrisСегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button show" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -446,11 +685,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился.</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -459,11 +700,13 @@
                         </div>
                     </li>
                     <li class="reviews__item js-slider-item-infinity js-item">
-                        <div class="content">
-                            <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                            </div>
                         </div>
                         <div class="reviews__item-wrapper">
-                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
                             <div class="wrapper">
                                 <h5 class="reviews__name">Марина Кружевная</h5>
                                 <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
@@ -474,10 +717,10 @@
                 </ul>
                 <div class="buttons__wrapper js-arrow-infinity js-item">
                     <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
+                    <button class="main-button-shadow js-button" data-target="add-reviews">
+                        <span class="text">оставить отзыв</span>
+                    </button>
                     <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
-                    <a href="#" class="main_button js-button-decor">
-                        <span class="text">СМОТРЕТЬ ЕЩЕ ОТЗЫВЫ</span>
-                    </a> 
                 </div>
             </div>
         </section>
