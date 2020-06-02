@@ -1,4 +1,4 @@
-@media (min-width: 1160px) {
+@media (min-width: 1220px) {
     
     /* General */
     
@@ -51,11 +51,17 @@
         }
     }
     
-    .main-button-shadow,
     .slider-button {
         &:hover {
             color: #0009F7;
             border-color: #0009F7;
+        }
+    }
+    
+    .main-button-shadow {
+        &:hover {
+            color: #0009F7;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
         }
     }
     
@@ -128,6 +134,14 @@
     .info-button {
         &:hover {
             background-color: #5C5DF7;
+        }
+    }
+    
+    .full-info-event__item {
+        .info-button {
+            &:hover {
+                background-color: #E0E0E0;
+            }
         }
     }
     
@@ -218,11 +232,11 @@
      
      /* Breadcrumbs */
      
-     .breadcrumbs__item {
+     .breadcrumbs__link {
          transition: color .4s;
          
          &:hover {
-             color: #0009F7;
+             color: #000;
          }
      }
      
@@ -371,11 +385,22 @@
     
     /* Contact */
     
-    a.contacts__item__descrip {
+    a.contacts__item__descrip,
+    a.full-info-event__contact {
         &:hover {
             color: #0009F7;
         }
     }
     
     /* //Contact */
+    
+    /* Blog */
+    
+    .blog__info__text {
+        &:hover {
+            color: #5C5DF7;
+        }
+    }
+    
+    /* //Blog */
 }

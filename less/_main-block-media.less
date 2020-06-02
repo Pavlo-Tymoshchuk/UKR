@@ -24,7 +24,9 @@
     }
 
     .workshops__list {
-        margin: 70px -20px 0px 0px;
+        &:not(.workshops__list-slider) {
+            margin: 70px -20px 0px 0px;
+        }
     }
     
     .workshops__item {
@@ -52,6 +54,44 @@
     
     
     /* //Annoncements */
+    
+    /* Similar-events */
+
+    .workshops__item-slider {
+        transform: translateX(calc(-100% - 20px));
+        
+        &.show {
+            transform: translateX(0px);
+            opacity: 1;
+
+            + .workshops__item-slider {
+                transform: translateX(calc(100% + 20px));
+                opacity: 1;
+
+                + .workshops__item-slider {
+                    transform: translateX(calc(200% + 40px));
+                    opacity: 1;
+                    
+                    + .workshops__item-slider {
+                        transform: translateX(calc(300% + 60px));
+                        opacity: 1;
+                        
+                        + .workshops__item-slider {
+                            transform: translateX(calc(400% + 80px));
+                            opacity: 1;
+                            
+                            ~ .workshops__item-slider {
+                                transform: translateX(calc(500% + 100px));
+                                opacity: 0;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    /* //Similar-events */
 }
 
 @media (max-width: 1024px) {
@@ -130,7 +170,9 @@
     }
     
     .workshops__list {
-        margin: 50px -20px 0px 0px;
+        &:not(.workshops__list-slider) {
+            margin: 50px -20px 0px 0px;
+        }
     }
     
     .workshops__item {
@@ -438,9 +480,6 @@
     
     .notyfication {
         margin-top: 100px;
-    }
-    
-    .notyfication__wrapper {
         margin-bottom: 100px;
     }
     
@@ -897,6 +936,251 @@
     }
     
     /* //Corporative */
+    
+    /* Event page */
+    
+    .event-page__img {
+        height: 200px;
+    }
+    
+    .event-page__container {
+        margin-bottom: 50px;
+    }
+    
+    .about-event__text {
+        margin-top: 20px;
+    }
+    
+    .event-page__sort-info {
+        padding: 30px 20px 30px 8px;
+    }
+    
+    .event-page__sort-info__item {
+        padding-left: 12px;
+    }
+    
+    .program-event {
+        margin-top: 100px;
+    }
+    
+    .program-event__container {
+        margin-top: 30px;
+    }
+    
+    .program-event__info {
+        margin-left: 30px;
+    }
+    
+    .program-event__buttons {
+        align-items: center;
+        flex-direction: column;
+        margin-top: 20px;
+        
+        .main-button-shadow {
+            margin-bottom: 10px;
+            max-width: 370px;
+            
+            &:last-child {
+                margin-bottom: 0px;
+            }
+        }
+    }
+    
+    .event-page__receive {
+        margin-top: 100px;
+    }
+    
+    .event-page__receive__item {
+        margin-bottom: 30px;
+    }
+    
+    .reserve-place {
+        margin-top: 40px;
+        margin-bottom: 100px;
+    }
+    
+    .reserve-place__list {
+        flex-wrap: wrap;
+        margin: 30px -20px -20px 0px;
+    }
+    
+    .reserve-place__item {
+        width: calc(50% - 20px);
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    
+    .reserve-place__container {
+        margin-top: 50px;
+    }
+    
+    .reserve-place__main-img {
+        width: 50%;
+        margin-left: -40px;
+    }
+    
+    .reserve-place__descrip {
+        width: 50%;
+    }
+    
+    /* //Event page */
+    
+    /* Photo gallery */
+    
+    .photo-gallery {
+        margin-bottom: 100px;
+    }
+    
+    .photo-gallery__list {
+        height: 228px;
+    }
+
+    .photo-gallery__item__img {
+        margin-right: 0px;
+        width: 31.7%;
+        height: 228px;
+        
+        &:nth-child(2) {
+            transform: translateY(-50px);
+        }
+        
+        &:nth-child(2),
+        &:nth-child(3) {
+            height: 105px;
+        }
+        
+        &:nth-child(3) {
+            margin-top: 18px;
+        }
+        
+        &:nth-child(4) {
+            height: 145px;
+        }
+        
+        &:nth-child(5) {
+            height: 64px;
+            margin-top: 18px;
+        }
+        
+        &:nth-child(6) {
+            height: 228px;
+        }
+    }
+
+    /* //Photo gallery */
+    
+    /* Corporate-event */
+    
+    .corporate-event {
+        margin-bottom: 100px;
+    }
+    
+    .corporate-event__decor {
+        width: 50%;
+        height: 265px;
+        margin-left: 30px;
+    }
+    
+    .corporate-event__info__buttons {
+        flex-direction: column;
+        align-items: center;
+        
+        .main-button-shadow {
+            max-width: 355px;
+            margin-right: 0px;
+            margin-bottom: 30px;
+        }
+    }
+    
+    /* //Corporate-event */
+    
+    /* Event page timer */
+    
+    .general-info-event {
+        margin-top: 100px;
+    }
+    
+    .event-page__timer {
+        width: calc(48% - 20px);
+    }
+    
+    .general-info-event__info {
+        padding: 30px;
+        width: calc(52% - 20px);
+    }
+    
+    .general-info-event__info__img {
+        margin-bottom: 10px;
+    }
+    
+    /* //Event page timer */
+    
+    /* Full info event */
+    
+    .full-info-event {
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    
+    .full-info-event__container {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        height: 492px;
+        padding: 30px 20px;
+    }
+    
+    .full-info-event__item {
+        .info-drop {
+            max-width: 180px;
+        }
+    }
+    
+    /* //Full info event */
+    
+    /* Similar-events */
+    
+    .similar-events {
+        margin-top: 100px;
+        margin-bottom: 50px;
+    }
+    
+    .workshops__list-slider {
+        height: 270px;
+    }
+    
+    /* //Similar-events */
+    
+    /* Blog */
+    
+    .blog {
+        margin-bottom: 100px;
+        
+        ~ .notyfication {
+            margin-bottom: 70px;
+        }
+    }
+    
+    .blog__list {
+        margin-top: 20px;
+        margin-bottom: -20px;
+    }
+    
+    .blog__item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .blog__img {
+        width: 170px;
+        height: 130px;
+    }
+    
+    .blog__info__text {
+        -webkit-line-clamp: 3;
+        height: 57px;
+    }
+    
+    /* //Blog */
 }
 
 
@@ -1225,11 +1509,7 @@
     .reviews__wrapper {
         position: relative;
         padding-bottom: 48px;
-        
-        .slider-button {
-            display: none;
-        }
-        
+
         .general-more {
             right: auto;
             top: auto;
@@ -1301,15 +1581,12 @@
     
     .notyfication {
         margin-top: 50px;
+        margin-bottom: 50px;
     }
     
     .notyfication-sub {
         margin-top: 10px;
         line-height: 130%;
-    }
-    
-    .notyfication__wrapper {
-        margin-bottom: 50px;
     }
     
     .notyfication__form {
@@ -1770,6 +2047,213 @@
     }
     
     /* //Corporative */
+    
+    /* Event page */
+    
+    
+    .event-page__sort-info {
+        flex-direction: column;
+        padding: 20px;
+    }
+    
+    .event-page__sort-info__item {
+        padding: 0px;
+        padding-top: 10px;
+        margin-bottom: 10px;
+        
+        &:first-child {
+            padding-top: 0px;
+        }
+        
+        &::before {
+            width: 100%;
+            height: 1px;
+            
+        }
+    }
+    
+    .event-page__price {
+        .info-drop {
+            max-width: 100%;
+        }
+    }
+    
+    .about-teacher {
+        margin-top: 30px;
+    }
+    
+    .program-event {
+        margin-top: 50px;
+    }
+    
+    .program-event__container {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .program-event__info {
+        margin-top: 40px;
+        margin-left: 0px;
+        padding-left: 0px;
+        border-left: none;
+    }
+    
+    .program-event__item {
+        h5 {
+            line-height: 140%;
+        }
+    }
+    
+    .program-event__buttons {
+        margin-top: 30px;
+    }
+    
+    
+    /* //Event page */
+    
+    /* Event-page receive */
+    
+    .event-page__receive {
+        margin-top: 50px;
+    }
+    
+    .event-page__receive__container {
+        flex-direction: column;
+    }
+    
+    .event-page__receive__list {
+        width: 100%;
+    }
+    
+    .event-page__receive__img {
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        height: 275px;
+        margin-left: 0px;
+        margin-top: 30px;
+    }
+    
+    /* //Event-page receive */
+    
+    /* Reserve Place */
+    
+    .reserve-place {
+        margin: 50px 0px;
+    }
+    
+    .reserve-place__container {
+        margin-top: 30px;
+        flex-direction: column;
+    }
+    
+    .reserve-place__main-img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 30px;
+        margin-left: 0px;
+    }
+    
+    .reserve-place__descrip {
+        width: 100%;
+    }
+    
+    /* //Reserve Place */
+    
+    /* Photo gallery */
+    
+    .photo-gallery {
+        margin-bottom: 50px;
+    }
+
+    /* //Photo gallery */
+    
+    /* Corporate-event */
+    
+    .corporate-event {
+        margin-bottom: 50px;
+    }
+    
+    .corporate-event__wrapper {
+        flex-direction: column;
+    }
+    
+    .corporate-event__info {
+        width: 100%;
+    }
+    
+    .corporate-event__decor {
+        order: -1;
+        width: 100%;
+        margin-left: 0px;
+        margin-bottom: 40px;
+    }
+    
+    /* Corporate event */
+
+    /* Event page timer */
+    
+    .general-info-event {
+        margin-top: 50px;
+    }
+    
+    .general-info-event__wrapper {
+        flex-direction: column;
+    }
+    
+    .event-page__timer {
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    
+    .general-info-event__info {
+        width: 100%;
+    }
+    
+    /* //Event page timer */
+    
+    /* Full info event */
+    
+    .full-info-event {
+        margin-bottom: 50px;
+    }
+    
+    .full-info-event__container {
+        height: auto;
+        padding-bottom: 0px;
+    }
+    
+    .full-info-event__sub-info {
+        position: static;
+        max-width: calc(100% + 40px);
+        width: calc(100% + 40px);
+        margin-left: -20px;
+        margin-top: 20px;
+        padding: 30px 20px;
+    }
+    
+    /* Similar-events */
+    
+    .similar-events {
+        margin-top: 50px;
+    }
+    
+    .workshops__list-slider {
+        height: 300px;
+    }
+    
+    /* //Similar-events */
+    
+    /* Blog */
+    
+    .blog {
+        margin-bottom: 50px;
+        
+        ~ .notyfication {
+            margin-bottom: 50px;
+        }
+    }
+    
+    /* //Blog */
 }
 
 @media screen and (max-width: 576px) {
@@ -1799,8 +2283,10 @@
     }
     
     .workshops__item {
-        width: 100%;
-        margin-right: 0px;
+        &:not(.workshops__item-slider){
+            width: 100%;
+            margin-right: 0px;
+        }
     }
     
     .announcements__theme {
@@ -1913,4 +2399,185 @@
             margin-top: 20px;
         }
     }
+    
+    /* //Catalog */
+    
+    /* Event page */
+    
+    .event-page__container {
+        .main_button-color {
+            max-width: 100%;
+        }
+    }
+    
+    .event-page__img {
+        height: 120px;
+    }
+    
+    .event-page__sort-info__item {
+        font-size: 16px;
+        line-height: 135%;
+        
+        .type {
+            font-size: 12px;
+            line-height: 18px;
+            margin-bottom: 5px;
+        }
+    }
+    
+    .event-page__price {
+        .price {
+            font-size: 16px;
+            line-height: 135%;
+            
+            + .old-price {
+                font-size: 12px;
+                line-height: 135%;
+            }
+        }
+    }
+    
+    /* //Event page */
+    
+    
+    /* Reserve Place */
+    
+    .reserve-place__item {
+        width: calc(100% - 20px);
+    }
+    
+    .reserve-place__main-img {
+        height: 265px;
+    }
+    
+    /* //Reserve Place */
+    
+    /* Photo gallery */
+    
+    .photo-gallery__list {
+        height: 430px;
+    }
+    
+    .photo-gallery__item {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    
+    .photo-gallery__item__img {
+        width: calc(50% - 10px) !important;
+        height: 130px !important;
+        margin-bottom: 20px;
+        margin-top: 0px !important;
+        transform: translateY(-70px);
+        
+        &:nth-child(even) {
+            transform: translateX(100px);
+        }
+        
+        &:nth-child(odd) {
+            transform: translateX(-100px);
+        }
+    }
+    
+    /* //Photo gallery */
+    
+    /* Event page timer */
+    
+    .general-info-event__info {
+        padding: 0px;
+        box-shadow: none;
+    }
+    
+    /* //Event page timer */
+    
+    /* Full info event */
+    
+    .full-info-event__wrapper {
+        .main_button-color {
+            margin: 20px auto 0px;
+        }
+    }
+    
+    .full-info-event__sub-info {
+        flex-direction: column;
+        height: auto;
+        
+        .caption {
+            font-size: 16px;
+        }
+        
+        .wrapper {
+            max-height: initial;
+        }
+    }
+    
+    .full-info-event__sub-info__item {
+        width: 100%;
+        
+        &:first-child {
+            margin-bottom: 30px;
+            width: 100%;
+        }
+    }
+    
+    .full-info-event__contact {
+        &:last-child {
+            align-self: flex-start;
+        }
+    }
+    
+    /* //Full info event */
+    
+    /* Client callback */
+    
+    .clients-callback__wrapper {
+        .input_wrapper {
+            width: 100%;
+            margin: 20px 0px;
+        }
+    }
+    
+    /* //Client callback */
+    
+    /* Similar-events */
+    
+    .workshops__list-slider {
+        margin-top: 20px;
+    }
+    
+    .workshops__item-slider {
+        width: 250px;
+    }
+    
+    /* //Similar-events */
+    
+    /* Blog */
+
+    .blog__item {
+        flex-direction: column;
+    }
+    
+    .blog__img {
+        width: 100%;
+        margin-right: 0px;
+        margin-bottom: 15px;
+    }
+    
+    .blog__info__header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .blog__date {
+        order: -1;
+        margin-bottom: 5px;
+    }
+    
+    .blog__info__text {
+        -webkit-line-clamp: 5;
+        height: auto;
+        max-height: 100px;
+    }
+    
+    /* //Blog */
 }
