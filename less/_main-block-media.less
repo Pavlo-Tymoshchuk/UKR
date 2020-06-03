@@ -92,6 +92,16 @@
     }
     
     /* //Similar-events */
+    
+    /* Blog page */
+    
+    .workshops__list.workshops__list-blog-page {
+        .workshops__item {
+            &:last-child {
+                display: none;
+            }
+        }
+    }
 }
 
 @media (max-width: 1024px) {
@@ -1181,6 +1191,18 @@
     }
     
     /* //Blog */
+    
+    /* Blog page */
+    
+    .blog-page {
+        margin-bottom: 100px;
+        
+        ~ .announcements {
+            margin-bottom: 50px;
+        }
+    }
+    
+    /* //Blog page */
 }
 
 
@@ -2254,6 +2276,14 @@
     }
     
     /* //Blog */
+    
+    /* Blog page */
+    
+    .blog-page {
+        margin-bottom: 50px;
+    }
+    
+    /* //Blog page */
 }
 
 @media screen and (max-width: 576px) {
@@ -2580,4 +2610,112 @@
     }
     
     /* //Blog */
+    
+    /* Blog page */
+    
+    .blog-page__img {
+        height: 142px;
+    }
+    
+    .blog-page__content {
+        > p {
+            margin-bottom: 20px;
+        }
+        
+        > ul,ol {
+            margin: 20px 0px 30px;
+        }
+        
+        > ul {
+            li {
+                margin-bottom: 20px;
+            }
+        }
+        
+        img {
+            max-height: 90px;
+            margin-bottom: 20px;
+        }
+    }
+    
+    .blog-page__table__header {
+        display: none;
+    }
+    
+    .blog-page__table__list {
+        padding: 0px;
+    }
+    
+    .blog-page__table__item {
+        flex-direction: column;
+        padding: 20px;
+        
+        .type {
+            display: block;
+        }
+    }
+    
+    .blog-page__table__sub-item {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 20px;
+        
+        &:last-child {
+            margin-bottom: 0px;
+        }
+    }
+    
+    /* Blog page reviews */
+    
+    .blog-page__reviews {
+        margin-top: 50px;
+    }
+    
+    .blog-page__reviews__item__header {
+        .button-wrapper {
+            .text {
+                display: none;
+            }
+        }
+        
+        .blog-page__reviews__button {
+            padding: 5px;
+        }
+    }
+    
+    .blog-page__reviews__item__footer {
+        &.active {
+            height: 250px;
+            max-height: 250px;
+        }
+    }
+    
+    .blog-page__add-reviews__form {
+        width: 100%;
+        
+        .wrapper {
+            flex-direction: column;
+        }
+        
+        .blog-page__reviews-img {
+            margin-bottom: 10px;
+        }
+    }
+    
+    .blog-page__add-reviews__buttons {
+        flex-direction: column;
+        align-items: 100%;
+        
+        .main-button-shadow {
+            max-width: 100%;
+            order: -1;
+            margin-bottom: 20px;
+            margin-left: 0px;
+        }
+    }
+    
+    /* //Blog page reviews */
+    
+    /* //Blog page */
 }

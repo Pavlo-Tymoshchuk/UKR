@@ -893,6 +893,20 @@ document.addEventListener("DOMContentLoaded", function(event) {
     }
     
     // //Gallery
+    
+    // Reviews 
+    
+    document.addEventListener('click', function(e){
+        let item = e.target;
+        
+        if(item.closest('.js-reviews-button')) {
+            let wrapper = item.closest('.js-drop-item');
+            
+            wrapper.classList.remove('active');
+        }
+    });
+    
+    // //Reviews 
 });
 
 

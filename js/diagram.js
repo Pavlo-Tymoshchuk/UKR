@@ -135,8 +135,6 @@ legendItems.forEach(
     });
   }
 );
- 
-console.log(myChart)
 
 let secondContainerItems = document.createElement('ul');
 secondContainerItems.classList.add('legent__list');
