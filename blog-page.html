@@ -611,96 +611,101 @@
             </div>
         </div>
     </footer>
-    <!-- Оставить отзы  -->
-    
-     <section class="popup add-reviews" data-target="add-reviews">
+    <!-- Оставить отзыв  -->
+    <section class="popup add-reviews" data-target="add-reviews">
         <button class="js-close close__popup">
-            <span class="icon-close"></span>
-        </button>
-        <h4 class="popup-caption">Добавление отзыва</h4>
-        <form action="#" class="add-reviews__form">
-            <div class="add-reviews__photo" style="background-image: url(./img/add-photo.png);">
-                <label class="add-photo-input">
-                    <input type="file" class="js-input-file">
-                    <span class="add-photo-input__decor">
-                        <span class="icon-add-photo"></span>
-                    </span>
-                </label>
-            </div>
-            <button type="button" class="clear-file-input">отмена</button>
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше имя*</span>
-                    <input type="text" class="main_input" placeholder="Имя" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваша должность</span>
-                    <input type="text" class="main_input" placeholder="Эколог">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное название предприятия</span>
-                    <input type="text" class="main_input" placeholder="Завод имени Малышева">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваш отзыв</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Напишите отзыв"></textarea>
-                </label>
-            </div>
-            <div class="stars__wrapper">
-                <h5>Оцените нашу работу</h5>
-                <input type="hidden" name="stars" class="js-stars-input">
-                <ul class="stars__list js-star-list">
-                    <li class="stars__item js-star-item" data-target="1">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="2">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="3">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="4">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="5">
-                        <span class="icon-star"></span>
-                    </li>
-                </ul>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">Отправить</span>
-            </button> 
-        </form>
+                <span class="icon-close"></span>
+            </button>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Добавление отзыва</h4>
+            <form action="#" class="add-reviews__form">
+                <div class="add-reviews__photo" style="background-image: url(./img/add-photo.png);">
+                    <label class="add-photo-input">
+                        <input type="file" class="js-input-file">
+                        <span class="add-photo-input__decor">
+                            <span class="icon-add-photo"></span>
+                        </span>
+                    </label>
+                </div>
+                <button type="button" class="clear-file-input">отмена</button>
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя*</span>
+                        <input type="text" class="main_input" placeholder="Имя" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваша должность</span>
+                        <input type="text" class="main_input" placeholder="Эколог">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваш отзыв</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Напишите отзыв"></textarea>
+                    </label>
+                </div>
+                <div class="stars__wrapper">
+                    <h5>Оцените нашу работу</h5>
+                    <input type="hidden" name="stars" class="js-stars-input">
+                    <ul class="stars__list js-star-list">
+                        <li class="stars__item js-star-item" data-target="1">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="2">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="3">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="4">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="5">
+                            <span class="icon-star"></span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">Отправить</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
-    <!-- //Оставить отзы  -->
+    <!-- //Оставить отзыв  -->
+    
+    <!-- //Вход через соц. сети  -->
     
     <section class="popup popup-social" data-target="popup-social">
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Оставить комментарий</h4>
-        <p class="popup-social__sub">Войдите, чтобы оставить комментарий</p>
-        <p>Через</p>
-        <a href="#" class="main-button-shadow">
-            <img src="./img/icon-google.png" alt="Google">
-            <span class="text">google</span>
-        </a>
-        <a href="#" class="main-button-shadow">
-            <img src="./img/icon-fb.png" alt="Facebook">
-            <span class="text">facebook</span>
-        </a>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Оставить комментарий</h4>
+            <p class="popup-social__sub">Войдите, чтобы оставить комментарий</p>
+            <p>Через</p>
+            <a href="#" class="main-button-shadow">
+                <img src="./img/icon-google.png" alt="Google">
+                <span class="text">google</span>
+            </a>
+            <a href="#" class="main-button-shadow">
+                <img src="./img/icon-fb.png" alt="Facebook">
+                <span class="text">facebook</span>
+            </a>
+        </div>
     </section>
     
-    <!-- //Оставить отзы  -->
+    <!-- //Вход через соц. сети  -->
     
     <!-- Удалить комментрания -->
     
@@ -708,11 +713,13 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption-small">Вы уверены, что хотите удалить комментарий?</h4>
-        <button class="main-button-shadow">
-            <span class="text">удалить</span>
-        </button>
-        <button class="general-more js-close">отмена</button>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption-small">Вы уверены, что хотите удалить комментарий?</h4>
+            <button class="main-button-shadow">
+                <span class="text">удалить</span>
+            </button>
+            <button class="general-more js-close">отмена</button>
+        </div>
     </section>
     
     <!-- //Удалить комментрания -->

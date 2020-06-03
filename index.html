@@ -880,15 +880,17 @@
     
     <section class="popup popup-reviews" data-target="reviews">
         <button class="js-close close-popup">Закрыть</button>
-        <div class="popup-reviews__header">
-            <div class="reviews__img"></div>
-            <div class="wrapper">
-                <h5 class="reviews__name"></h5>
-                <p class="reviews__sub"></p>
+        <div class="popup__wrapper">
+            <div class="popup-reviews__header">
+                <div class="reviews__img"></div>
+                <div class="wrapper">
+                    <h5 class="reviews__name"></h5>
+                    <p class="reviews__sub"></p>
+                </div>
             </div>
-        </div>
-        <div class="popup-reviews__content">
-            <p></p>
+            <div class="popup-reviews__content">
+                <p></p>
+            </div>
         </div>
     </section>
     
@@ -900,68 +902,70 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Добавление отзыва</h4>
-        <form action="#" class="add-reviews__form">
-            <div class="add-reviews__photo" style="background-image: url(./img/add-photo.png);">
-                <label class="add-photo-input">
-                    <input type="file" class="js-input-file">
-                    <span class="add-photo-input__decor">
-                        <span class="icon-add-photo"></span>
-                    </span>
-                </label>
-            </div>
-            <button type="button" class="clear-file-input">отмена</button>
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше имя*</span>
-                    <input type="text" class="main_input" placeholder="Имя" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваша должность</span>
-                    <input type="text" class="main_input" placeholder="Эколог">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное название предприятия</span>
-                    <input type="text" class="main_input" placeholder="Завод имени Малышева">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваш отзыв</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Напишите отзыв"></textarea>
-                </label>
-            </div>
-            <div class="stars__wrapper">
-                <h5>Оцените нашу работу</h5>
-                <input type="hidden" name="stars" class="js-stars-input">
-                <ul class="stars__list js-star-list">
-                    <li class="stars__item js-star-item" data-target="1">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="2">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="3">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="4">
-                        <span class="icon-star"></span>
-                    </li>
-                    <li class="stars__item js-star-item" data-target="5">
-                        <span class="icon-star"></span>
-                    </li>
-                </ul>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">Отправить</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Добавление отзыва</h4>
+            <form action="#" class="add-reviews__form">
+                <div class="add-reviews__photo" style="background-image: url(./img/add-photo.png);">
+                    <label class="add-photo-input">
+                        <input type="file" class="js-input-file">
+                        <span class="add-photo-input__decor">
+                            <span class="icon-add-photo"></span>
+                        </span>
+                    </label>
+                </div>
+                <button type="button" class="clear-file-input">отмена</button>
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя*</span>
+                        <input type="text" class="main_input" placeholder="Имя" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваша должность</span>
+                        <input type="text" class="main_input" placeholder="Эколог">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваш отзыв</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Напишите отзыв"></textarea>
+                    </label>
+                </div>
+                <div class="stars__wrapper">
+                    <h5>Оцените нашу работу</h5>
+                    <input type="hidden" name="stars" class="js-stars-input">
+                    <ul class="stars__list js-star-list">
+                        <li class="stars__item js-star-item" data-target="1">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="2">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="3">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="4">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="5">
+                            <span class="icon-star"></span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">Отправить</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
      <!-- //Оставить отзы  -->
@@ -971,30 +975,32 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Хотите предложить тему семинара?</h4>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше имя*</p>
-                    <input type="text" class="main_input" placeholder="Имя" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</p>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</p>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше предложение</p>
-                    <textarea class="main_input main_input-textarea" placeholder="Опишите тему или программу мероприятия которое Вы хотели бы посетить. Опишите подробности, вопросы которые Вас интересуют"></textarea>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">Отправить</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Хотите предложить тему семинара?</h4>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя*</p>
+                        <input type="text" class="main_input" placeholder="Имя" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</p>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</p>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше предложение</p>
+                        <textarea class="main_input main_input-textarea" placeholder="Опишите тему или программу мероприятия которое Вы хотели бы посетить. Опишите подробности, вопросы которые Вас интересуют"></textarea>
+                    </label>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">Отправить</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Тема семинара  -->
@@ -1005,78 +1011,80 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Скачать программу семинара</h4>
-        <p class="popup__info-text">«Современные стандарты природоохранной работы. Обеспечение экологической безопасности в области обращения с отходами.»</p>
-        <h5 class="popup-programm__caption">Вы можете исключить некоторую информацию</h5>
-        <form action="#" class="popup__form">
-            <div class="popup-checkbox">
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Экскурсия'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Экскурсия</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Дата проведения'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Дата проведения</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Предисловие'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Предисловие</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Дополнительная информация'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Дополнительная информация</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Обед'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Обед</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Реквизиты'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Реквизиты</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Преподаватели'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Преподаватели</span>
-                </label>
-                <label class="checkbox__wrapper">
-                    <input type="checkbox" class="input-checkbox" value='Цена'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Цена</span>
-                </label>
-            </div>
-            <a href="#" download class="main_button-color js-button-decor">
-                <span class="text">СКАЧАТЬ DOC</span>
-            </a>
-            <a href="#" download class="main_button-color js-button-decor">
-                <span class="text">СКАЧАТЬ PDF</span>
-            </a>
-            <a href="#" download class="main_button-color js-button-decor">
-                <span class="text">РАСПЕЧАТАТЬ</span>
-            </a>
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Скачать программу семинара</h4>
+            <p class="popup__info-text">«Современные стандарты природоохранной работы. Обеспечение экологической безопасности в области обращения с отходами.»</p>
+            <h5 class="popup-programm__caption">Вы можете исключить некоторую информацию</h5>
+            <form action="#" class="popup__form">
+                <div class="popup-checkbox">
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Экскурсия'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Экскурсия</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Дата проведения'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Дата проведения</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Предисловие'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Предисловие</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Дополнительная информация'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Дополнительная информация</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Обед'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Обед</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Реквизиты'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Реквизиты</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Преподаватели'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Преподаватели</span>
+                    </label>
+                    <label class="checkbox__wrapper">
+                        <input type="checkbox" class="input-checkbox" value='Цена'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Цена</span>
+                    </label>
+                </div>
+                <a href="#" download class="main_button-color js-button-decor">
+                    <span class="text">СКАЧАТЬ DOC</span>
+                </a>
+                <a href="#" download class="main_button-color js-button-decor">
+                    <span class="text">СКАЧАТЬ PDF</span>
+                </a>
+                <a href="#" download class="main_button-color js-button-decor">
+                    <span class="text">РАСПЕЧАТАТЬ</span>
+                </a>
+            </form>
+        </div>
     </section>
     
     <!-- //Программа семинара  -->
@@ -1087,48 +1095,50 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Заказать корпоративное мероприятие</h4>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Контактное лицо</span>
-                    <input type="text" class="main_input" placeholder="Имя">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <div class="input_wrapper js-drop-item general-drop">
-                    <span class="input-caption">Выберите программу обучения</span>
-                    <div class="wrapper">
-                        <input type="text" class="main_input js-drop-input js-drop-button" readonly placeholder="Эколог"> 
-                        <span class="icon-drop"></span>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Заказать корпоративное мероприятие</h4>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Контактное лицо</span>
+                        <input type="text" class="main_input" placeholder="Имя">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <div class="input_wrapper js-drop-item general-drop">
+                        <span class="input-caption">Выберите программу обучения</span>
+                        <div class="wrapper">
+                            <input type="text" class="main_input js-drop-input js-drop-button" readonly placeholder="Эколог"> 
+                            <span class="icon-drop"></span>
+                        </div>
+                        <div class="general-drop__list">
+                            <div class="general-drop__item js-drop-contains">
+                                <div class="text">Еще одна программа</div>
+                            </div>
+                            <div class="general-drop__item js-drop-contains">
+                                <div class="text">Еще одна программа</div>
+                            </div>
+                            <div class="general-drop__item js-drop-contains">
+                                <div class="text">Еще одна программа</div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="general-drop__list">
-                        <div class="general-drop__item js-drop-contains">
-                            <div class="text">Еще одна программа</div>
-                        </div>
-                        <div class="general-drop__item js-drop-contains">
-                            <div class="text">Еще одна программа</div>
-                        </div>
-                        <div class="general-drop__item js-drop-contains">
-                            <div class="text">Еще одна программа</div>
-                        </div>
-                    </div>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Примечание</p>
+                        <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
+                    </label>
                 </div>
-                <label class="input_wrapper">
-                    <span class="input-caption">Примечание</p>
-                    <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ЗАКАЗАТЬ</span>
-            </button> 
-        </form>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ЗАКАЗАТЬ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Заказать корпоративное мероприятие  -->
@@ -1139,39 +1149,41 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Записаться на семинар</h4>
-        <p class="popup__info-text">«Современные стандарты природоохранной работы. Обеспечение экологической безопасности в области обращения с отходами.»</p>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Контактное лицо</span>
-                    <input type="text" class="main_input" placeholder="Имя">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное название предприятия*</span>
-                    <input type="text" class="main_input" placeholder="Завод имени Малышева" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное ФИО участников*</span>
-                    <input type="text" class="main_input" placeholder="Фамилия Имя Отчество" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Примечание</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ЗАПИСАТЬСЯ</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Записаться на семинар</h4>
+            <p class="popup__info-text">«Современные стандарты природоохранной работы. Обеспечение экологической безопасности в области обращения с отходами.»</p>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Контактное лицо</span>
+                        <input type="text" class="main_input" placeholder="Имя">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия*</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное ФИО участников*</span>
+                        <input type="text" class="main_input" placeholder="Фамилия Имя Отчество" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Примечание</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
+                    </label>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ЗАПИСАТЬСЯ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Заказ семинар -->
@@ -1182,47 +1194,49 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Подать заявку</h4>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное название предприятия</sapn>
-                    <input type="text" class="main_input" placeholder="Завод имени Малышева">
-                </label>
-                <div class="popup-person__wrapper">
-                     <label class="input_wrapper">
-                        <span class="input-caption">Полное ФИО участника</sapn>
-                        <input type="text" class="main_input" placeholder="Фамилия Имя Отчество">
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Подать заявку</h4>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева">
                     </label>
-                    <button type="button" class="add-person">
-                        <span class="decor"></span>
-                        <span>Добавить участника</span>
-                    </button>
+                    <div class="person__wrapper">
+                        <label class="input_wrapper">
+                            <span class="input-caption">Полное ФИО участника</span>
+                            <input type="text" class="main_input" placeholder="Фамилия Имя Отчество">
+                        </label>
+                        <button type="button" class="add-person">
+                            <span class="decor"></span>
+                            <span>Добавить участника</span>
+                        </button>
+                    </div>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Примечание</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
+                    </label>
+                    <label class="checkbox__wrapper checkbox__wrapper-policy">
+                        <input type="checkbox" class="input-checkbox" value='Дата проведения'>
+                        <span class="custome-check">
+                            <span class="icon-active"></span>
+                        </span>
+                        <span class="text">Я принимаю условия <a href="#" class="policy-link">Пользовательского соглашения</a></span>
+                    </label>
                 </div>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</sapn>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</sapn>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Примечание</sapn>
-                    <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
-                </label>
-                <label class="checkbox__wrapper checkbox__wrapper-policy">
-                    <input type="checkbox" class="input-checkbox" value='Дата проведения'>
-                    <span class="custome-check">
-                        <span class="icon-active"></span>
-                    </span>
-                    <span class="text">Я принимаю условия <a href="#" class="policy-link">Пользовательского соглашения</a></span>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ОТПРАВИТЬ ЗАЯВКУ</span>
-            </button> 
-        </form>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ОТПРАВИТЬ ЗАЯВКУ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Подать заявку -->
@@ -1233,35 +1247,37 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Заказать консалтинг</h4>
-        <p class="popup__info-text">“Экологический консалтинг”</p>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Контактное лицо</span>
-                    <input type="text" class="main_input" placeholder="Имя">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Полное название предприятия*</span>
-                    <input type="text" class="main_input" placeholder="Завод имени Малышева" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Примечание</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ЗАКАЗАТЬ</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Заказать консалтинг</h4>
+            <p class="popup__info-text">“Экологический консалтинг”</p>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Контактное лицо</span>
+                        <input type="text" class="main_input" placeholder="Имя">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия*</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Примечание</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
+                    </label>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ЗАКАЗАТЬ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Заказать консалтинг  -->
@@ -1272,83 +1288,85 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <div class="popup-teacher__header">
-            <h4 class="popup-caption">Кобиковская Юлия Валентиновна</h4>
-            <div class="teacher__photo" style="background-image: url(./img/reviews-img-2.png)"></div>
-        </div>
-        <div class="popup-teacher__body">
-            <ul class="popup-teacher__list">
-                <li class="popup-teacher__item">
-                    <p>Практический психолог</p>
-                </li>
-                <li class="popup-teacher__item">
-                    <p>Преподаватель психологии</p>
-                </li>
-                <li class="popup-teacher__item">
-                    <p>Тренер</p>
-                </li>
-                <li class="popup-teacher__item">
-                    <p>Тренер-фасилитатор ОО “Возраст возможностей”</p>
-                </li>
-                <li class="popup-teacher__item">
-                    <p>Член союза журналистов Украины</p>
-                </li>
-            </ul>
-            <h5 class="popup-teacher__caption">Преподаватель курсов</h5>
-            <ul class="popup-teacher__course-list">
-                <li class="popup-teacher__course-item">
-                    <p>Современные стандарты коммуникационной компетенции. Развитие ораторских навыков</p>
-                    <a href="#">Подробнее</a>
-                </li>
-                <li class="popup-teacher__course-item">
-                    <p>Система мотивации безопасного поведения на предприятии. Психологическое обеспечение безопасного поведения</p>
-                    <a href="#">Подробнее</a>
-                </li>
-                <li class="popup-teacher__course-item">
-                    <p>Лидерство и руководство в менеджменте. Овладение навыков психической саморегуляции</p>
-                    <a href="#">Подробнее</a>
-                </li>
-                <li class="popup-teacher__course-item">
-                    <p>Личная эффективность управленческого персонала</p>
-                    <a href="#">Подробнее</a>
-                </li>
-            </ul>
-        </div>
-        <div class="popup-teacher__reviews slider-infinity">
-            <h5 class="popup-teacher__caption">Отзывы о преподавателе</h5>
-            <ul class="popup-teacher__reviews__list js-slider-list">
-                <li class="popup-teacher__reviews__item js-item js-slider-item-infinity show">
-                    <div class="content">
-                        <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
-                    </div>
-                    <div class="reviews__item-wrapper">
-                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
-                        <div class="wrapper">
-                            <h5 class="reviews__name">Иван Кротов</h5>
-                            <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
-                            <button class="add-reviews-button js-button" data-target="add-reviews">Оставить свой отзыв</button>
+        <div class="popup__wrapper">
+            <div class="popup-teacher__header">
+                <h4 class="popup-caption">Кобиковская Юлия Валентиновна</h4>
+                <div class="teacher__photo" style="background-image: url(./img/reviews-img-2.png)"></div>
+            </div>
+            <div class="popup-teacher__body">
+                <ul class="popup-teacher__list">
+                    <li class="popup-teacher__item">
+                        <p>Практический психолог</p>
+                    </li>
+                    <li class="popup-teacher__item">
+                        <p>Преподаватель психологии</p>
+                    </li>
+                    <li class="popup-teacher__item">
+                        <p>Тренер</p>
+                    </li>
+                    <li class="popup-teacher__item">
+                        <p>Тренер-фасилитатор ОО “Возраст возможностей”</p>
+                    </li>
+                    <li class="popup-teacher__item">
+                        <p>Член союза журналистов Украины</p>
+                    </li>
+                </ul>
+                <h5 class="popup-teacher__caption">Преподаватель курсов</h5>
+                <ul class="popup-teacher__course-list">
+                    <li class="popup-teacher__course-item">
+                        <p>Современные стандарты коммуникационной компетенции. Развитие ораторских навыков</p>
+                        <a href="#">Подробнее</a>
+                    </li>
+                    <li class="popup-teacher__course-item">
+                        <p>Система мотивации безопасного поведения на предприятии. Психологическое обеспечение безопасного поведения</p>
+                        <a href="#">Подробнее</a>
+                    </li>
+                    <li class="popup-teacher__course-item">
+                        <p>Лидерство и руководство в менеджменте. Овладение навыков психической саморегуляции</p>
+                        <a href="#">Подробнее</a>
+                    </li>
+                    <li class="popup-teacher__course-item">
+                        <p>Личная эффективность управленческого персонала</p>
+                        <a href="#">Подробнее</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="popup-teacher__reviews slider-infinity">
+                <h5 class="popup-teacher__caption">Отзывы о преподавателе</h5>
+                <ul class="popup-teacher__reviews__list js-slider-list">
+                    <li class="popup-teacher__reviews__item js-item js-slider-item-infinity show">
+                        <div class="content">
+                            <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
                         </div>
-                        <div class="reviews__img" style="background-image:url(./img/reviews-img-1.png)"></div>
-                    </div>
-                </li>
-                <li class="popup-teacher__reviews__item js-item js-slider-item-infinity">
-                    <div class="content">
-                        <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
-                    </div>
-                    <div class="reviews__item-wrapper">
-                        <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
-                        <div class="wrapper">
-                            <h5 class="reviews__name">Иван Кротов</h5>
-                            <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
-                            <button class="add-reviews-button js-button" data-target="add-reviews">Оставить свой отзыв</button>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Иван Кротов</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                                <button class="add-reviews-button js-button" data-target="add-reviews">Оставить свой отзыв</button>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-1.png)"></div>
                         </div>
-                        <div class="reviews__img" style="background-image:url(./img/reviews-img-1.png)"></div>
-                    </div>
-                </li>
-            </ul>
-            <div class="buttons__wrapper js-arrow-infinity js-item">
-                <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
-                <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
+                    </li>
+                    <li class="popup-teacher__reviews__item js-item js-slider-item-infinity">
+                        <div class="content">
+                            <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                        </div>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Иван Кротов</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                                <button class="add-reviews-button js-button" data-target="add-reviews">Оставить свой отзыв</button>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-1.png)"></div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="buttons__wrapper js-arrow-infinity js-item">
+                    <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
+                    <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
+                </div>
             </div>
         </div>
     </section>
@@ -1361,37 +1379,39 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше имя</span>
-                    <input type="text" class="main_input" placeholder="Имя">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Номер телефона*</span>
-                    <input type="tel" class="main_input" placeholder="+380934882556" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Вопрос первый в одну строку?</span>
-                    <input type="text" class="main_input" placeholder="Ваш ответ">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Вопрос второй в две строки, вопрос второй в две строки, вопрос второй в две строки?</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Ваш ответ"></textarea>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Вопрос третий в одну строку?</p>
-                    <input type="text" class="main_input" placeholder="Ваш ответ">
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ОТПРАВИТЬ</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя</span>
+                        <input type="text" class="main_input" placeholder="Имя">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Вопрос первый в одну строку?</span>
+                        <input type="text" class="main_input" placeholder="Ваш ответ">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Вопрос второй в две строки, вопрос второй в две строки, вопрос второй в две строки?</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Ваш ответ"></textarea>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Вопрос третий в одну строку?</p>
+                        <input type="text" class="main_input" placeholder="Ваш ответ">
+                    </label>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ОТПРАВИТЬ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Вопросы  -->
@@ -1402,26 +1422,28 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Задайте вопрос</h4>
-        <form action="#" class="popup__form">
-            <div class="popup-inputs">
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваше имя</span>
-                    <input type="text" class="main_input" placeholder="Имя">
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">E-mail*</span>
-                    <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                </label>
-                <label class="input_wrapper">
-                    <span class="input-caption">Ваш вопрос</span>
-                    <textarea class="main_input main_input-textarea" placeholder="Напишите вопрос..."></textarea>
-                </label>
-            </div>
-            <button class="main_button-color js-button-decor">
-                <span class="text">ОТПРАВИТЬ</span>
-            </button> 
-        </form>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Задайте вопрос</h4>
+            <form action="#" class="popup__form">
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя</span>
+                        <input type="text" class="main_input" placeholder="Имя">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваш вопрос</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Напишите вопрос..."></textarea>
+                    </label>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">ОТПРАВИТЬ</span>
+                </button> 
+            </form>
+        </div>
     </section>
     
     <!-- //Задайте вопрос  -->
@@ -1432,11 +1454,13 @@
         <button class="js-close close__popup">
             <span class="icon-close"></span>
         </button>
-        <h4 class="popup-caption">Спасибо!</h4>
-        <p class="popup__info-text">Ваши ответы помогут нам повысить качество предоставляемых услуг</p>
-        <button class="main_button-color js-button-decor">
-            <span class="text">Ок</span>
-        </button>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Спасибо!</h4>
+            <p class="popup__info-text">Ваши ответы помогут нам повысить качество предоставляемых услуг</p>
+            <button class="main_button-color js-button-decor">
+                <span class="text">Ок</span>
+            </button>
+        </div>
     </section>
     
     <!-- //Блогадарность  -->

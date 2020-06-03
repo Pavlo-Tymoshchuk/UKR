@@ -42,7 +42,7 @@
                                 <a href="#">План мероприятий 2020</a>
                             </li>
                             <li class="burger-menu__item">
-                                <a href="#">Частозадаваемые вопросы</a>
+                                <a href="#">Галерея</a>
                             </li>
                         </ul>
                     </li>
@@ -65,7 +65,7 @@
                     </li>
                 </ul>
                 <div class="burger-menu__wrapper">
-                    <button class="close-burger js-close">
+                    <button class="close-burger">
                         <span class="icon-close"></span>
                     </button>
                     <div class="wrapper">
@@ -103,7 +103,7 @@
                                 <a href="#">План мероприятий 2020</a>
                             </li>
                             <li class="burger-menu__item">
-                                <a href="#">Частозадаваемые вопросы</a>
+                                <a href="#">Галерея</a>
                             </li>
                         </ul>
                         <ul class="burger-menu__list call-back">
@@ -123,56 +123,102 @@
         <section class="breadcrumbs">
             <div class="breadcrumbs__wrapper container">
                 <a href="#" class="breadcrumbs__link">Главная</a>
-                <a href="#" class="breadcrumbs__link">Мероприятия</a>
+                <a href="#" class="breadcrumbs__link">Отзывы</a>
             </div>
         </section>
-        <section class="catalog">
-            <h2 class="main-caption-m container">Мероприятия</h2>
-            <div class="announcements-slider__wrapper js-catalog-wrapper">
-                <ul class="announcements__list announcements__list-slider js-catalog-list">
-                    <li class="announcements__item announcements__item-all js-catalog-item">
-                        <h3 class="announcements__theme">Все</h3>
+        <section class="reviews-page">
+            <div class="reviews-page__wrapper container">
+                <h2 class="main-caption-m">Отзывы</h2>
+                <ul class="reviews__list">
+                    <li class="reviews__item show js-item">
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
+                        </div>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Иван Кротов</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-1.png)"></div>
+                        </div>
                     </li>
-                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-1.png)">
+                    <li class="reviews__item js-item">
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился, лекции ведут профессионалы. Спасибо УкрКонсалтингу за проведенное мероприятие.  Семинар понравился, лекции ведут профессионалы. Семинар понравился, лекции ведут профессионалы.</p>
+                            </div>
+                        </div>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Марина Кружевная</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-2.png)"></div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item">
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Семинар понравился.</p>
+                            </div>
+                        </div>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Марина Кружевная</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-2.png)"></div>
+                        </div>
+                    </li>
+                    <li class="reviews__item js-item">
+                        <div class="reviews__item__text">
+                            <div class="content">
+                                <p>Сегодня был супер день. Особенно подравилась экскурсия на Phillip Morris</p>
+                            </div>
+                        </div>
+                        <div class="reviews__item-wrapper">
+                            <button class="js-more-info more_info js-button general-more" data-target="reviews">Читать весь отзыв</button>
+                            <div class="wrapper">
+                                <h5 class="reviews__name">Марина Кружевная</h5>
+                                <p class="reviews__sub">эколог, Харьковский трубный завод имени Васильевича </p>
+                            </div>
+                            <div class="reviews__img" style="background-image:url(./img/reviews-img-2.png)"></div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="reviews-page__add-reviews">
+                    <h3 class="main-caption-s">Отставить отзыв</h3>
+                    <p class="add-reviews__sub-info">Вы можете оставить свой отзыв как о нашей организации,  так и о конкретном мероприятии. Нам важно Ваше мнение!</p>
+                    <button  class="main_button-color js-button-decor js-button" data-target="add-reviews">
+                        <span class="text">оставить отзыв</span>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section class="announcements">
+            <div class="announcements__wrapper container">
+                <h2 class="main-caption-m">Анонсы мероприятий</h2>
+                <ul class="announcements__list">
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-1.png)">
                         <h3 class="announcements__theme">Охрана труда</h3>
                     </li>
-                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-2.png)">
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-2.png)">
                         <h3 class="announcements__theme">Охрана окружающей среды</h3>
                     </li>
-                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-3.png)">
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-3.png)">
                         <h3 class="announcements__theme">Экономика предприятия</h3>
                     </li>
-                    <li class="announcements__item js-catalog-item" style="background-image:url(./img/announcements-img-4.png)">
+                    <li class="announcements__item" style="background-image:url(./img/announcements-img-4.png)">
                         <h3 class="announcements__theme">Управление персоналом</h3>
                     </li>
                 </ul>
-            </div>
-            <div class="catalog__wrapper container">
-                <div class="catalog__buttons__container">
-                    <div class="filter__wrapper filter__wrapper-drop js-drop-item">
-                        <h5 class="filter__caption">Сортировать:</h5>
-                        <button class="filter-button js-drop-button">
-                            <span class="text js-drop-info">Дата по убыванию</span>
-                            <span class="icon-drop"></span>
-                        </button>
-                        <ul class="filter__list">
-                            <li class="filter__item js-drop-contains active">
-                                <span class="text">Дата по убыванию</span>
-                            </li>
-                            <li class="filter__item js-drop-contains">
-                                <span class="text">Дата по возрастанию</span>
-                            </li>
-                            <li class="filter__item js-drop-contains">
-                                <span class="text">По популярности</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <a href="#" class="main-button-shadow">
-                        <span class="text">смотреть в календаре</span>
-                    </a>
-                </div>
                 <div class="position-wrapper">
-                    <ul class="workshops__list workshops__list-catalog">
+                    <ul class="workshops__list">
                         <li class="workshops__item">
                             <div class="workshops__item__wrapper js-drop-item">
                                 <div class="workshops__date">
@@ -308,52 +354,88 @@
                     </ul>
                 </div>
                 <button class="main_button">
-                    <span class="text">загрузить еще</span>
+                    <span class="text">СМОТРЕТЬ ВСЕ СЕМИНАРЫ</span>
                 </button>
             </div>
         </section>
-        <section class="helpful-info">
-            <div class="helpful-info__wrapper container">
-                <h2 class="main-caption-s">Полезная информация</h2>
-                <ul class="helpful-info__list">
-                    <li class="helpful-info__item">
-                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-1.png)"></div>
-                        <div class="helpful-info__content">
-                            <h5 class="helpful-info__caption">Календарь мероприятий 2019</h5>
-                            <a href="#" class="general-more">подробнее</a>
+        <section class="notyfication">
+            <div class="notyfication__wrapper container">
+                <h2 class="main-caption-m">Уведомления</h2>
+                <p class="notyfication-sub">Как Вы хотели бы получать информацию о свежих мероприятиях?</p>
+                <form action="#" class="notyfication__form">
+                    <div class="notyfication__list">
+                        <label class="notyfication__item">
+                            <input class="noty-radio" type="radio" name="noty" value="noty-sms">
+                            <span class="custome-radio"></span>
+                            <div class="notyfication__img" style="background:url(./img/noty-img-1.png)"></div>
+                            <div class="notyfication__info">
+                                <h5>SMS рассылка</h5>
+                                <p>Анонсы мероприятий в sms-сообщениях</p>
+                            </div>
+                        </label>
+                        <label class="notyfication__item">
+                            <input class="noty-radio" type="radio" name="noty" value="noty-E-mail">
+                            <span class="custome-radio"></span>
+                            <div class="notyfication__img" style="background:url(./img/noty-img-2.png)"></div>
+                            <div class="notyfication__info">
+                                <h5>E-mail рассылка</h5>
+                                <p>Программы семинаров по электронной почте</p>
+                            </div>
+                        </label>
+                        <label class="notyfication__item">
+                            <input class="noty-radio" type="radio" name="noty" value="noty-push">
+                            <span class="custome-radio"></span>
+                            <div class="notyfication__img" style="background:url(./img/noty-img-3.png)"></div>
+                            <div class="notyfication__info">
+                                <h5>Push-&nbsp;уведомления</h5>
+                                <p>Анонсы семинаров в web-браузере</p>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="notyfication-subscription">
+                        <h5 class="notyfication-subscription__caption">Выберите интересующие Вас темы:</h5>
+                        <div class="notyfication-subscription__list">
+                            <label class="notyfication-subscription__item checkbox__wrapper">
+                                <input type="checkbox" value="Охрана окружающей среды" class="input-checkbox">
+                                <span class="custome-check">
+                                    <span class="icon-active"></span>
+                                </span>
+                                <span class="text">Охрана окружающей среды</span>
+                            </label>
+                            <label class="notyfication-subscription__item checkbox__wrapper">
+                                <input type="checkbox" value="Охрана труда" class="input-checkbox">
+                                <span class="custome-check">
+                                    <span class="icon-active"></span>
+                                </span>
+                                <span class="text">Охрана труда</span>
+                            </label>
+                            <label class="notyfication-subscription__item checkbox__wrapper">
+                                <input type="checkbox" value="Управление персоналом" class="input-checkbox">
+                                <span class="custome-check">
+                                    <span class="icon-active"></span>
+                                </span>
+                                <span class="text">Управление персоналом</span>
+                            </label>
+                            <label class="notyfication-subscription__item checkbox__wrapper">
+                                <input type="checkbox" value="Экономика предприятия" class="input-checkbox">
+                                <span class="custome-check">
+                                    <span class="icon-active"></span>
+                                </span>
+                                <span class="text">Экономика предприятия</span>
+                            </label>
                         </div>
-                    </li>
-                    <li class="helpful-info__item">
-                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-2.png)"></div>
-                        <div class="helpful-info__content">
-                            <h5 class="helpful-info__caption">Хотите преподавать у нас?</h5>
-                            <a href="#" class="general-more">подробнее</a>
+                        <div class="notyfication-subscription__footer">
+                            <label class="input_wrapper error">
+                                <span class="input-caption">Введите ваш E-mail</span>
+                                <input type="email" class="main_input" placeholder="ivanov@gmail.com">
+                                <span class="input-text-error">Пожалуйста, введите ваш e-mail в формате: ivanov@gmail.com</span>
+                            </label>
+                            <button class="main_button-color js-button-decor" type="submit">
+                                <span class="text">Подписаться</span>
+                            </button>
                         </div>
-                    </li>
-                    <li class="helpful-info__item">
-                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-3.png)"></div>
-                        <div class="helpful-info__content">
-                            <h5 class="helpful-info__caption">Гостиницы Харькова</h5>
-                            <a href="#" class="general-more">подробнее</a>
-                        </div>
-                    </li>
-                    <li class="helpful-info__item">
-                        <div class="helpful-info__item__img" style="background-image: url(./img/helpful-img-4.png)"></div>
-                        <div class="helpful-info__content">
-                            <h5 class="helpful-info__caption">Новая услуга. Экологическая к</h5>
-                            <a href="#" class="general-more">подробнее</a>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-        </section>
-        <section class="seo-block">
-            <h2 class="main-caption-s">SEO - текст</h2>
-            <div class="seo-block__wrapper container">
-                <h4 class="seo-caption-m">Подзаголовок</h4>
-                <p>Ви́кинги (дат. vikinger, швед. vikingar, норв. vikingene) — раннесредневековые скандинавские[1] мореходы в VIII—XI веках, совершавшие морские походы от Винланда до Биармии и Северной Африки. В основной массе это были племена в стадии разложения родоплеменного строя, жившие на территории современных Швеции, Дании и Норвегии, которых толкало за пределы родных стран перенаселение и голод[1]. По религиозной принадлежности викинги в подавляющем большинстве были язычниками[1</p>
-                <h5 class="seo-caption-s">Подзаголовок</h5>
-                <p>Шведские, норвежские и датские викинги, которые двигались на запад, известны по латинским источникам под именем норманнов (лат. Normanni). Точный этнический состав викингов в Восточной Европе (в балтийских землях и на Руси) неизвестен, но европейские историки предполагают, что это могли быть шведы[1]. В летописях Киевской Руси они были известны как варяги. Однако по Лаврентьевской летописи: «Те варяги назывались русью, как другие называются свеи, а иные норманны и англы, а ещё иные готландцы, — вот так и эти».</p>
+                    </div>
+                </form>
             </div>
         </section>
     </main>
@@ -428,70 +510,101 @@
             </div>
         </div>
     </footer>
+    
+    <!-- Показ отзыва  -->
+    
+    <section class="popup popup-reviews" data-target="reviews">
+        <button class="js-close close-popup">Закрыть</button>
+        <div class="popup__wrapper">
+            <div class="popup-reviews__header">
+                <div class="reviews__img"></div>
+                <div class="wrapper">
+                    <h5 class="reviews__name"></h5>
+                    <p class="reviews__sub"></p>
+                </div>
+            </div>
+            <div class="popup-reviews__content">
+                <p></p>
+            </div>
+        </div>
+    </section>
+    
+    <!-- //Показ отзыва  -->
+    
+    <!-- Оставить отзыв  -->
+    
+     <section class="popup add-reviews" data-target="add-reviews">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <div class="popup__wrapper">
+            <h4 class="popup-caption">Добавление отзыва</h4>
+            <form action="#" class="add-reviews__form">
+                <div class="add-reviews__photo" style="background-image: url(./img/add-photo.png);">
+                    <label class="add-photo-input">
+                        <input type="file" class="js-input-file">
+                        <span class="add-photo-input__decor">
+                            <span class="icon-add-photo"></span>
+                        </span>
+                    </label>
+                </div>
+                <button type="button" class="clear-file-input">отмена</button>
+                <div class="popup-inputs">
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваше имя*</span>
+                        <input type="text" class="main_input" placeholder="Имя" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">E-mail*</span>
+                        <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Номер телефона*</span>
+                        <input type="tel" class="main_input" placeholder="+380934882556" required>
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваша должность</span>
+                        <input type="text" class="main_input" placeholder="Эколог">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Полное название предприятия</span>
+                        <input type="text" class="main_input" placeholder="Завод имени Малышева">
+                    </label>
+                    <label class="input_wrapper">
+                        <span class="input-caption">Ваш отзыв</span>
+                        <textarea class="main_input main_input-textarea" placeholder="Напишите отзыв"></textarea>
+                    </label>
+                </div>
+                <div class="stars__wrapper">
+                    <h5>Оцените нашу работу</h5>
+                    <input type="hidden" name="stars" class="js-stars-input">
+                    <ul class="stars__list js-star-list">
+                        <li class="stars__item js-star-item" data-target="1">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="2">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="3">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="4">
+                            <span class="icon-star"></span>
+                        </li>
+                        <li class="stars__item js-star-item" data-target="5">
+                            <span class="icon-star"></span>
+                        </li>
+                    </ul>
+                </div>
+                <button class="main_button-color js-button-decor">
+                    <span class="text">Отправить</span>
+                </button> 
+            </form>
+        </div>
+    </section>
+    
+    <!-- //Оставить отзыв  -->
     <div class="overlay"></div>
     <script src="./js/main.js"></script>
-    <script>
-        // Catalog-move
-    
-        let catalogWrapper = document.querySelector('.js-catalog-wrapper');
-        let catalogList = document.querySelector(".js-catalog-list");
-        let allItem = catalogList.querySelectorAll(".js-catalog-item");
-        let item = catalogList.querySelector(".js-catalog-item");
-        
-        let styleElem = window.getComputedStyle(item);
-        let catalogWrapperStyle = window.getComputedStyle(catalogWrapper);
-        let catalogWrapperStylePadding = parseFloat(catalogWrapperStyle.paddingLeft);
-        let margin = parseFloat(styleElem.marginRight);
-        
-        function moveList() {
-            let fullWidthItems = 0;
-            allItem.forEach(function(item){
-                fullWidthItems += item.offsetWidth;
-            });
-            
-            let widthList = fullWidthItems + (margin * allItem.length) + catalogWrapperStylePadding + 250;
-            
-            let step = (widthList - window.innerWidth) / window.innerWidth;
-            let flag;
-            let timerId;
-            let setTimMouseEnter;
-            
-            catalogWrapper.addEventListener('mouseenter', function(e){
-                setTimMouseEnter = setTimeout(function(){
-                    leftMouseMove = catalogWrapper.offsetLeft - e.clientX;
-                    catalogList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform .6s`);
-                }, 200);
-                
-            });
-            
-            catalogWrapper.addEventListener('mousemove', function(e){
-                timerId = setTimeout(function(){
-                    flag = true;
-                }, 500);
-
-                if(flag){
-                    clearTimeout(timerId);
-                    clearTimeout(setTimMouseEnter);
-                    leftMouseMove = this.offsetLeft - e.clientX;
-                    let transition = Math.abs(leftMouseMove) / 10000;
-                    catalogList.setAttribute('style', `transform: translateX(${Math.floor(leftMouseMove * step)}px); transition: transform ${transition}s`);
-                }
-            });
-            
-            catalogWrapper.addEventListener('mouseleave', function(e){
-                flag = false;
-                clearTimeout(setTimMouseEnter);
-                catalogList.setAttribute('style', `transform: translateX(-180px); transition: transform .6s`);
-            });
-        }
-        
-        moveList();
-        
-        window.addEventListener('resize', function() {
-            moveList();
-        });
-        
-        // Catalog-move
-    </script>
 </body>
-</html>
+</html

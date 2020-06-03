@@ -1,4 +1,6 @@
 .popup {
+    display: flex;
+    flex-direction: column;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -6,15 +8,26 @@
     z-index: 4;
     background-color: #fff;
     max-height: 100%;
-    overflow: auto;
+    overflow: hidden;
     border-radius: 30px;
-    padding: 50px;
-    -ms-overflow-style: none;
     max-width: 480px;
     width: 100%;
+    
+    .input_wrapper {
+        margin-bottom: 20px;
+    }
+    
+    .main_button-color {
+        margin: 0px auto;
+    }
+}
+
+.popup__wrapper {
+    overflow: auto;
     scrollbar-color: rgba(193, 199, 221, 0.75) white;
     scrollbar-width: 5px;
     -ms-overflow-style: none;
+    padding: 50px;
     
     &::-webkit-scrollbar {
         width: 5px;
@@ -23,14 +36,6 @@
     &::-webkit-scrollbar-thumb {
         background: rgba(193, 199, 221, 0.75);
         border-radius: 4px;
-    }
-    
-    .input_wrapper {
-        margin-bottom: 24px;
-    }
-    
-    .main_button-color {
-        margin: 0px auto;
     }
 }
 
@@ -58,6 +63,18 @@
     top: 0px;
     left: 0px;
     transition: opacity .6s, visibility 0s .6s, transform .6s;
+    scrollbar-color: rgba(193, 199, 221, 0.75) white;
+    scrollbar-width: 5px;
+    -ms-overflow-style: none;
+    
+    &::-webkit-scrollbar {
+        width: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: rgba(193, 199, 221, 0.75);
+        border-radius: 4px;
+    }
     
     &.active {
         visibility: visible;
@@ -191,6 +208,7 @@
     cursor: pointer;
     outline: none;
     color: #636c8a;
+    z-index: 4;
     transition: color .4s, transform .4s;
 }
 
@@ -221,9 +239,12 @@
 }
 
 .popup-reviews {
-    padding: 30px 40px 85px;
     max-width: 540px;
     width: 100%;
+    
+    .popup__wrapper {
+        padding: 30px 40px 85px;
+    }
     
     .close-popup {
         color: #0009F7;
@@ -328,8 +349,12 @@
     transition: color .4s;
 }
 
-.popup-person__wrapper {
+.person__wrapper {
     position: relative;
+    
+    .input_wrapper {
+        margin-bottom: 32px;
+    }
 }
 
 .add-person {
