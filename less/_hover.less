@@ -2,10 +2,16 @@
     
     /* General */
     
+    .radio-wrapper {
+        &:hover {
+            color: #0009F7;
+        }
+    }
+    
     .main_button-color {
         &.active {
             .decor {
-            clip-path: circle(400px at center);
+                clip-path: circle(400px at center);
             }
         }
     }
@@ -409,4 +415,18 @@
     }
     
     /* //Blog */
+    
+    /* Order page */
+    
+    .order-page__item__info {
+        &:hover {
+            .order-page__item__body {
+                .text {
+                    color: #5C5DF7;
+                }
+            }
+        }
+    }
+    
+    /* //Order page */
 }

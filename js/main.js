@@ -907,6 +907,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     });
     
     // //Reviews 
+    
+    // Add Person 
+    
+    let buttonPerson = document.querySelector('.js-add-person');
+    
+    if(buttonPerson) {
+        buttonPerson.addEventListener('click', function(){
+            let wrapper = this.closest('.js-person-wrapper');
+            let cloneItem = wrapper.querySelector('.js-person-item');
+            let newItem = cloneItem.cloneNode(true);
+            wrapper.prepend(newItem);
+        });
+    }
 });
 
 

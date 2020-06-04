@@ -125,133 +125,99 @@
         <section class="breadcrumbs">
             <div class="breadcrumbs__wrapper container">
                 <a href="#" class="breadcrumbs__link">Главная</a>
-                <a href="#" class="breadcrumbs__link">Оформление заявки</a>
+                <a href="#" class="breadcrumbs__link">Опрос участников мероприятий</a>
             </div>
         </section>
-        <section class="order-page">
-            <div class="order-page__wrapper container">
-                <h2 class="main-caption-m">Оформление заявки</h2>
-                <form action="#" class="order-page__form">
-                    <div class="order-page__check-event">
-                        <h3 class="main-caption-s order-page__caption">Выберите мероприятие</h3>
-                        <div class="order-page__check-event__filter">
-                            <div class="filter__wrapper filter__wrapper-drop js-drop-item">
-                                <h5 class="filter__caption">Сортировать по теме:</h5>
-                                <button type="button" class="filter-button js-drop-button">
-                                    <span class="text js-drop-info">Oхрана труда</span>
-                                    <span class="icon-drop"></span>
-                                </button>
-                                <ul class="filter__list">
-                                    <li class="filter__item js-drop-contains active">
-                                        <span class="text">Oхрана труда</span>
-                                    </li>
-                                    <li class="filter__item js-drop-contains">
-                                        <span class="text">Дата по возрастанию</span>
-                                    </li>
-                                    <li class="filter__item js-drop-contains">
-                                        <span class="text">По популярности</span>
-                                    </li>
-                                </ul>
+        <section class="page-quiz">
+            <div class="page-quiz__wrapper container">
+                <h2 class="main-caption-m">Опрос участников мероприятий</h2>
+                <p class="page-quiz__sub-text">Ответьте на несколько вопросов для улучшения качества нашей работы!</p>
+                <form action="#" class="page-quiz__form">
+                    <div class="page-quiz__form__radio">
+                        <h4 class="page-quiz__form__caption">Вопрос для участников мероприятий</h4>
+                        <label class="radio-wrapper">
+                            <input type="radio" name="page-quiz" class="noty-radio">
+                            <span class="custome-radio"></span>
+                            <span class="text">Ответ участников мероприятий</span>
+                        </label>
+                        <label class="radio-wrapper">
+                            <input type="radio" name="page-quiz" class="noty-radio">
+                            <span class="custome-radio"></span>
+                            <span class="text">Ответ участников мероприятий</span>
+                        </label>
+                        <label class="radio-wrapper">
+                            <input type="radio" name="page-quiz" class="noty-radio">
+                            <span class="custome-radio"></span>
+                            <span class="text">Ответ участников мероприятий</span>
+                        </label>
+                    </div>
+                    <div class="page-quiz__form__checkbox">
+                        <h4 class="page-quiz__form__caption">Вопрос для участников мероприятий</h4>
+                        <label class="checkbox__wrapper">
+                            <input type="checkbox" value="Охрана окружающей среды" class="input-checkbox">
+                            <span class="custome-check">
+                                <span class="icon-active"></span>
+                            </span>
+                            <span class="text">Охрана окружающей среды</span>
+                        </label>
+                        <label class="checkbox__wrapper">
+                            <input type="checkbox" value="Охрана окружающей среды" class="input-checkbox">
+                            <span class="custome-check">
+                                <span class="icon-active"></span>
+                            </span>
+                            <span class="text">Охрана окружающей среды</span>
+                        </label>
+                        <label class="checkbox__wrapper">
+                            <input type="checkbox" value="Охрана окружающей среды" class="input-checkbox">
+                            <span class="custome-check">
+                                <span class="icon-active"></span>
+                            </span>
+                            <span class="text">Охрана окружающей среды</span>
+                        </label>
+                    </div>
+                    <div class="page-quiz__form__drop-info">
+                        <h4 class="page-quiz__form__caption">Вопрос для участников мероприятий в две строки</h4>
+                        <div class="input_wrapper js-drop-item general-drop">
+                            <span class="input-caption">Выберите программу обучения</span>
+                            <div class="wrapper js-drop-button" rel="button">
+                                <input type="text" class="main_input main_input-drop js-drop-input" readonly placeholder="Эколог"> 
+                                <span class="icon-drop"></span>
                             </div>
-                            <div class="order-page__list">
-                                <label class="order-page__item">
-                                    <input type="radio" name="event-check" class="noty-radio">
-                                    <span class="custome-radio"></span>
-                                    <span class="order-page__item__info">
-                                        <span class="order-page__item__header">
-                                            <span class="date">5.04 - 7.04</span>
-                                            <span class="city">Харьков</span>
-                                        </span>
-                                        <span class="order-page__item__body">
-                                            <span class="text"><strong>Имплементация законодательных актов Европейского Союза в сфере охраны окружающей среды в правовую систему Украины</strong></span>
-                                            <span class="price__wrapper js-drop-item">
-                                                <span class="wrapper">
-                                                    <span class="price_old">3 850 <span>грн</span></span>
-                                                    <span class="price">3 250 <span>грн</span></span>
-                                                </span>
-                                                <button class="info-button js-drop-button" type="button"></button>
-                                                <span class="info-drop">
-                                                    <span>Скидка действует при участии более двух человек с одного предприятия</span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </label>
-                                <label class="order-page__item">
-                                    <input type="radio" name="event-check" class="noty-radio">
-                                    <span class="custome-radio"></span>
-                                    <span class="order-page__item__info">
-                                        <span class="order-page__item__header">
-                                            <span class="date">5.04 - 7.04</span>
-                                            <span class="city">Харьков</span>
-                                        </span>
-                                        <span class="order-page__item__body">
-                                            <span class="text"><strong>Имплементация законодательных актов Европейского Союза в сфере охраны окружающей среды в правовую систему Украины</strong></span>
-                                            <span class="price__wrapper js-drop-item">
-                                                <span class="wrapper">
-                                                    <span class="price">3 250 <span>грн</span></span>
-                                                </span>
-                                            </span>
-                                        </span>
-                                    </span>
-                                </label>
+                            <div class="general-drop__list">
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input_wrapper js-drop-item general-drop">
+                            <span class="input-caption">Выберите программу обучения</span>
+                            <div class="wrapper js-drop-button" rel="button">
+                                <input type="text" class="main_input main_input-drop js-drop-input" readonly placeholder="Эколог"> 
+                                <span class="icon-drop"></span>
+                            </div>
+                            <div class="general-drop__list">
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
+                                <div class="general-drop__item js-drop-contains">
+                                    <div class="text">Еще одна программа</div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="order-page__container">
-                        <h3 class="main-caption-s">Заполните форму</h3>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Контактное лицо</span>
-                            <input type="text" class="main_input" placeholder="Имя" required>
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">E-mail*</span>
-                            <input type="email" class="main_input" placeholder="ivanov@gmail.com" required>
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Номер телефона*</span>
-                            <input type="tel" class="main_input" placeholder="+380934882556" required>
-                        </label>
-                        <div class="person__wrapper js-person-wrapper">
-                            <label class="input_wrapper js-person-item">
-                                <span class="input-caption">Полное ФИО участника</span>
-                                <input type="text" class="main_input" placeholder="Фамилия Имя Отчество">
-                            </label>
-                            <button type="button" class="add-person js-add-person">
-                                <span class="decor"></span>
-                                <span>Добавить участника</span>
-                            </button>
-                        </div>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Полное название предприятия</span>
-                            <input type="text" class="main_input" placeholder="Завод имени Малышева">
-                        </label>
-                        <label class="input_wrapper">
-                            <span class="input-caption">Примечание</span>
-                            <textarea class="main_input main_input-textarea" placeholder="Добавить комментарий"></textarea>
-                        </label>
-                        <button type="submit" class="main_button-color js-button-decor">
-                            <span class="text">отправить</span>
-                        </button>
-                    </div>
+                    <button class="main_button-color js-button-decor">
+                        <span class="text">готово</span>
+                    </button>
                 </form>
-            </div>
-        </section>
-        <section class="clients-callback">
-            <div class="clients-callback__wrapper container">
-                <div class="wrapper">
-                    <h4 class="main-caption-s">Обратный звонок</h4>
-                    <p>Для уточнения деталей вы можете заказать обратный звонок и мы свяжемся с Вами в ближайшее время</p>
-                    <form action="#" class="clints-callback__form">
-                        <label class="input_wrapper">
-                            <span class="input-caption">Номер телефона</span>
-                            <input type="tel" class="main_input js-input" placeholder="+380934882556">
-                        </label>
-                        <button class="main-button-shadow">
-                            <span class="text">заказать звонок</span>
-                        </button>
-                    </form>
-                </div>
             </div>
         </section>
     </main>

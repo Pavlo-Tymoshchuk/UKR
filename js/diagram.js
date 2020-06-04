@@ -1,3 +1,5 @@
+var fullValues = 0;
+
 Chart.defaults.global.tooltips.custom = function(tooltip) {
     // Tooltip Element
     var tooltipEl = document.getElementById('chartjs-tooltip');
@@ -35,7 +37,8 @@ Chart.defaults.global.tooltips.custom = function(tooltip) {
         });
  
         var tableRoot = tooltipEl.querySelector('.manufacturing-hover-active');
-        tableRoot.innerHTML = innerHtml;
+        var valuePct = parseFloat((innerHtml / fullValues) * 100).toFixed(1);
+        tableRoot.innerHTML = valuePct;
     }
  
    
@@ -53,13 +56,19 @@ Chart.defaults.global.tooltips.custom = function(tooltip) {
 };
  
 var ctx = document.getElementById('myChart').getContext('2d');
+let dataValue = [100, 190, 30, 50, 21, 30, 100,500, 109, 30, 50, 20, 30, 10];
+let dataName = ['Оргтехника, телекоммуникации', 'Полиграфия', 'Бытовая электротехника', 'Транспортные средства и услуги', 'Туризм, спорт, развлечения', 'Авто-, мото-', 'Промышленность, производство','Оргтехника, телекоммуникации', 'Полиграфия', 'Бытовая электротехника', 'Транспортные средства и услуги', 'Туризм, спорт, развлечения', 'Авто-, мото-', 'Промышленность, производство'];
+
+dataValue.forEach((item) => {
+    fullValues += item;
+});
  
 var myChart = new Chart(ctx, {
     type: 'doughnut',
     data: {
-        labels: ['Оргтехника, телекоммуникации', 'Полиграфия', 'Бытовая электротехника', 'Транспортные средства и услуги', 'Туризм, спорт, развлечения', 'Авто-, мото-', 'Промышленность, производство','Оргтехника, телекоммуникации', 'Полиграфия', 'Бытовая электротехника', 'Транспортные средства и услуги', 'Туризм, спорт, развлечения', 'Авто-, мото-', 'Промышленность, производство'],
+        labels: dataName,
         datasets: [{
-            data: [10, 19, 3, 5, 2, 3, 1,10, 19, 3, 5, 2, 3, 1],
+            data: dataValue,
             backgroundColor: '#F0F0FA',
             borderColor: "#FAFAFF",
             borderWidth: 1,
@@ -94,10 +103,6 @@ for (var i = 0; i < legendItems.length; i++) {
   legendItems[i].classList.add('legent__item');
   legendItems[i].querySelector('span').classList.add('icon-drop');
   legendItems[i].setAttribute('data-index', i);
-}
-
-myChart.canvas.onHover = function(e) {
-    console.log(e);
 }
 
 myChart.openToolTip = function(index) {
@@ -153,27 +158,21 @@ legendItems.forEach(function(item,index){
 var data = [
   {
    "name": "Энергетические и сырьевые ресурсы", 
-   "color": "red", 
     "value": 180
   }, {
    "name": "Металлургия и металлообработка", 
-   "color": "", 
     "value": 100
   }, {
-   "name": "Машиностроение, оборудование", 
-   "color": "green", 
+   "name": "Машиностроение, оборудование",  
     "value": 135
   }, {
    "name": "Электрооборудование и устройства", 
-   "color": "pink", 
     "value": 230
   }, {
    "name": "Пищевая промышленность", 
-   "color": "blue", 
     "value": 90
   }, {
    "name": "Сельское хозяйство", 
-   "color": "red", 
     "value": 180
   }
 ];

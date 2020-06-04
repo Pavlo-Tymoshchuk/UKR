@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>URK</title>
+    <title>УкрКонсалтинг</title>
     <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
@@ -12,7 +12,9 @@
          <header class="header">
             <div class="header__wrapper">
                 <nav class="header-nav">
-                    <a href="#" class="header-logo">LOGO</a>
+                    <a href="#" class="header-logo">
+                        <img src="./img/logo.png" alt="УкрКонсалтинг">
+                    </a>
                     <button class="header-burger"><span></span></button>
                     <ul class="header__list">
                         <li class="header__item drop-item">
@@ -65,6 +67,9 @@
                             <a href="mailto: info@ukrc.net">info@ukrc.net</a>
                         </li>
                     </ul>
+                    <!-- Когда авторизован  -->
+                    <div class="user-authorization-img" style="background-image: url(./img/reviews-img-1.png);"></div>
+                    <!-- Когда авторизован  -->
                     <div class="burger-menu__wrapper">
                         <button class="close-burger">
                             <span class="icon-close"></span>
@@ -1113,8 +1118,8 @@
                     </label>
                     <div class="input_wrapper js-drop-item general-drop">
                         <span class="input-caption">Выберите программу обучения</span>
-                        <div class="wrapper">
-                            <input type="text" class="main_input js-drop-input js-drop-button" readonly placeholder="Эколог"> 
+                        <div class="wrapper js-drop-button" rel="button">
+                            <input type="text" class="main_input main_input-drop js-drop-input" readonly placeholder="Эколог"> 
                             <span class="icon-drop"></span>
                         </div>
                         <div class="general-drop__list">
