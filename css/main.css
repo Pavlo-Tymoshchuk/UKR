@@ -1745,7 +1745,7 @@ body {
   display: flex;
   align-items: flex-start;
   flex-wrap: wrap;
-  margin-right: -40px;
+  margin-right: -30px;
 }
 .trust-us__company__item {
   display: flex;
