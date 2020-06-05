@@ -1264,7 +1264,7 @@ body {
   z-index: 1;
 }
 .announcements-slider__wrapper {
-  padding-left: calc((100vw - 1200px) / 2);
+  padding-left: calc((100vw - 1185px) / 2);
   cursor: move;
 }
 .announcements__list-slider {
@@ -2321,7 +2321,7 @@ body {
   margin-top: 30px;
 }
 .calendar__container {
-  max-width: 290px;
+  max-width: 285px;
   width: 100%;
 }
 .calendar__header {
@@ -4299,7 +4299,7 @@ body {
   margin-top: 30px;
 }
 .order-page__check-event__filter .filter__wrapper {
-  width: 315px;
+  width: 300px;
   white-space: nowrap;
 }
 .order-page__check-event__filter .filter__wrapper .text {
@@ -4743,6 +4743,9 @@ body {
     font-size: 16px;
   }
   /* //Seo block */
+  .background-decor {
+    max-width: 280px;
+  }
 }
 @media screen and (max-width: 576px) {
   .main_button-color {
@@ -5860,6 +5863,7 @@ body {
     margin-bottom: 30px;
   }
   .main-section__info {
+    min-width: 100%;
     width: 100%;
   }
   .main-section__decor {
