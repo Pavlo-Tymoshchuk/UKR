@@ -12,6 +12,25 @@
     html.overflow {
         margin-right: 0px;
     }
+    
+    .background-decor {
+        max-width: 728px;
+        
+        &::before {
+            content: "";
+            position: absolute;
+            left: 50%;
+            top: 0px;
+            transform: translateX(-50%);
+            height: 100%;
+            width: 1px;
+            background-color: #EFEFF7;
+        }
+    }
+    
+    .background-decor__inner {
+        display: none;
+    }
 }
 
 @media (max-width: 1024px) {

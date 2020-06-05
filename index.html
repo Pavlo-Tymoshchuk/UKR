@@ -6,8 +6,43 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>УкрКонсалтинг</title>
     <link rel="stylesheet" href="./css/main.css">
+    <style>
+        .preloader {
+            position: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            top: 0;
+            left: 0;
+            z-index: 100;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            overflow: hidden;
+            animation-delay: 1s;
+            opacity: 1;
+            transition: opacity .4s, width .4s 1.4s, height .4s 1.4s;
+        }
+        .preloader.hide {
+            opacity: 0;
+            width: 0px;
+            height: 0px;
+        }
+    </style>
+     <script>
+        window.onload = function() {
+            let preloader = document.querySelector(".preloader");
+            preloader.classList.add('hide');
+        }
+    </script>
 </head>
 <body>
+    <div class="preloader">
+        <img src="./img/Preloader..gif" aria-hidden="true">
+    </div>
+    <div class="background-decor">
+        <div class="background-decor__inner"></div>
+    </div>
     <div id="app">
          <header class="header">
             <div class="header__wrapper">
@@ -578,6 +613,36 @@
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section class="photo-gallery">
+                <div class="photo-gallery__wrapper container slider-infinity">
+                    <h3 class="main-caption-s">Как проходят наши мероприятия</h3>
+                    <p class="photo-gallery__sub-info">Фотогалерея</p>
+                    <ul class="photo-gallery__list js-slider-list">
+                        <li class="photo-gallery__item js-slider-item-infinity show">
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-1.png);"></div>
+                        </li>
+                        <li class="photo-gallery__item js-slider-item-infinity">
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                            <div class="photo-gallery__item__img js-button" data-target="gallery" rel="button" style="background-image: url(./img/photo-gallery-img-2.png);"></div>
+                        </li>
+                    </ul>
+                    <div class="buttons__wrapper js-arrow-infinity">
+                        <button class="slider-button prev"><span class="icon-slider-arrow-left"></span></button>
+                        <a href="#" class="main_button">
+                            <span class="text">перейти в галерею</span>
+                        </a>
+                        <button class="slider-button next"><span class="icon-slider-arrow-right"></span></button>
+                    </div>
             </section>
             <section class="reviews">
                 <div class="reviews__wrapper container slider-infinity">
@@ -1469,6 +1534,50 @@
     </section>
     
     <!-- //Блогадарность  -->
+    <!-- Галерея  -->
+    
+    <section class="popup popup-gallery js-gallery" data-target="gallery">
+        <button class="js-close close__popup">
+            <span class="icon-close"></span>
+        </button>
+        <div class="popup-gallery__wrapper">
+            <button class="slider-button prev js-image-button-prev disabled"><span class="icon-slider-arrow-left"></span></button>
+            <button class="slider-button next js-image-button-next"><span class="icon-slider-arrow-right"></span></button>
+            <div class="popup-gallery__header">
+                <h3 class="popup-gallery__name">Консультационный семинар для специалистов планово-экономической службы “Актуальная тематика”</h3>
+                <h5 class="popup-gallery__city">г. Харьков</h5>
+            </div>
+            <div class="popup-gallery__general-img js-general-image">
+                <img src="./img/announcements-img-1.png" alt="Фото">
+            </div>
+            <ul class="popup-gallery__img-list product-page__img-list">
+                <li class="popup-gallery__img-item js-image active" data-index="1">
+                    <img src="./img/announcements-img-1.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="2">
+                    <img src="./img/announcements-img-2.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="3">
+                    <img src="./img/announcements-img-3.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="4">
+                    <img src="./img/announcements-img-4.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="5">
+                    <img src="./img/photo-gallery-img-1.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="6">
+                    <img src="./img/announcements-img-3.png" alt="Фото">
+                </li>
+                <li class="popup-gallery__img-item js-image" data-index="7">
+                    <img src="./img/announcements-img-4.png" alt="Фото">
+                </li>
+            </ul>
+        </div>
+        
+    </section>
+    
+    <!-- //Галерея  -->
     <div class="overlay"></div>
     <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
     <script src="./node_modules/vue-slider-component/dist-css/vue-slider-component.umd.min.js"></script>
