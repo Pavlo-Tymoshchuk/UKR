@@ -801,15 +801,35 @@ document.addEventListener("DOMContentLoaded", function(event) {
         setTimeout(function(){
             generalImgWrapper.classList.remove('active');
         },600)
+    }
+    
+    let galleryInfoContainer = document.querySelector('.js-gallery-info-container');
+    let galleryName = document.querySelector('.js-gallery-name');
+    let galleryCity = document.querySelector('.js-gallery-city');
+    
+    function setValueItem(item) {
+        let valueName = item.getAttribute('data-name');
+        let valuCity = item.getAttribute('data-city');
         
+        galleryName.innerHTML = valueName;
+        galleryCity.innerHTML = valuCity;
+        
+        galleryInfoContainer.classList.add('active');
+        
+        setTimeout(function(){
+            galleryInfoContainer.classList.remove('active');
+        },600);
     }
     
     if(generalImg) {
+        setValueItem(document.querySelector('.js-image.active'));
+        
         allImg.forEach(function(item){
             item.addEventListener('click', function(){
                 allImg.forEach(function(item){
                     item.classList.remove("active");
                 });
+                
                 item.classList.add('active');
                 let getIndex = item.getAttribute('data-index');
                 
@@ -825,6 +845,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 }
                 
                 changeImg(item.querySelector('img'));
+                
+                setValueItem(item);
             });
         });
         
@@ -848,6 +870,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 if(showImg.previousElementSibling.previousElementSibling == null) {
                     buttonPrev.classList.add('disabled');
                 }
+                
+                setValueItem(showImg.previousElementSibling);
             });
             
             buttonNext.addEventListener("click", function(){
@@ -869,6 +893,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
                 if(showImg.nextElementSibling.nextElementSibling == null) {
                     buttonNext.classList.add('disabled');
                 }
+                
+                setValueItem(showImg.nextElementSibling);
                 
             });
             

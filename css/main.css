@@ -7123,10 +7123,9 @@ body {
   overflow-y: auto;
   overflow-x: hidden;
   border-radius: 0px;
-  background: rgba(60, 65, 83, 0.75);
-  transform: translate(0%, -100%);
   visibility: hidden;
   opacity: 0;
+  transform: translate(0px, 0px);
   top: 0px;
   left: 0px;
   transition: opacity 0.6s, visibility 0s 0.6s, transform 0.6s;
@@ -7142,10 +7141,14 @@ body {
   border-radius: 4px;
 }
 .popup-gallery.active {
+  transform: translate(0px, 0px);
   visibility: visible;
   opacity: 1;
-  transform: translate(0%, 0%);
   transition: opacity 0.6s, visibility 0s 0s, transform 0.6s;
+}
+.popup-gallery.active .popup-gallery__wrapper {
+  opacity: 1;
+  transform: scale(1);
 }
 .popup-gallery .close__popup {
   color: #ffffff;
@@ -7161,6 +7164,9 @@ body {
   padding: 25px 20px 25px;
   color: #ffffff;
   position: relative;
+  opacity: 1;
+  transform: scale(0);
+  transition: opacity 0.6s, transform 0.6s;
 }
 .popup-gallery__wrapper .slider-button {
   position: absolute;
@@ -7178,6 +7184,17 @@ body {
   justify-content: space-between;
   align-items: flex-end;
   margin-bottom: 30px;
+}
+.popup-gallery__header.active {
+  animation: opacity-gallery-header 0.6s;
+}
+@keyframes opacity-gallery-header {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 .popup-gallery__name {
   font-size: 24px;

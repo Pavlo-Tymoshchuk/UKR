@@ -56,10 +56,9 @@
     overflow-y: auto;
     overflow-x: hidden;
     border-radius: 0px;
-    background: rgba(60, 65, 83, 0.75);
-    transform: translate(0%, -100%);
     visibility: hidden;
     opacity: 0;
+    transform: translate(0px, 0px);
     top: 0px;
     left: 0px;
     transition: opacity .6s, visibility 0s .6s, transform .6s;
@@ -77,10 +76,15 @@
     }
     
     &.active {
+        transform: translate(0px, 0px);
         visibility: visible;
         opacity: 1;
-        transform: translate(0%, 0%);
         transition: opacity .6s, visibility 0s 0s, transform .6s;
+        
+        .popup-gallery__wrapper {
+            opacity: 1;
+            transform: scale(1);
+        }
     }
     
     .close__popup {
@@ -99,6 +103,9 @@
     padding: 25px 20px 25px;
     color: #ffffff;
     position: relative;
+    opacity: 1;
+    transform: scale(0);
+    transition: opacity  .6s, transform .6s;
     
     .slider-button {
         position: absolute;
@@ -119,6 +126,20 @@
     justify-content: space-between;
     align-items: flex-end;
     margin-bottom: 30px;
+    
+    &.active {
+        animation: opacity-gallery-header .6s;
+    }
+}
+
+@keyframes opacity-gallery-header {
+    0% {
+        opacity: 0;
+    }
+    
+    100% {
+        opacity: 1;
+    }
 }
 
 .popup-gallery__name {
