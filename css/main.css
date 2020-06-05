@@ -7200,6 +7200,7 @@ body {
   font-size: 24px;
   line-height: 130%;
   max-width: 770px;
+  min-height: 62px;
 }
 .popup-gallery__city {
   font-size: 20px;
@@ -7658,6 +7659,7 @@ body {
     font-size: 20px;
     line-height: 130%;
     margin-bottom: 20px;
+    min-height: 52px;
   }
   .popup-gallery__city {
     font-size: 16px;
@@ -7733,6 +7735,7 @@ body {
     font-size: 16px;
     line-height: 130%;
     margin-bottom: 10px;
+    min-height: 40px;
   }
   .popup-gallery__city {
     font-size: 14px;
