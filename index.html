@@ -31,6 +31,18 @@
         .preloader img {
             width: 250px;
         }
+        .preloader .hide-line {
+            width: 250px;
+            position: relative;
+        }
+        .preloader .hide-line::before {
+            content: "";
+            position: absolute;
+            top: -2px;
+            width: 100%;
+            height: 10px;
+            background-color: #ffffff;
+        }
     </style>
      <script>
         window.onload = function() {
@@ -41,7 +53,9 @@
 </head>
 <body>
     <div class="preloader">
-        <img src="./img/Preloader..gif" aria-hidden="true">
+        <div class="hide-line">
+            <img src="./img/Preloader..gif" aria-hidden="true">
+        </div>
     </div>
     <div class="background-decor">
         <div class="background-decor__inner"></div>
